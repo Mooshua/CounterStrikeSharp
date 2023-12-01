@@ -16,7 +16,10 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Contracts;
 using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -24,13 +27,28 @@ namespace CounterStrikeSharp.API
 {
     public abstract class NativeObject
     {
-        public IntPtr Handle { get; internal set; }
 
-        protected NativeObject(IntPtr pointer)
+        /// <summary>
+        /// The underlying pointer object that this native wraps
+        /// </summary>
+        [NotNull]
+        public IntPtr Handle { get; init; }
+
+        [Pure]
+        public NativeObject(IntPtr pointer)
         {
             Handle = pointer;
         }
-        
+
+        /// <summary>
+        /// Construct an instance of this type without an initial handle
+        /// </summary>
+        [Pure]
+        public NativeObject()
+        {
+
+        }
+
         /// <summary>
         /// Returns a new instance of the specified type using the pointer from the passed in object.
         /// </summary>
@@ -40,9 +58,22 @@ namespace CounterStrikeSharp.API
         /// </remarks>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T As<T>() where T : NativeObject
+        public T As<T>() where T : NativeObject, new()
         {
-            return (T)Activator.CreateInstance(typeof(T), this.Handle);
+            return new T() { Handle = this.Handle };
+        }
+
+        /// <summary>
+        /// Convert this native pointer into a managed pointer of type <typeparamref name="T"/>.
+        /// Note that this conversion does not do any safety checking!
+        /// </summary>
+        /// <param name="fieldIndex">the byte-index of the field to read. Defaults to zero.</param>
+        /// <typeparam name="T">The primitive type to interpret the handle as</typeparam>
+        /// <returns>A managed pointer to (this + fieldIndex)</returns>
+        public unsafe ref T AsPointer<T>(int fieldIndex = 0)
+            where T : unmanaged
+        {
+            return ref Unsafe.AsRef<T>( IntPtr.Add( Handle, fieldIndex).ToPointer() );
         }
     }
 }
