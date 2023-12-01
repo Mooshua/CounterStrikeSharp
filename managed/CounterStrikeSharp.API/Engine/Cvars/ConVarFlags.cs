@@ -14,11 +14,7 @@
  *  along with CounterStrikeSharp.  If not, see <https://www.gnu.org/licenses/>. *
  */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CounterStrikeSharp.API
+namespace CounterStrikeSharp.API.Modules.Cvars
 {
     [Flags]
     public enum ConVarFlags : Int64
@@ -66,7 +62,7 @@ namespace CounterStrikeSharp.API
         FCVAR_SERVER_CANNOT_QUERY =
             (1 << 26), // If this is set, then the server is not allowed to query this cvar's value (via IServerPluginHelpers::StartQueryCvarValue).
         FCVAR_VCONSOLE_SET_FOCUS = (1 << 27),
-        FCVAR_CLIENTCMD_CAN_EXECUTE = (1 << 28), // IVEngineClient::ClientCmd is allowed to execute this command. 
+        FCVAR_CLIENTCMD_CAN_EXECUTE = (1 << 28), // IVEngineClient::ClientCmd is allowed to execute this command.
         FCVAR_EXECUTE_PER_TICK = (1 << 29),
     }
 

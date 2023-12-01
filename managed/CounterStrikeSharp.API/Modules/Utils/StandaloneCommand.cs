@@ -4,6 +4,8 @@ using CounterStrikeSharp.API.Modules.Commands;
 using System;
 using System.Reflection;
 
+using CounterStrikeSharp.API.Modules.Cvars;
+
 namespace CounterStrikeSharp.API.Modules.Utils;
 
 public class CommandUtils

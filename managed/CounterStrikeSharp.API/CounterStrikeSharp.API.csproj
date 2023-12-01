@@ -33,6 +33,7 @@
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Engine\" />
     <Folder Include="Modules\Errors" />
   </ItemGroup>
   <ItemGroup>
