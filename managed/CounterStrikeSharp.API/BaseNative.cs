@@ -58,10 +58,21 @@ namespace CounterStrikeSharp.API
         /// </remarks>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T As<T>() where T : NativeObject, new()
+        public T As<T>()
+            where T : NativeObject, new()
         {
             return new T() { Handle = this.Handle };
         }
+
+        /// <summary>
+        /// Create a new NativeObject handle for the specified pointer
+        /// </summary>
+        /// <param name="handle"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T New<T>(IntPtr handle)
+            where T : NativeObject, new()
+            => new T() { Handle = handle };
 
         /// <summary>
         /// Convert this native pointer into a managed pointer of type <typeparamref name="T"/>.
