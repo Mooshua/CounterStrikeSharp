@@ -3139,6 +3139,7 @@ public enum WorldTextPanelVerticalAlign_t : uint
 public partial class AnimationUpdateListHandle_t : NativeObject
 {
     public AnimationUpdateListHandle_t (IntPtr pointer) : base(pointer) {}
+    public AnimationUpdateListHandle_t() {}
 
     // m_Value
     public ref UInt32 Value => ref Schema.GetRef<UInt32>(this.Handle, "AnimationUpdateListHandle_t", "m_Value");
@@ -3148,6 +3149,7 @@ public partial class AnimationUpdateListHandle_t : NativeObject
 public partial class audioparams_t : NativeObject
 {
     public audioparams_t (IntPtr pointer) : base(pointer) {}
+    public audioparams_t() {}
 
     // localSound
     public Span<Vector> LocalSound => Schema.GetFixedArray<Vector>(this.Handle, "audioparams_t", "localSound", 8);
@@ -3169,6 +3171,7 @@ public partial class audioparams_t : NativeObject
 public partial class CAI_ChangeHintGroup : CBaseEntity
 {
     public CAI_ChangeHintGroup (IntPtr pointer) : base(pointer) {}
+    public CAI_ChangeHintGroup() {}
 
     // m_iSearchType
     public ref Int32 SearchType => ref Schema.GetRef<Int32>(this.Handle, "CAI_ChangeHintGroup", "m_iSearchType");
@@ -3195,6 +3198,7 @@ public partial class CAI_ChangeHintGroup : CBaseEntity
 public partial class CAI_ChangeTarget : CBaseEntity
 {
     public CAI_ChangeTarget (IntPtr pointer) : base(pointer) {}
+    public CAI_ChangeTarget() {}
 
     // m_iszNewTarget
     public string NewTarget
@@ -3208,6 +3212,7 @@ public partial class CAI_ChangeTarget : CBaseEntity
 public partial class CAI_Expresser : NativeObject
 {
     public CAI_Expresser (IntPtr pointer) : base(pointer) {}
+    public CAI_Expresser() {}
 
     // m_flStopTalkTime
     public ref float StopTalkTime => ref Schema.GetRef<float>(this.Handle, "CAI_Expresser", "m_flStopTalkTime");
@@ -3241,6 +3246,7 @@ public partial class CAI_Expresser : NativeObject
 public partial class CAI_ExpresserWithFollowup : CAI_Expresser
 {
     public CAI_ExpresserWithFollowup (IntPtr pointer) : base(pointer) {}
+    public CAI_ExpresserWithFollowup() {}
 
     // m_pPostponedFollowup
     public ResponseFollowup? PostponedFollowup => Schema.GetPointer<ResponseFollowup>(this.Handle, "CAI_ExpresserWithFollowup", "m_pPostponedFollowup");
@@ -3250,6 +3256,7 @@ public partial class CAI_ExpresserWithFollowup : CAI_Expresser
 public partial class CAISound : CPointEntity
 {
     public CAISound (IntPtr pointer) : base(pointer) {}
+    public CAISound() {}
 
     // m_iSoundType
     public ref Int32 SoundType => ref Schema.GetRef<Int32>(this.Handle, "CAISound", "m_iSoundType");
@@ -3278,12 +3285,14 @@ public partial class CAISound : CPointEntity
 public partial class CAK47 : CCSWeaponBaseGun
 {
     public CAK47 (IntPtr pointer) : base(pointer) {}
+    public CAK47() {}
 
 }
 
 public partial class CAmbientGeneric : CPointEntity
 {
     public CAmbientGeneric (IntPtr pointer) : base(pointer) {}
+    public CAmbientGeneric() {}
 
     // m_radius
     public ref float Radius => ref Schema.GetRef<float>(this.Handle, "CAmbientGeneric", "m_radius");
@@ -3328,6 +3337,7 @@ public partial class CAmbientGeneric : CPointEntity
 public partial class CAnimGraphNetworkedVariables : NativeObject
 {
     public CAnimGraphNetworkedVariables (IntPtr pointer) : base(pointer) {}
+    public CAnimGraphNetworkedVariables() {}
 
     // m_PredNetBoolVariables
     public NetworkedVector<UInt32> PredNetBoolVariables => Schema.GetDeclaredClass<NetworkedVector<UInt32>>(this.Handle, "CAnimGraphNetworkedVariables", "m_PredNetBoolVariables");
@@ -3400,6 +3410,7 @@ public partial class CAnimGraphNetworkedVariables : NativeObject
 public partial class CAttributeContainer : CAttributeManager
 {
     public CAttributeContainer (IntPtr pointer) : base(pointer) {}
+    public CAttributeContainer() {}
 
     // m_Item
     public CEconItemView Item => Schema.GetDeclaredClass<CEconItemView>(this.Handle, "CAttributeContainer", "m_Item");
@@ -3409,6 +3420,7 @@ public partial class CAttributeContainer : CAttributeManager
 public partial class CAttributeList : NativeObject
 {
     public CAttributeList (IntPtr pointer) : base(pointer) {}
+    public CAttributeList() {}
 
     // m_Attributes
     public NetworkedVector<CEconItemAttribute> Attributes => Schema.GetDeclaredClass<NetworkedVector<CEconItemAttribute>>(this.Handle, "CAttributeList", "m_Attributes");
@@ -3421,6 +3433,7 @@ public partial class CAttributeList : NativeObject
 public partial class CAttributeManager : NativeObject
 {
     public CAttributeManager (IntPtr pointer) : base(pointer) {}
+    public CAttributeManager() {}
 
     // m_Providers
     public NetworkedVector<CHandle<CBaseEntity>> Providers => Schema.GetDeclaredClass<NetworkedVector<CHandle<CBaseEntity>>>(this.Handle, "CAttributeManager", "m_Providers");
@@ -3442,6 +3455,7 @@ public partial class CAttributeManager : NativeObject
 public partial class CBarnLight : CBaseModelEntity
 {
     public CBarnLight (IntPtr pointer) : base(pointer) {}
+    public CBarnLight() {}
 
     // m_bEnabled
     public ref bool Enabled => ref Schema.GetRef<bool>(this.Handle, "CBarnLight", "m_bEnabled");
@@ -3612,6 +3626,7 @@ public partial class CBarnLight : CBaseModelEntity
 public partial class CBaseAnimGraph : CBaseModelEntity
 {
     public CBaseAnimGraph (IntPtr pointer) : base(pointer) {}
+    public CBaseAnimGraph() {}
 
     // m_bInitiallyPopulateInterpHistory
     public ref bool InitiallyPopulateInterpHistory => ref Schema.GetRef<bool>(this.Handle, "CBaseAnimGraph", "m_bInitiallyPopulateInterpHistory");
@@ -3651,6 +3666,7 @@ public partial class CBaseAnimGraph : CBaseModelEntity
 public partial class CBaseAnimGraphController : CSkeletonAnimationController
 {
     public CBaseAnimGraphController (IntPtr pointer) : base(pointer) {}
+    public CBaseAnimGraphController() {}
 
     // m_baseLayer
     public CNetworkedSequenceOperation BaseLayer => Schema.GetDeclaredClass<CNetworkedSequenceOperation>(this.Handle, "CBaseAnimGraphController", "m_baseLayer");
@@ -3696,6 +3712,7 @@ public partial class CBaseAnimGraphController : CSkeletonAnimationController
 public partial class CBaseButton : CBaseToggle
 {
     public CBaseButton (IntPtr pointer) : base(pointer) {}
+    public CBaseButton() {}
 
     // m_angMoveEntitySpace
     public QAngle MoveEntitySpace => Schema.GetDeclaredClass<QAngle>(this.Handle, "CBaseButton", "m_angMoveEntitySpace");
@@ -3794,6 +3811,7 @@ public partial class CBaseButton : CBaseToggle
 public partial class CBaseClientUIEntity : CBaseModelEntity
 {
     public CBaseClientUIEntity (IntPtr pointer) : base(pointer) {}
+    public CBaseClientUIEntity() {}
 
     // m_bEnabled
     public ref bool Enabled => ref Schema.GetRef<bool>(this.Handle, "CBaseClientUIEntity", "m_bEnabled");
@@ -3854,6 +3872,7 @@ public partial class CBaseClientUIEntity : CBaseModelEntity
 public partial class CBaseCombatCharacter : CBaseFlex
 {
     public CBaseCombatCharacter (IntPtr pointer) : base(pointer) {}
+    public CBaseCombatCharacter() {}
 
     // m_bForceServerRagdoll
     public ref bool ForceServerRagdoll => ref Schema.GetRef<bool>(this.Handle, "CBaseCombatCharacter", "m_bForceServerRagdoll");
@@ -3901,6 +3920,7 @@ public partial class CBaseCombatCharacter : CBaseFlex
 public partial class CBaseCSGrenade : CCSWeaponBase
 {
     public CBaseCSGrenade (IntPtr pointer) : base(pointer) {}
+    public CBaseCSGrenade() {}
 
     // m_bRedraw
     public ref bool Redraw => ref Schema.GetRef<bool>(this.Handle, "CBaseCSGrenade", "m_bRedraw");
@@ -3934,6 +3954,7 @@ public partial class CBaseCSGrenade : CCSWeaponBase
 public partial class CBaseCSGrenadeProjectile : CBaseGrenade
 {
     public CBaseCSGrenadeProjectile (IntPtr pointer) : base(pointer) {}
+    public CBaseCSGrenadeProjectile() {}
 
     // m_vInitialPosition
     public Vector InitialPosition => Schema.GetDeclaredClass<Vector>(this.Handle, "CBaseCSGrenadeProjectile", "m_vInitialPosition");
@@ -3994,6 +4015,7 @@ public partial class CBaseCSGrenadeProjectile : CBaseGrenade
 public partial class CBaseDMStart : CPointEntity
 {
     public CBaseDMStart (IntPtr pointer) : base(pointer) {}
+    public CBaseDMStart() {}
 
     // m_Master
     public string Master
@@ -4007,6 +4029,7 @@ public partial class CBaseDMStart : CPointEntity
 public partial class CBaseDoor : CBaseToggle
 {
     public CBaseDoor (IntPtr pointer) : base(pointer) {}
+    public CBaseDoor() {}
 
     // m_angMoveEntitySpace
     public QAngle MoveEntitySpace => Schema.GetDeclaredClass<QAngle>(this.Handle, "CBaseDoor", "m_angMoveEntitySpace");
@@ -4114,6 +4137,7 @@ public partial class CBaseDoor : CBaseToggle
 public partial class CBaseEntity : CEntityInstance
 {
     public CBaseEntity (IntPtr pointer) : base(pointer) {}
+    public CBaseEntity() {}
 
     // m_CBodyComponent
     public CBodyComponent? CBodyComponent => Schema.GetPointer<CBodyComponent>(this.Handle, "CBaseEntity", "m_CBodyComponent");
@@ -4359,6 +4383,7 @@ public partial class CBaseEntity : CEntityInstance
 public partial class CBaseFilter : CLogicalEntity
 {
     public CBaseFilter (IntPtr pointer) : base(pointer) {}
+    public CBaseFilter() {}
 
     // m_bNegated
     public ref bool Negated => ref Schema.GetRef<bool>(this.Handle, "CBaseFilter", "m_bNegated");
@@ -4374,6 +4399,7 @@ public partial class CBaseFilter : CLogicalEntity
 public partial class CBaseFire : CBaseEntity
 {
     public CBaseFire (IntPtr pointer) : base(pointer) {}
+    public CBaseFire() {}
 
     // m_flScale
     public ref float Scale => ref Schema.GetRef<float>(this.Handle, "CBaseFire", "m_flScale");
@@ -4392,6 +4418,7 @@ public partial class CBaseFire : CBaseEntity
 public partial class CBaseFlex : CBaseAnimGraph
 {
     public CBaseFlex (IntPtr pointer) : base(pointer) {}
+    public CBaseFlex() {}
 
     // m_flexWeight
     public NetworkedVector<float> FlexWeight => Schema.GetDeclaredClass<NetworkedVector<float>>(this.Handle, "CBaseFlex", "m_flexWeight");
@@ -4419,12 +4446,14 @@ public partial class CBaseFlex : CBaseAnimGraph
 public partial class CBaseFlexAlias_funCBaseFlex : CBaseFlex
 {
     public CBaseFlexAlias_funCBaseFlex (IntPtr pointer) : base(pointer) {}
+    public CBaseFlexAlias_funCBaseFlex() {}
 
 }
 
 public partial class CBaseGrenade : CBaseFlex
 {
     public CBaseGrenade (IntPtr pointer) : base(pointer) {}
+    public CBaseGrenade() {}
 
     // m_OnPlayerPickup
     public CEntityIOOutput OnPlayerPickup => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CBaseGrenade", "m_OnPlayerPickup");
@@ -4481,6 +4510,7 @@ public partial class CBaseGrenade : CBaseFlex
 public partial class CBaseIssue : NativeObject
 {
     public CBaseIssue (IntPtr pointer) : base(pointer) {}
+    public CBaseIssue() {}
 
     // m_szTypeString
     public string TypeString
@@ -4513,6 +4543,7 @@ public partial class CBaseIssue : NativeObject
 public partial class CBaseModelEntity : CBaseEntity
 {
     public CBaseModelEntity (IntPtr pointer) : base(pointer) {}
+    public CBaseModelEntity() {}
 
     // m_CRenderComponent
     public CRenderComponent? CRenderComponent => Schema.GetPointer<CRenderComponent>(this.Handle, "CBaseModelEntity", "m_CRenderComponent");
@@ -4598,6 +4629,7 @@ public partial class CBaseModelEntity : CBaseEntity
 public partial class CBaseMoveBehavior : CPathKeyFrame
 {
     public CBaseMoveBehavior (IntPtr pointer) : base(pointer) {}
+    public CBaseMoveBehavior() {}
 
     // m_iPositionInterpolator
     public ref Int32 PositionInterpolator => ref Schema.GetRef<Int32>(this.Handle, "CBaseMoveBehavior", "m_iPositionInterpolator");
@@ -4637,6 +4669,7 @@ public partial class CBaseMoveBehavior : CPathKeyFrame
 public partial class CBasePlatTrain : CBaseToggle
 {
     public CBasePlatTrain (IntPtr pointer) : base(pointer) {}
+    public CBasePlatTrain() {}
 
     // m_NoiseMoving
     public string NoiseMoving
@@ -4666,6 +4699,7 @@ public partial class CBasePlatTrain : CBaseToggle
 public partial class CBasePlayerController : CBaseEntity
 {
     public CBasePlayerController (IntPtr pointer) : base(pointer) {}
+    public CBasePlayerController() {}
 
     // m_nInButtonsWhichAreToggles
     public ref UInt64 InButtonsWhichAreToggles => ref Schema.GetRef<UInt64>(this.Handle, "CBasePlayerController", "m_nInButtonsWhichAreToggles");
@@ -4752,6 +4786,7 @@ public partial class CBasePlayerController : CBaseEntity
 public partial class CBasePlayerPawn : CBaseCombatCharacter
 {
     public CBasePlayerPawn (IntPtr pointer) : base(pointer) {}
+    public CBasePlayerPawn() {}
 
     // m_pWeaponServices
     public CPlayer_WeaponServices? WeaponServices => Schema.GetPointer<CPlayer_WeaponServices>(this.Handle, "CBasePlayerPawn", "m_pWeaponServices");
@@ -4830,6 +4865,7 @@ public partial class CBasePlayerPawn : CBaseCombatCharacter
 public partial class CBasePlayerWeapon : CEconEntity
 {
     public CBasePlayerWeapon (IntPtr pointer) : base(pointer) {}
+    public CBasePlayerWeapon() {}
 
     // m_nNextPrimaryAttackTick
     public ref Int32 NextPrimaryAttackTick => ref Schema.GetRef<Int32>(this.Handle, "CBasePlayerWeapon", "m_nNextPrimaryAttackTick");
@@ -4860,6 +4896,7 @@ public partial class CBasePlayerWeapon : CEconEntity
 public partial class CBaseProp : CBaseAnimGraph
 {
     public CBaseProp (IntPtr pointer) : base(pointer) {}
+    public CBaseProp() {}
 
     // m_bModelOverrodeBlockLOS
     public ref bool ModelOverrodeBlockLOS => ref Schema.GetRef<bool>(this.Handle, "CBaseProp", "m_bModelOverrodeBlockLOS");
@@ -4878,6 +4915,7 @@ public partial class CBaseProp : CBaseAnimGraph
 public partial class CBasePropDoor : CDynamicProp
 {
     public CBasePropDoor (IntPtr pointer) : base(pointer) {}
+    public CBasePropDoor() {}
 
     // m_flAutoReturnDelay
     public ref float AutoReturnDelay => ref Schema.GetRef<float>(this.Handle, "CBasePropDoor", "m_flAutoReturnDelay");
@@ -5035,6 +5073,7 @@ public partial class CBasePropDoor : CDynamicProp
 public partial class CBaseToggle : CBaseModelEntity
 {
     public CBaseToggle (IntPtr pointer) : base(pointer) {}
+    public CBaseToggle() {}
 
     // m_toggle_state
     public ref TOGGLE_STATE Toggle_state => ref Schema.GetRef<TOGGLE_STATE>(this.Handle, "CBaseToggle", "m_toggle_state");
@@ -5093,6 +5132,7 @@ public partial class CBaseToggle : CBaseModelEntity
 public partial class CBaseTrigger : CBaseToggle
 {
     public CBaseTrigger (IntPtr pointer) : base(pointer) {}
+    public CBaseTrigger() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CBaseTrigger", "m_bDisabled");
@@ -5136,6 +5176,7 @@ public partial class CBaseTrigger : CBaseToggle
 public partial class CBaseViewModel : CBaseAnimGraph
 {
     public CBaseViewModel (IntPtr pointer) : base(pointer) {}
+    public CBaseViewModel() {}
 
     // m_vecLastFacing
     public Vector LastFacing => Schema.GetDeclaredClass<Vector>(this.Handle, "CBaseViewModel", "m_vecLastFacing");
@@ -5183,6 +5224,7 @@ public partial class CBaseViewModel : CBaseAnimGraph
 public partial class CBeam : CBaseModelEntity
 {
     public CBeam (IntPtr pointer) : base(pointer) {}
+    public CBeam() {}
 
     // m_flFrameRate
     public ref float FrameRate => ref Schema.GetRef<float>(this.Handle, "CBeam", "m_flFrameRate");
@@ -5261,6 +5303,7 @@ public partial class CBeam : CBaseModelEntity
 public partial class CBlood : CPointEntity
 {
     public CBlood (IntPtr pointer) : base(pointer) {}
+    public CBlood() {}
 
     // m_vecSprayAngles
     public QAngle SprayAngles => Schema.GetDeclaredClass<QAngle>(this.Handle, "CBlood", "m_vecSprayAngles");
@@ -5279,6 +5322,7 @@ public partial class CBlood : CPointEntity
 public partial class CBodyComponent : CEntityComponent
 {
     public CBodyComponent (IntPtr pointer) : base(pointer) {}
+    public CBodyComponent() {}
 
     // m_pSceneNode
     public CGameSceneNode? SceneNode => Schema.GetPointer<CGameSceneNode>(this.Handle, "CBodyComponent", "m_pSceneNode");
@@ -5291,6 +5335,7 @@ public partial class CBodyComponent : CEntityComponent
 public partial class CBodyComponentBaseAnimGraph : CBodyComponentSkeletonInstance
 {
     public CBodyComponentBaseAnimGraph (IntPtr pointer) : base(pointer) {}
+    public CBodyComponentBaseAnimGraph() {}
 
     // m_animationController
     public CBaseAnimGraphController AnimationController => Schema.GetDeclaredClass<CBaseAnimGraphController>(this.Handle, "CBodyComponentBaseAnimGraph", "m_animationController");
@@ -5303,6 +5348,7 @@ public partial class CBodyComponentBaseAnimGraph : CBodyComponentSkeletonInstanc
 public partial class CBodyComponentBaseModelEntity : CBodyComponentSkeletonInstance
 {
     public CBodyComponentBaseModelEntity (IntPtr pointer) : base(pointer) {}
+    public CBodyComponentBaseModelEntity() {}
 
     // __m_pChainEntity
     public CNetworkVarChainer __m_pChainEntity => Schema.GetDeclaredClass<CNetworkVarChainer>(this.Handle, "CBodyComponentBaseModelEntity", "__m_pChainEntity");
@@ -5312,6 +5358,7 @@ public partial class CBodyComponentBaseModelEntity : CBodyComponentSkeletonInsta
 public partial class CBodyComponentPoint : CBodyComponent
 {
     public CBodyComponentPoint (IntPtr pointer) : base(pointer) {}
+    public CBodyComponentPoint() {}
 
     // m_sceneNode
     public CGameSceneNode SceneNode => Schema.GetDeclaredClass<CGameSceneNode>(this.Handle, "CBodyComponentPoint", "m_sceneNode");
@@ -5324,6 +5371,7 @@ public partial class CBodyComponentPoint : CBodyComponent
 public partial class CBodyComponentSkeletonInstance : CBodyComponent
 {
     public CBodyComponentSkeletonInstance (IntPtr pointer) : base(pointer) {}
+    public CBodyComponentSkeletonInstance() {}
 
     // m_skeletonInstance
     public CSkeletonInstance SkeletonInstance => Schema.GetDeclaredClass<CSkeletonInstance>(this.Handle, "CBodyComponentSkeletonInstance", "m_skeletonInstance");
@@ -5336,6 +5384,7 @@ public partial class CBodyComponentSkeletonInstance : CBodyComponent
 public partial class CBombTarget : CBaseTrigger
 {
     public CBombTarget (IntPtr pointer) : base(pointer) {}
+    public CBombTarget() {}
 
     // m_OnBombExplode
     public CEntityIOOutput OnBombExplode => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CBombTarget", "m_OnBombExplode");
@@ -5373,6 +5422,7 @@ public partial class CBombTarget : CBaseTrigger
 public partial class CBot : NativeObject
 {
     public CBot (IntPtr pointer) : base(pointer) {}
+    public CBot() {}
 
     // m_pController
     public CCSPlayerController? Controller => Schema.GetPointer<CCSPlayerController>(this.Handle, "CBot", "m_pController");
@@ -5418,18 +5468,21 @@ public partial class CBot : NativeObject
 public partial class CBreachCharge : CCSWeaponBase
 {
     public CBreachCharge (IntPtr pointer) : base(pointer) {}
+    public CBreachCharge() {}
 
 }
 
 public partial class CBreachChargeProjectile : CBaseGrenade
 {
     public CBreachChargeProjectile (IntPtr pointer) : base(pointer) {}
+    public CBreachChargeProjectile() {}
 
 }
 
 public partial class CBreakable : CBaseModelEntity
 {
     public CBreakable (IntPtr pointer) : base(pointer) {}
+    public CBreakable() {}
 
     // m_Material
     public ref Materials Material => ref Schema.GetRef<Materials>(this.Handle, "CBreakable", "m_Material");
@@ -5512,6 +5565,7 @@ public partial class CBreakable : CBaseModelEntity
 public partial class CBreakableProp : CBaseProp
 {
     public CBreakableProp (IntPtr pointer) : base(pointer) {}
+    public CBreakableProp() {}
 
     // m_OnBreak
     public CEntityIOOutput OnBreak => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CBreakableProp", "m_OnBreak");
@@ -5645,6 +5699,7 @@ public partial class CBreakableProp : CBaseProp
 public partial class CBubbling : CBaseModelEntity
 {
     public CBubbling (IntPtr pointer) : base(pointer) {}
+    public CBubbling() {}
 
     // m_density
     public ref Int32 Density => ref Schema.GetRef<Int32>(this.Handle, "CBubbling", "m_density");
@@ -5660,18 +5715,21 @@ public partial class CBubbling : CBaseModelEntity
 public partial class CBumpMine : CCSWeaponBase
 {
     public CBumpMine (IntPtr pointer) : base(pointer) {}
+    public CBumpMine() {}
 
 }
 
 public partial class CBumpMineProjectile : CBaseGrenade
 {
     public CBumpMineProjectile (IntPtr pointer) : base(pointer) {}
+    public CBumpMineProjectile() {}
 
 }
 
 public partial class CBuoyancyHelper : NativeObject
 {
     public CBuoyancyHelper (IntPtr pointer) : base(pointer) {}
+    public CBuoyancyHelper() {}
 
     // m_flFluidDensity
     public ref float FluidDensity => ref Schema.GetRef<float>(this.Handle, "CBuoyancyHelper", "m_flFluidDensity");
@@ -5681,6 +5739,7 @@ public partial class CBuoyancyHelper : NativeObject
 public partial class CBuyZone : CBaseTrigger
 {
     public CBuyZone (IntPtr pointer) : base(pointer) {}
+    public CBuyZone() {}
 
     // m_LegacyTeamNum
     public ref Int32 LegacyTeamNum => ref Schema.GetRef<Int32>(this.Handle, "CBuyZone", "m_LegacyTeamNum");
@@ -5690,6 +5749,7 @@ public partial class CBuyZone : CBaseTrigger
 public partial class CC4 : CCSWeaponBase
 {
     public CC4 (IntPtr pointer) : base(pointer) {}
+    public CC4() {}
 
     // m_vecLastValidPlayerHeldPosition
     public Vector LastValidPlayerHeldPosition => Schema.GetDeclaredClass<Vector>(this.Handle, "CC4", "m_vecLastValidPlayerHeldPosition");
@@ -5732,6 +5792,7 @@ public partial class CC4 : CCSWeaponBase
 public partial class CChangeLevel : CBaseTrigger
 {
     public CChangeLevel (IntPtr pointer) : base(pointer) {}
+    public CChangeLevel() {}
 
     // m_sMapName
     public string MapName
@@ -5767,6 +5828,7 @@ public partial class CChangeLevel : CBaseTrigger
 public partial class CChicken : CDynamicProp
 {
     public CChicken (IntPtr pointer) : base(pointer) {}
+    public CChicken() {}
 
     // m_AttributeManager
     public CAttributeContainer AttributeManager => Schema.GetDeclaredClass<CAttributeContainer>(this.Handle, "CChicken", "m_AttributeManager");
@@ -5875,6 +5937,7 @@ public partial class CChicken : CDynamicProp
 public partial class CCollisionProperty : NativeObject
 {
     public CCollisionProperty (IntPtr pointer) : base(pointer) {}
+    public CCollisionProperty() {}
 
     // m_collisionAttribute
     public VPhysicsCollisionAttribute_t CollisionAttribute => Schema.GetDeclaredClass<VPhysicsCollisionAttribute_t>(this.Handle, "CCollisionProperty", "m_collisionAttribute");
@@ -5932,6 +5995,7 @@ public partial class CCollisionProperty : NativeObject
 public partial class CColorCorrection : CBaseEntity
 {
     public CColorCorrection (IntPtr pointer) : base(pointer) {}
+    public CColorCorrection() {}
 
     // m_flFadeInDuration
     public ref float FadeInDuration => ref Schema.GetRef<float>(this.Handle, "CColorCorrection", "m_flFadeInDuration");
@@ -5997,6 +6061,7 @@ public partial class CColorCorrection : CBaseEntity
 public partial class CColorCorrectionVolume : CBaseTrigger
 {
     public CColorCorrectionVolume (IntPtr pointer) : base(pointer) {}
+    public CColorCorrectionVolume() {}
 
     // m_bEnabled
     public ref bool Enabled => ref Schema.GetRef<bool>(this.Handle, "CColorCorrectionVolume", "m_bEnabled");
@@ -6037,6 +6102,7 @@ public partial class CColorCorrectionVolume : CBaseTrigger
 public partial class CCommentaryAuto : CBaseEntity
 {
     public CCommentaryAuto (IntPtr pointer) : base(pointer) {}
+    public CCommentaryAuto() {}
 
     // m_OnCommentaryNewGame
     public CEntityIOOutput OnCommentaryNewGame => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CCommentaryAuto", "m_OnCommentaryNewGame");
@@ -6052,12 +6118,14 @@ public partial class CCommentaryAuto : CBaseEntity
 public partial class CCommentaryViewPosition : CSprite
 {
     public CCommentaryViewPosition (IntPtr pointer) : base(pointer) {}
+    public CCommentaryViewPosition() {}
 
 }
 
 public partial class CConstantForceController : NativeObject
 {
     public CConstantForceController (IntPtr pointer) : base(pointer) {}
+    public CConstantForceController() {}
 
     // m_linear
     public Vector Linear => Schema.GetDeclaredClass<Vector>(this.Handle, "CConstantForceController", "m_linear");
@@ -6076,6 +6144,7 @@ public partial class CConstantForceController : NativeObject
 public partial class CConstraintAnchor : CBaseAnimGraph
 {
     public CConstraintAnchor (IntPtr pointer) : base(pointer) {}
+    public CConstraintAnchor() {}
 
     // m_massScale
     public ref float MassScale => ref Schema.GetRef<float>(this.Handle, "CConstraintAnchor", "m_massScale");
@@ -6085,12 +6154,14 @@ public partial class CConstraintAnchor : CBaseAnimGraph
 public partial class CCoopBonusCoin : CDynamicProp
 {
     public CCoopBonusCoin (IntPtr pointer) : base(pointer) {}
+    public CCoopBonusCoin() {}
 
 }
 
 public partial class CCredits : CPointEntity
 {
     public CCredits (IntPtr pointer) : base(pointer) {}
+    public CCredits() {}
 
     // m_OnCreditsDone
     public CEntityIOOutput OnCreditsDone => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CCredits", "m_OnCreditsDone");
@@ -6106,6 +6177,7 @@ public partial class CCredits : CPointEntity
 public partial class CCSBot : CBot
 {
     public CCSBot (IntPtr pointer) : base(pointer) {}
+    public CCSBot() {}
 
     // m_lastCoopSpawnPoint
     public CHandle<SpawnPointCoopEnemy> LastCoopSpawnPoint => Schema.GetDeclaredClass<CHandle<SpawnPointCoopEnemy>>(this.Handle, "CCSBot", "m_lastCoopSpawnPoint");
@@ -6534,6 +6606,7 @@ public partial class CCSBot : CBot
 public partial class CCSGameModeRules : NativeObject
 {
     public CCSGameModeRules (IntPtr pointer) : base(pointer) {}
+    public CCSGameModeRules() {}
 
     // __m_pChainEntity
     public CNetworkVarChainer __m_pChainEntity => Schema.GetDeclaredClass<CNetworkVarChainer>(this.Handle, "CCSGameModeRules", "__m_pChainEntity");
@@ -6543,6 +6616,7 @@ public partial class CCSGameModeRules : NativeObject
 public partial class CCSGameModeRules_Deathmatch : CCSGameModeRules
 {
     public CCSGameModeRules_Deathmatch (IntPtr pointer) : base(pointer) {}
+    public CCSGameModeRules_Deathmatch() {}
 
     // m_bFirstThink
     public ref bool FirstThink => ref Schema.GetRef<bool>(this.Handle, "CCSGameModeRules_Deathmatch", "m_bFirstThink");
@@ -6564,18 +6638,21 @@ public partial class CCSGameModeRules_Deathmatch : CCSGameModeRules
 public partial class CCSGameModeRules_Noop : CCSGameModeRules
 {
     public CCSGameModeRules_Noop (IntPtr pointer) : base(pointer) {}
+    public CCSGameModeRules_Noop() {}
 
 }
 
 public partial class CCSGameModeRules_Scripted : CCSGameModeRules
 {
     public CCSGameModeRules_Scripted (IntPtr pointer) : base(pointer) {}
+    public CCSGameModeRules_Scripted() {}
 
 }
 
 public partial class CCSGameRules : CTeamplayRules
 {
     public CCSGameRules (IntPtr pointer) : base(pointer) {}
+    public CCSGameRules() {}
 
     // __m_pChainEntity
     public CNetworkVarChainer __m_pChainEntity => Schema.GetDeclaredClass<CNetworkVarChainer>(this.Handle, "CCSGameRules", "__m_pChainEntity");
@@ -7178,6 +7255,7 @@ public partial class CCSGameRules : CTeamplayRules
 public partial class CCSGameRulesProxy : CGameRulesProxy
 {
     public CCSGameRulesProxy (IntPtr pointer) : base(pointer) {}
+    public CCSGameRulesProxy() {}
 
     // m_pGameRules
     public CCSGameRules? GameRules => Schema.GetPointer<CCSGameRules>(this.Handle, "CCSGameRulesProxy", "m_pGameRules");
@@ -7187,24 +7265,28 @@ public partial class CCSGameRulesProxy : CGameRulesProxy
 public partial class CCSGO_TeamIntroCharacterPosition : CCSGO_TeamPreviewCharacterPosition
 {
     public CCSGO_TeamIntroCharacterPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_TeamIntroCharacterPosition() {}
 
 }
 
 public partial class CCSGO_TeamIntroCounterTerroristPosition : CCSGO_TeamIntroCharacterPosition
 {
     public CCSGO_TeamIntroCounterTerroristPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_TeamIntroCounterTerroristPosition() {}
 
 }
 
 public partial class CCSGO_TeamIntroTerroristPosition : CCSGO_TeamIntroCharacterPosition
 {
     public CCSGO_TeamIntroTerroristPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_TeamIntroTerroristPosition() {}
 
 }
 
 public partial class CCSGO_TeamPreviewCharacterPosition : CBaseEntity
 {
     public CCSGO_TeamPreviewCharacterPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_TeamPreviewCharacterPosition() {}
 
     // m_nVariant
     public ref Int32 Variant => ref Schema.GetRef<Int32>(this.Handle, "CCSGO_TeamPreviewCharacterPosition", "m_nVariant");
@@ -7239,42 +7321,49 @@ public partial class CCSGO_TeamPreviewCharacterPosition : CBaseEntity
 public partial class CCSGO_TeamSelectCharacterPosition : CCSGO_TeamPreviewCharacterPosition
 {
     public CCSGO_TeamSelectCharacterPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_TeamSelectCharacterPosition() {}
 
 }
 
 public partial class CCSGO_TeamSelectCounterTerroristPosition : CCSGO_TeamSelectCharacterPosition
 {
     public CCSGO_TeamSelectCounterTerroristPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_TeamSelectCounterTerroristPosition() {}
 
 }
 
 public partial class CCSGO_TeamSelectTerroristPosition : CCSGO_TeamSelectCharacterPosition
 {
     public CCSGO_TeamSelectTerroristPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_TeamSelectTerroristPosition() {}
 
 }
 
 public partial class CCSGO_WingmanIntroCharacterPosition : CCSGO_TeamIntroCharacterPosition
 {
     public CCSGO_WingmanIntroCharacterPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_WingmanIntroCharacterPosition() {}
 
 }
 
 public partial class CCSGO_WingmanIntroCounterTerroristPosition : CCSGO_WingmanIntroCharacterPosition
 {
     public CCSGO_WingmanIntroCounterTerroristPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_WingmanIntroCounterTerroristPosition() {}
 
 }
 
 public partial class CCSGO_WingmanIntroTerroristPosition : CCSGO_WingmanIntroCharacterPosition
 {
     public CCSGO_WingmanIntroTerroristPosition (IntPtr pointer) : base(pointer) {}
+    public CCSGO_WingmanIntroTerroristPosition() {}
 
 }
 
 public partial class CCSGOViewModel : CPredictedViewModel
 {
     public CCSGOViewModel (IntPtr pointer) : base(pointer) {}
+    public CCSGOViewModel() {}
 
     // m_bShouldIgnoreOffsetAndAccuracy
     public ref bool ShouldIgnoreOffsetAndAccuracy => ref Schema.GetRef<bool>(this.Handle, "CCSGOViewModel", "m_bShouldIgnoreOffsetAndAccuracy");
@@ -7290,48 +7379,56 @@ public partial class CCSGOViewModel : CPredictedViewModel
 public partial class CCSMinimapBoundary : CBaseEntity
 {
     public CCSMinimapBoundary (IntPtr pointer) : base(pointer) {}
+    public CCSMinimapBoundary() {}
 
 }
 
 public partial class CCSObserver_CameraServices : CCSPlayerBase_CameraServices
 {
     public CCSObserver_CameraServices (IntPtr pointer) : base(pointer) {}
+    public CCSObserver_CameraServices() {}
 
 }
 
 public partial class CCSObserver_MovementServices : CPlayer_MovementServices
 {
     public CCSObserver_MovementServices (IntPtr pointer) : base(pointer) {}
+    public CCSObserver_MovementServices() {}
 
 }
 
 public partial class CCSObserver_ObserverServices : CPlayer_ObserverServices
 {
     public CCSObserver_ObserverServices (IntPtr pointer) : base(pointer) {}
+    public CCSObserver_ObserverServices() {}
 
 }
 
 public partial class CCSObserver_UseServices : CPlayer_UseServices
 {
     public CCSObserver_UseServices (IntPtr pointer) : base(pointer) {}
+    public CCSObserver_UseServices() {}
 
 }
 
 public partial class CCSObserver_ViewModelServices : CPlayer_ViewModelServices
 {
     public CCSObserver_ViewModelServices (IntPtr pointer) : base(pointer) {}
+    public CCSObserver_ViewModelServices() {}
 
 }
 
 public partial class CCSObserverPawn : CCSPlayerPawnBase
 {
     public CCSObserverPawn (IntPtr pointer) : base(pointer) {}
+    public CCSObserverPawn() {}
 
 }
 
 public partial class CCSPlace : CServerOnlyModelEntity
 {
     public CCSPlace (IntPtr pointer) : base(pointer) {}
+    public CCSPlace() {}
 
     // m_name
     public string Name
@@ -7345,6 +7442,7 @@ public partial class CCSPlace : CServerOnlyModelEntity
 public partial class CCSPlayer_ActionTrackingServices : CPlayerPawnComponent
 {
     public CCSPlayer_ActionTrackingServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_ActionTrackingServices() {}
 
     // m_hLastWeaponBeforeC4AutoSwitch
     public CHandle<CBasePlayerWeapon> LastWeaponBeforeC4AutoSwitch => Schema.GetDeclaredClass<CHandle<CBasePlayerWeapon>>(this.Handle, "CCSPlayer_ActionTrackingServices", "m_hLastWeaponBeforeC4AutoSwitch");
@@ -7363,6 +7461,7 @@ public partial class CCSPlayer_ActionTrackingServices : CPlayerPawnComponent
 public partial class CCSPlayer_BulletServices : CPlayerPawnComponent
 {
     public CCSPlayer_BulletServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_BulletServices() {}
 
     // m_totalHitsOnServer
     public ref Int32 TotalHitsOnServer => ref Schema.GetRef<Int32>(this.Handle, "CCSPlayer_BulletServices", "m_totalHitsOnServer");
@@ -7372,6 +7471,7 @@ public partial class CCSPlayer_BulletServices : CPlayerPawnComponent
 public partial class CCSPlayer_BuyServices : CPlayerPawnComponent
 {
     public CCSPlayer_BuyServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_BuyServices() {}
 
     // m_vecSellbackPurchaseEntries
     public NetworkedVector<SellbackPurchaseEntry_t> SellbackPurchaseEntries => Schema.GetDeclaredClass<NetworkedVector<SellbackPurchaseEntry_t>>(this.Handle, "CCSPlayer_BuyServices", "m_vecSellbackPurchaseEntries");
@@ -7381,18 +7481,21 @@ public partial class CCSPlayer_BuyServices : CPlayerPawnComponent
 public partial class CCSPlayer_CameraServices : CCSPlayerBase_CameraServices
 {
     public CCSPlayer_CameraServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_CameraServices() {}
 
 }
 
 public partial class CCSPlayer_DamageReactServices : CPlayerPawnComponent
 {
     public CCSPlayer_DamageReactServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_DamageReactServices() {}
 
 }
 
 public partial class CCSPlayer_HostageServices : CPlayerPawnComponent
 {
     public CCSPlayer_HostageServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_HostageServices() {}
 
     // m_hCarriedHostage
     public CHandle<CBaseEntity> CarriedHostage => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CCSPlayer_HostageServices", "m_hCarriedHostage");
@@ -7405,6 +7508,7 @@ public partial class CCSPlayer_HostageServices : CPlayerPawnComponent
 public partial class CCSPlayer_ItemServices : CPlayer_ItemServices
 {
     public CCSPlayer_ItemServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_ItemServices() {}
 
     // m_bHasDefuser
     public ref bool HasDefuser => ref Schema.GetRef<bool>(this.Handle, "CCSPlayer_ItemServices", "m_bHasDefuser");
@@ -7420,6 +7524,7 @@ public partial class CCSPlayer_ItemServices : CPlayer_ItemServices
 public partial class CCSPlayer_MovementServices : CPlayer_MovementServices_Humanoid
 {
     public CCSPlayer_MovementServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_MovementServices() {}
 
     // m_flMaxFallVelocity
     public ref float MaxFallVelocity => ref Schema.GetRef<float>(this.Handle, "CCSPlayer_MovementServices", "m_flMaxFallVelocity");
@@ -7543,6 +7648,7 @@ public partial class CCSPlayer_MovementServices : CPlayer_MovementServices_Human
 public partial class CCSPlayer_PingServices : CPlayerPawnComponent
 {
     public CCSPlayer_PingServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_PingServices() {}
 
     // m_flPlayerPingTokens
     public Span<float> PlayerPingTokens => Schema.GetFixedArray<float>(this.Handle, "CCSPlayer_PingServices", "m_flPlayerPingTokens", 5);
@@ -7555,6 +7661,7 @@ public partial class CCSPlayer_PingServices : CPlayerPawnComponent
 public partial class CCSPlayer_RadioServices : CPlayerPawnComponent
 {
     public CCSPlayer_RadioServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_RadioServices() {}
 
     // m_flGotHostageTalkTimer
     public ref float GotHostageTalkTimer => ref Schema.GetRef<float>(this.Handle, "CCSPlayer_RadioServices", "m_flGotHostageTalkTimer");
@@ -7576,6 +7683,7 @@ public partial class CCSPlayer_RadioServices : CPlayerPawnComponent
 public partial class CCSPlayer_UseServices : CPlayer_UseServices
 {
     public CCSPlayer_UseServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_UseServices() {}
 
     // m_hLastKnownUseEntity
     public CHandle<CBaseEntity> LastKnownUseEntity => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CCSPlayer_UseServices", "m_hLastKnownUseEntity");
@@ -7594,6 +7702,7 @@ public partial class CCSPlayer_UseServices : CPlayer_UseServices
 public partial class CCSPlayer_ViewModelServices : CPlayer_ViewModelServices
 {
     public CCSPlayer_ViewModelServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_ViewModelServices() {}
 
     // m_hViewModel
     public Span<CHandle<CBaseViewModel>> ViewModel => Schema.GetFixedArray<CHandle<CBaseViewModel>>(this.Handle, "CCSPlayer_ViewModelServices", "m_hViewModel", 3);
@@ -7603,6 +7712,7 @@ public partial class CCSPlayer_ViewModelServices : CPlayer_ViewModelServices
 public partial class CCSPlayer_WaterServices : CPlayer_WaterServices
 {
     public CCSPlayer_WaterServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_WaterServices() {}
 
     // m_NextDrownDamageTime
     public ref float NextDrownDamageTime => ref Schema.GetRef<float>(this.Handle, "CCSPlayer_WaterServices", "m_NextDrownDamageTime");
@@ -7627,6 +7737,7 @@ public partial class CCSPlayer_WaterServices : CPlayer_WaterServices
 public partial class CCSPlayer_WeaponServices : CPlayer_WeaponServices
 {
     public CCSPlayer_WeaponServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayer_WeaponServices() {}
 
     // m_flNextAttack
     public ref float NextAttack => ref Schema.GetRef<float>(this.Handle, "CCSPlayer_WeaponServices", "m_flNextAttack");
@@ -7666,6 +7777,7 @@ public partial class CCSPlayer_WeaponServices : CPlayer_WeaponServices
 public partial class CCSPlayerBase_CameraServices : CPlayer_CameraServices
 {
     public CCSPlayerBase_CameraServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayerBase_CameraServices() {}
 
     // m_iFOV
     public ref UInt32 FOV => ref Schema.GetRef<UInt32>(this.Handle, "CCSPlayerBase_CameraServices", "m_iFOV");
@@ -7693,6 +7805,7 @@ public partial class CCSPlayerBase_CameraServices : CPlayer_CameraServices
 public partial class CCSPlayerController : CBasePlayerController
 {
     public CCSPlayerController (IntPtr pointer) : base(pointer) {}
+    public CCSPlayerController() {}
 
     // m_pInGameMoneyServices
     public CCSPlayerController_InGameMoneyServices? InGameMoneyServices => Schema.GetPointer<CCSPlayerController_InGameMoneyServices>(this.Handle, "CCSPlayerController", "m_pInGameMoneyServices");
@@ -7949,6 +8062,7 @@ public partial class CCSPlayerController : CBasePlayerController
 public partial class CCSPlayerController_ActionTrackingServices : CPlayerControllerComponent
 {
     public CCSPlayerController_ActionTrackingServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayerController_ActionTrackingServices() {}
 
     // m_perRoundStats
     public NetworkedVector<CSPerRoundStats_t> PerRoundStats => Schema.GetDeclaredClass<NetworkedVector<CSPerRoundStats_t>>(this.Handle, "CCSPlayerController_ActionTrackingServices", "m_perRoundStats");
@@ -7970,6 +8084,7 @@ public partial class CCSPlayerController_ActionTrackingServices : CPlayerControl
 public partial class CCSPlayerController_DamageServices : CPlayerControllerComponent
 {
     public CCSPlayerController_DamageServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayerController_DamageServices() {}
 
     // m_nSendUpdate
     public ref Int32 SendUpdate => ref Schema.GetRef<Int32>(this.Handle, "CCSPlayerController_DamageServices", "m_nSendUpdate");
@@ -7982,6 +8097,7 @@ public partial class CCSPlayerController_DamageServices : CPlayerControllerCompo
 public partial class CCSPlayerController_InGameMoneyServices : CPlayerControllerComponent
 {
     public CCSPlayerController_InGameMoneyServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayerController_InGameMoneyServices() {}
 
     // m_bReceivesMoneyNextRound
     public ref bool ReceivesMoneyNextRound => ref Schema.GetRef<bool>(this.Handle, "CCSPlayerController_InGameMoneyServices", "m_bReceivesMoneyNextRound");
@@ -8006,6 +8122,7 @@ public partial class CCSPlayerController_InGameMoneyServices : CPlayerController
 public partial class CCSPlayerController_InventoryServices : CPlayerControllerComponent
 {
     public CCSPlayerController_InventoryServices (IntPtr pointer) : base(pointer) {}
+    public CCSPlayerController_InventoryServices() {}
 
     // m_unMusicID
     public ref UInt16 MusicID => ref Schema.GetRef<UInt16>(this.Handle, "CCSPlayerController_InventoryServices", "m_unMusicID");
@@ -8036,6 +8153,7 @@ public partial class CCSPlayerController_InventoryServices : CPlayerControllerCo
 public partial class CCSPlayerPawn : CCSPlayerPawnBase
 {
     public CCSPlayerPawn (IntPtr pointer) : base(pointer) {}
+    public CCSPlayerPawn() {}
 
     // m_pBulletServices
     public CCSPlayer_BulletServices? BulletServices => Schema.GetPointer<CCSPlayer_BulletServices>(this.Handle, "CCSPlayerPawn", "m_pBulletServices");
@@ -8198,6 +8316,7 @@ public partial class CCSPlayerPawn : CCSPlayerPawnBase
 public partial class CCSPlayerPawnBase : CBasePlayerPawn
 {
     public CCSPlayerPawnBase (IntPtr pointer) : base(pointer) {}
+    public CCSPlayerPawnBase() {}
 
     // m_CTouchExpansionComponent
     public CTouchExpansionComponent CTouchExpansionComponent => Schema.GetDeclaredClass<CTouchExpansionComponent>(this.Handle, "CCSPlayerPawnBase", "m_CTouchExpansionComponent");
@@ -8616,6 +8735,7 @@ public partial class CCSPlayerPawnBase : CBasePlayerPawn
 public partial class CCSPlayerResource : CBaseEntity
 {
     public CCSPlayerResource (IntPtr pointer) : base(pointer) {}
+    public CCSPlayerResource() {}
 
     // m_bHostageAlive
     public Span<bool> HostageAlive => Schema.GetFixedArray<bool>(this.Handle, "CCSPlayerResource", "m_bHostageAlive", 12);
@@ -8652,12 +8772,14 @@ public partial class CCSPlayerResource : CBaseEntity
 public partial class CCSSprite : CSprite
 {
     public CCSSprite (IntPtr pointer) : base(pointer) {}
+    public CCSSprite() {}
 
 }
 
 public partial class CCSTeam : CTeam
 {
     public CCSTeam (IntPtr pointer) : base(pointer) {}
+    public CCSTeam() {}
 
     // m_nLastRecievedShorthandedRoundBonus
     public ref Int32 LastRecievedShorthandedRoundBonus => ref Schema.GetRef<Int32>(this.Handle, "CCSTeam", "m_nLastRecievedShorthandedRoundBonus");
@@ -8722,6 +8844,7 @@ public partial class CCSTeam : CTeam
 public partial class CCSWeaponBase : CBasePlayerWeapon
 {
     public CCSWeaponBase (IntPtr pointer) : base(pointer) {}
+    public CCSWeaponBase() {}
 
     // m_bRemoveable
     public ref bool Removeable => ref Schema.GetRef<bool>(this.Handle, "CCSWeaponBase", "m_bRemoveable");
@@ -8902,6 +9025,7 @@ public partial class CCSWeaponBase : CBasePlayerWeapon
 public partial class CCSWeaponBaseGun : CCSWeaponBase
 {
     public CCSWeaponBaseGun (IntPtr pointer) : base(pointer) {}
+    public CCSWeaponBaseGun() {}
 
     // m_zoomLevel
     public ref Int32 ZoomLevel => ref Schema.GetRef<Int32>(this.Handle, "CCSWeaponBaseGun", "m_zoomLevel");
@@ -8935,6 +9059,7 @@ public partial class CCSWeaponBaseGun : CCSWeaponBase
 public partial class CDamageRecord : NativeObject
 {
     public CDamageRecord (IntPtr pointer) : base(pointer) {}
+    public CDamageRecord() {}
 
     // m_PlayerDamager
     public CHandle<CCSPlayerPawnBase> PlayerDamager => Schema.GetDeclaredClass<CHandle<CCSPlayerPawnBase>>(this.Handle, "CDamageRecord", "m_PlayerDamager");
@@ -8991,12 +9116,14 @@ public partial class CDamageRecord : NativeObject
 public partial class CDEagle : CCSWeaponBaseGun
 {
     public CDEagle (IntPtr pointer) : base(pointer) {}
+    public CDEagle() {}
 
 }
 
 public partial class CDebugHistory : CBaseEntity
 {
     public CDebugHistory (IntPtr pointer) : base(pointer) {}
+    public CDebugHistory() {}
 
     // m_nNpcEvents
     public ref Int32 NpcEvents => ref Schema.GetRef<Int32>(this.Handle, "CDebugHistory", "m_nNpcEvents");
@@ -9006,12 +9133,14 @@ public partial class CDebugHistory : CBaseEntity
 public partial class CDecoyGrenade : CBaseCSGrenade
 {
     public CDecoyGrenade (IntPtr pointer) : base(pointer) {}
+    public CDecoyGrenade() {}
 
 }
 
 public partial class CDecoyProjectile : CBaseCSGrenadeProjectile
 {
     public CDecoyProjectile (IntPtr pointer) : base(pointer) {}
+    public CDecoyProjectile() {}
 
     // m_nDecoyShotTick
     public ref Int32 DecoyShotTick => ref Schema.GetRef<Int32>(this.Handle, "CDecoyProjectile", "m_nDecoyShotTick");
@@ -9030,6 +9159,7 @@ public partial class CDecoyProjectile : CBaseCSGrenadeProjectile
 public partial class CDynamicLight : CBaseModelEntity
 {
     public CDynamicLight (IntPtr pointer) : base(pointer) {}
+    public CDynamicLight() {}
 
     // m_ActualFlags
     public ref byte ActualFlags => ref Schema.GetRef<byte>(this.Handle, "CDynamicLight", "m_ActualFlags");
@@ -9063,6 +9193,7 @@ public partial class CDynamicLight : CBaseModelEntity
 public partial class CDynamicProp : CBreakableProp
 {
     public CDynamicProp (IntPtr pointer) : base(pointer) {}
+    public CDynamicProp() {}
 
     // m_bCreateNavObstacle
     public ref bool CreateNavObstacle => ref Schema.GetRef<bool>(this.Handle, "CDynamicProp", "m_bCreateNavObstacle");
@@ -9146,24 +9277,28 @@ public partial class CDynamicProp : CBreakableProp
 public partial class CDynamicPropAlias_cable_dynamic : CDynamicProp
 {
     public CDynamicPropAlias_cable_dynamic (IntPtr pointer) : base(pointer) {}
+    public CDynamicPropAlias_cable_dynamic() {}
 
 }
 
 public partial class CDynamicPropAlias_dynamic_prop : CDynamicProp
 {
     public CDynamicPropAlias_dynamic_prop (IntPtr pointer) : base(pointer) {}
+    public CDynamicPropAlias_dynamic_prop() {}
 
 }
 
 public partial class CDynamicPropAlias_prop_dynamic_override : CDynamicProp
 {
     public CDynamicPropAlias_prop_dynamic_override (IntPtr pointer) : base(pointer) {}
+    public CDynamicPropAlias_prop_dynamic_override() {}
 
 }
 
 public partial class CEconEntity : CBaseFlex
 {
     public CEconEntity (IntPtr pointer) : base(pointer) {}
+    public CEconEntity() {}
 
     // m_AttributeManager
     public CAttributeContainer AttributeManager => Schema.GetDeclaredClass<CAttributeContainer>(this.Handle, "CEconEntity", "m_AttributeManager");
@@ -9197,6 +9332,7 @@ public partial class CEconEntity : CBaseFlex
 public partial class CEconItemAttribute : NativeObject
 {
     public CEconItemAttribute (IntPtr pointer) : base(pointer) {}
+    public CEconItemAttribute() {}
 
     // m_iAttributeDefinitionIndex
     public ref UInt16 AttributeDefinitionIndex => ref Schema.GetRef<UInt16>(this.Handle, "CEconItemAttribute", "m_iAttributeDefinitionIndex");
@@ -9218,6 +9354,7 @@ public partial class CEconItemAttribute : NativeObject
 public partial class CEconItemView : IEconItemInterface
 {
     public CEconItemView (IntPtr pointer) : base(pointer) {}
+    public CEconItemView() {}
 
     // m_iItemDefinitionIndex
     public ref UInt16 ItemDefinitionIndex => ref Schema.GetRef<UInt16>(this.Handle, "CEconItemView", "m_iItemDefinitionIndex");
@@ -9271,6 +9408,7 @@ public partial class CEconItemView : IEconItemInterface
 public partial class CEconWearable : CEconEntity
 {
     public CEconWearable (IntPtr pointer) : base(pointer) {}
+    public CEconWearable() {}
 
     // m_nForceSkin
     public ref Int32 ForceSkin => ref Schema.GetRef<Int32>(this.Handle, "CEconWearable", "m_nForceSkin");
@@ -9283,24 +9421,28 @@ public partial class CEconWearable : CEconEntity
 public partial class CEnableMotionFixup : CBaseEntity
 {
     public CEnableMotionFixup (IntPtr pointer) : base(pointer) {}
+    public CEnableMotionFixup() {}
 
 }
 
 public partial class CEntityBlocker : CBaseModelEntity
 {
     public CEntityBlocker (IntPtr pointer) : base(pointer) {}
+    public CEntityBlocker() {}
 
 }
 
 public partial class CEntityComponent : NativeObject
 {
     public CEntityComponent (IntPtr pointer) : base(pointer) {}
+    public CEntityComponent() {}
 
 }
 
 public partial class CEntityDissolve : CBaseModelEntity
 {
     public CEntityDissolve (IntPtr pointer) : base(pointer) {}
+    public CEntityDissolve() {}
 
     // m_flFadeInStart
     public ref float FadeInStart => ref Schema.GetRef<float>(this.Handle, "CEntityDissolve", "m_flFadeInStart");
@@ -9337,6 +9479,7 @@ public partial class CEntityDissolve : CBaseModelEntity
 public partial class CEntityFlame : CBaseEntity
 {
     public CEntityFlame (IntPtr pointer) : base(pointer) {}
+    public CEntityFlame() {}
 
     // m_hEntAttached
     public CHandle<CBaseEntity> EntAttached => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CEntityFlame", "m_hEntAttached");
@@ -9376,6 +9519,7 @@ public partial class CEntityFlame : CBaseEntity
 public partial class CEntityIdentity : NativeObject
 {
     public CEntityIdentity (IntPtr pointer) : base(pointer) {}
+    public CEntityIdentity() {}
 
     // m_nameStringableIndex
     public ref Int32 NameStringableIndex => ref Schema.GetRef<Int32>(this.Handle, "CEntityIdentity", "m_nameStringableIndex");
@@ -9420,8 +9564,11 @@ public partial class CEntityIdentity : NativeObject
 
 }
 
-public partial class CEntityInstance : NativeEntity
+public partial class CEntityInstance : NativeObject
 {
+    public CEntityInstance (IntPtr pointer) : base(pointer) {}
+    public CEntityInstance() {}
+
     // m_iszPrivateVScripts
     public string PrivateVScripts
     {
@@ -9440,12 +9587,14 @@ public partial class CEntityInstance : NativeEntity
 public partial class CEntityIOOutput : NativeObject
 {
     public CEntityIOOutput (IntPtr pointer) : base(pointer) {}
+    public CEntityIOOutput() {}
 
 }
 
 public partial class CEnvBeam : CBeam
 {
     public CEnvBeam (IntPtr pointer) : base(pointer) {}
+    public CEnvBeam() {}
 
     // m_active
     public ref Int32 Active => ref Schema.GetRef<Int32>(this.Handle, "CEnvBeam", "m_active");
@@ -9529,6 +9678,7 @@ public partial class CEnvBeam : CBeam
 public partial class CEnvBeverage : CBaseEntity
 {
     public CEnvBeverage (IntPtr pointer) : base(pointer) {}
+    public CEnvBeverage() {}
 
     // m_CanInDispenser
     public ref bool CanInDispenser => ref Schema.GetRef<bool>(this.Handle, "CEnvBeverage", "m_CanInDispenser");
@@ -9541,6 +9691,7 @@ public partial class CEnvBeverage : CBaseEntity
 public partial class CEnvCombinedLightProbeVolume : CBaseEntity
 {
     public CEnvCombinedLightProbeVolume (IntPtr pointer) : base(pointer) {}
+    public CEnvCombinedLightProbeVolume() {}
 
     // m_Color
     public Color Color
@@ -9623,6 +9774,7 @@ public partial class CEnvCombinedLightProbeVolume : CBaseEntity
 public partial class CEnvCubemap : CBaseEntity
 {
     public CEnvCubemap (IntPtr pointer) : base(pointer) {}
+    public CEnvCubemap() {}
 
     // m_hCubemapTexture
     public CStrongHandle<InfoForResourceTypeCTextureBase> CubemapTexture => Schema.GetDeclaredClass<CStrongHandle<InfoForResourceTypeCTextureBase>>(this.Handle, "CEnvCubemap", "m_hCubemapTexture");
@@ -9683,12 +9835,14 @@ public partial class CEnvCubemap : CBaseEntity
 public partial class CEnvCubemapBox : CEnvCubemap
 {
     public CEnvCubemapBox (IntPtr pointer) : base(pointer) {}
+    public CEnvCubemapBox() {}
 
 }
 
 public partial class CEnvCubemapFog : CBaseEntity
 {
     public CEnvCubemapFog (IntPtr pointer) : base(pointer) {}
+    public CEnvCubemapFog() {}
 
     // m_flEndDistance
     public ref float EndDistance => ref Schema.GetRef<float>(this.Handle, "CEnvCubemapFog", "m_flEndDistance");
@@ -9753,6 +9907,7 @@ public partial class CEnvCubemapFog : CBaseEntity
 public partial class CEnvDecal : CBaseModelEntity
 {
     public CEnvDecal (IntPtr pointer) : base(pointer) {}
+    public CEnvDecal() {}
 
     // m_hDecalMaterial
     public CStrongHandle<InfoForResourceTypeIMaterial2> DecalMaterial => Schema.GetDeclaredClass<CStrongHandle<InfoForResourceTypeIMaterial2>>(this.Handle, "CEnvDecal", "m_hDecalMaterial");
@@ -9786,6 +9941,7 @@ public partial class CEnvDecal : CBaseModelEntity
 public partial class CEnvDetailController : CBaseEntity
 {
     public CEnvDetailController (IntPtr pointer) : base(pointer) {}
+    public CEnvDetailController() {}
 
     // m_flFadeStartDist
     public ref float FadeStartDist => ref Schema.GetRef<float>(this.Handle, "CEnvDetailController", "m_flFadeStartDist");
@@ -9798,6 +9954,7 @@ public partial class CEnvDetailController : CBaseEntity
 public partial class CEnvEntityIgniter : CBaseEntity
 {
     public CEnvEntityIgniter (IntPtr pointer) : base(pointer) {}
+    public CEnvEntityIgniter() {}
 
     // m_flLifetime
     public ref float Lifetime => ref Schema.GetRef<float>(this.Handle, "CEnvEntityIgniter", "m_flLifetime");
@@ -9807,6 +9964,7 @@ public partial class CEnvEntityIgniter : CBaseEntity
 public partial class CEnvEntityMaker : CPointEntity
 {
     public CEnvEntityMaker (IntPtr pointer) : base(pointer) {}
+    public CEnvEntityMaker() {}
 
     // m_vecEntityMins
     public Vector EntityMins => Schema.GetDeclaredClass<Vector>(this.Handle, "CEnvEntityMaker", "m_vecEntityMins");
@@ -9853,6 +10011,7 @@ public partial class CEnvEntityMaker : CPointEntity
 public partial class CEnvExplosion : CModelPointEntity
 {
     public CEnvExplosion (IntPtr pointer) : base(pointer) {}
+    public CEnvExplosion() {}
 
     // m_iMagnitude
     public ref Int32 Magnitude => ref Schema.GetRef<Int32>(this.Handle, "CEnvExplosion", "m_iMagnitude");
@@ -9920,6 +10079,7 @@ public partial class CEnvExplosion : CModelPointEntity
 public partial class CEnvFade : CLogicalEntity
 {
     public CEnvFade (IntPtr pointer) : base(pointer) {}
+    public CEnvFade() {}
 
     // m_fadeColor
     public Color FadeColor
@@ -9942,6 +10102,7 @@ public partial class CEnvFade : CLogicalEntity
 public partial class CEnvFireSensor : CBaseEntity
 {
     public CEnvFireSensor (IntPtr pointer) : base(pointer) {}
+    public CEnvFireSensor() {}
 
     // m_bEnabled
     public ref bool Enabled => ref Schema.GetRef<bool>(this.Handle, "CEnvFireSensor", "m_bEnabled");
@@ -9972,6 +10133,7 @@ public partial class CEnvFireSensor : CBaseEntity
 public partial class CEnvFireSource : CBaseEntity
 {
     public CEnvFireSource (IntPtr pointer) : base(pointer) {}
+    public CEnvFireSource() {}
 
     // m_bEnabled
     public ref bool Enabled => ref Schema.GetRef<bool>(this.Handle, "CEnvFireSource", "m_bEnabled");
@@ -9987,12 +10149,14 @@ public partial class CEnvFireSource : CBaseEntity
 public partial class CEnvFunnel : CBaseEntity
 {
     public CEnvFunnel (IntPtr pointer) : base(pointer) {}
+    public CEnvFunnel() {}
 
 }
 
 public partial class CEnvGlobal : CLogicalEntity
 {
     public CEnvGlobal (IntPtr pointer) : base(pointer) {}
+    public CEnvGlobal() {}
 
     // m_globalstate
     public string Globalstate
@@ -10015,6 +10179,7 @@ public partial class CEnvGlobal : CLogicalEntity
 public partial class CEnvHudHint : CPointEntity
 {
     public CEnvHudHint (IntPtr pointer) : base(pointer) {}
+    public CEnvHudHint() {}
 
     // m_iszMessage
     public string Message
@@ -10028,6 +10193,7 @@ public partial class CEnvHudHint : CPointEntity
 public partial class CEnvInstructorHint : CPointEntity
 {
     public CEnvInstructorHint (IntPtr pointer) : base(pointer) {}
+    public CEnvInstructorHint() {}
 
     // m_iszName
     public string Name
@@ -10142,6 +10308,7 @@ public partial class CEnvInstructorHint : CPointEntity
 public partial class CEnvInstructorVRHint : CPointEntity
 {
     public CEnvInstructorVRHint (IntPtr pointer) : base(pointer) {}
+    public CEnvInstructorVRHint() {}
 
     // m_iszName
     public string Name
@@ -10195,6 +10362,7 @@ public partial class CEnvInstructorVRHint : CPointEntity
 public partial class CEnvLaser : CBeam
 {
     public CEnvLaser (IntPtr pointer) : base(pointer) {}
+    public CEnvLaser() {}
 
     // m_iszLaserTarget
     public string LaserTarget
@@ -10224,6 +10392,7 @@ public partial class CEnvLaser : CBeam
 public partial class CEnvLightProbeVolume : CBaseEntity
 {
     public CEnvLightProbeVolume (IntPtr pointer) : base(pointer) {}
+    public CEnvLightProbeVolume() {}
 
     // m_hLightProbeTexture
     public CStrongHandle<InfoForResourceTypeCTextureBase> LightProbeTexture => Schema.GetDeclaredClass<CStrongHandle<InfoForResourceTypeCTextureBase>>(this.Handle, "CEnvLightProbeVolume", "m_hLightProbeTexture");
@@ -10281,6 +10450,7 @@ public partial class CEnvLightProbeVolume : CBaseEntity
 public partial class CEnvMicrophone : CPointEntity
 {
     public CEnvMicrophone (IntPtr pointer) : base(pointer) {}
+    public CEnvMicrophone() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CEnvMicrophone", "m_bDisabled");
@@ -10347,6 +10517,7 @@ public partial class CEnvMicrophone : CPointEntity
 public partial class CEnvMuzzleFlash : CPointEntity
 {
     public CEnvMuzzleFlash (IntPtr pointer) : base(pointer) {}
+    public CEnvMuzzleFlash() {}
 
     // m_flScale
     public ref float Scale => ref Schema.GetRef<float>(this.Handle, "CEnvMuzzleFlash", "m_flScale");
@@ -10363,6 +10534,7 @@ public partial class CEnvMuzzleFlash : CPointEntity
 public partial class CEnvParticleGlow : CParticleSystem
 {
     public CEnvParticleGlow (IntPtr pointer) : base(pointer) {}
+    public CEnvParticleGlow() {}
 
     // m_flAlphaScale
     public ref float AlphaScale => ref Schema.GetRef<float>(this.Handle, "CEnvParticleGlow", "m_flAlphaScale");
@@ -10388,6 +10560,7 @@ public partial class CEnvParticleGlow : CParticleSystem
 public partial class CEnvProjectedTexture : CModelPointEntity
 {
     public CEnvProjectedTexture (IntPtr pointer) : base(pointer) {}
+    public CEnvProjectedTexture() {}
 
     // m_hTargetEntity
     public CHandle<CBaseEntity> TargetEntity => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CEnvProjectedTexture", "m_hTargetEntity");
@@ -10492,6 +10665,7 @@ public partial class CEnvProjectedTexture : CModelPointEntity
 public partial class CEnvScreenOverlay : CPointEntity
 {
     public CEnvScreenOverlay (IntPtr pointer) : base(pointer) {}
+    public CEnvScreenOverlay() {}
 
     // m_iszOverlayNames
     public Span<string> OverlayNames => Schema.GetFixedArray<string>(this.Handle, "CEnvScreenOverlay", "m_iszOverlayNames", 10);
@@ -10513,6 +10687,7 @@ public partial class CEnvScreenOverlay : CPointEntity
 public partial class CEnvShake : CPointEntity
 {
     public CEnvShake (IntPtr pointer) : base(pointer) {}
+    public CEnvShake() {}
 
     // m_limitToEntity
     public string LimitToEntity
@@ -10553,6 +10728,7 @@ public partial class CEnvShake : CPointEntity
 public partial class CEnvSky : CBaseModelEntity
 {
     public CEnvSky (IntPtr pointer) : base(pointer) {}
+    public CEnvSky() {}
 
     // m_hSkyMaterial
     public CStrongHandle<InfoForResourceTypeIMaterial2> SkyMaterial => Schema.GetDeclaredClass<CStrongHandle<InfoForResourceTypeIMaterial2>>(this.Handle, "CEnvSky", "m_hSkyMaterial");
@@ -10603,6 +10779,7 @@ public partial class CEnvSky : CBaseModelEntity
 public partial class CEnvSoundscape : CServerOnlyEntity
 {
     public CEnvSoundscape (IntPtr pointer) : base(pointer) {}
+    public CEnvSoundscape() {}
 
     // m_OnPlay
     public CEntityIOOutput OnPlay => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CEnvSoundscape", "m_OnPlay");
@@ -10650,12 +10827,14 @@ public partial class CEnvSoundscape : CServerOnlyEntity
 public partial class CEnvSoundscapeAlias_snd_soundscape : CEnvSoundscape
 {
     public CEnvSoundscapeAlias_snd_soundscape (IntPtr pointer) : base(pointer) {}
+    public CEnvSoundscapeAlias_snd_soundscape() {}
 
 }
 
 public partial class CEnvSoundscapeProxy : CEnvSoundscape
 {
     public CEnvSoundscapeProxy (IntPtr pointer) : base(pointer) {}
+    public CEnvSoundscapeProxy() {}
 
     // m_MainSoundscapeName
     public string MainSoundscapeName
@@ -10669,24 +10848,28 @@ public partial class CEnvSoundscapeProxy : CEnvSoundscape
 public partial class CEnvSoundscapeProxyAlias_snd_soundscape_proxy : CEnvSoundscapeProxy
 {
     public CEnvSoundscapeProxyAlias_snd_soundscape_proxy (IntPtr pointer) : base(pointer) {}
+    public CEnvSoundscapeProxyAlias_snd_soundscape_proxy() {}
 
 }
 
 public partial class CEnvSoundscapeTriggerable : CEnvSoundscape
 {
     public CEnvSoundscapeTriggerable (IntPtr pointer) : base(pointer) {}
+    public CEnvSoundscapeTriggerable() {}
 
 }
 
 public partial class CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable : CEnvSoundscapeTriggerable
 {
     public CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable (IntPtr pointer) : base(pointer) {}
+    public CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable() {}
 
 }
 
 public partial class CEnvSpark : CPointEntity
 {
     public CEnvSpark (IntPtr pointer) : base(pointer) {}
+    public CEnvSpark() {}
 
     // m_flDelay
     public ref float Delay => ref Schema.GetRef<float>(this.Handle, "CEnvSpark", "m_flDelay");
@@ -10708,6 +10891,7 @@ public partial class CEnvSpark : CPointEntity
 public partial class CEnvSplash : CPointEntity
 {
     public CEnvSplash (IntPtr pointer) : base(pointer) {}
+    public CEnvSplash() {}
 
     // m_flScale
     public ref float Scale => ref Schema.GetRef<float>(this.Handle, "CEnvSplash", "m_flScale");
@@ -10717,6 +10901,7 @@ public partial class CEnvSplash : CPointEntity
 public partial class CEnvTilt : CPointEntity
 {
     public CEnvTilt (IntPtr pointer) : base(pointer) {}
+    public CEnvTilt() {}
 
     // m_Duration
     public ref float Duration => ref Schema.GetRef<float>(this.Handle, "CEnvTilt", "m_Duration");
@@ -10735,6 +10920,7 @@ public partial class CEnvTilt : CPointEntity
 public partial class CEnvTracer : CPointEntity
 {
     public CEnvTracer (IntPtr pointer) : base(pointer) {}
+    public CEnvTracer() {}
 
     // m_vecEnd
     public Vector End => Schema.GetDeclaredClass<Vector>(this.Handle, "CEnvTracer", "m_vecEnd");
@@ -10747,6 +10933,7 @@ public partial class CEnvTracer : CPointEntity
 public partial class CEnvViewPunch : CPointEntity
 {
     public CEnvViewPunch (IntPtr pointer) : base(pointer) {}
+    public CEnvViewPunch() {}
 
     // m_flRadius
     public ref float Radius => ref Schema.GetRef<float>(this.Handle, "CEnvViewPunch", "m_flRadius");
@@ -10759,6 +10946,7 @@ public partial class CEnvViewPunch : CPointEntity
 public partial class CEnvVolumetricFogController : CBaseEntity
 {
     public CEnvVolumetricFogController (IntPtr pointer) : base(pointer) {}
+    public CEnvVolumetricFogController() {}
 
     // m_flScattering
     public ref float Scattering => ref Schema.GetRef<float>(this.Handle, "CEnvVolumetricFogController", "m_flScattering");
@@ -10849,6 +11037,7 @@ public partial class CEnvVolumetricFogController : CBaseEntity
 public partial class CEnvVolumetricFogVolume : CBaseEntity
 {
     public CEnvVolumetricFogVolume (IntPtr pointer) : base(pointer) {}
+    public CEnvVolumetricFogVolume() {}
 
     // m_bActive
     public ref bool Active => ref Schema.GetRef<bool>(this.Handle, "CEnvVolumetricFogVolume", "m_bActive");
@@ -10876,6 +11065,7 @@ public partial class CEnvVolumetricFogVolume : CBaseEntity
 public partial class CEnvWind : CBaseEntity
 {
     public CEnvWind (IntPtr pointer) : base(pointer) {}
+    public CEnvWind() {}
 
     // m_EnvWindShared
     public CEnvWindShared EnvWindShared => Schema.GetDeclaredClass<CEnvWindShared>(this.Handle, "CEnvWind", "m_EnvWindShared");
@@ -10885,6 +11075,7 @@ public partial class CEnvWind : CBaseEntity
 public partial class CEnvWindShared : NativeObject
 {
     public CEnvWindShared (IntPtr pointer) : base(pointer) {}
+    public CEnvWindShared() {}
 
     // m_flStartTime
     public ref float StartTime => ref Schema.GetRef<float>(this.Handle, "CEnvWindShared", "m_flStartTime");
@@ -10984,6 +11175,7 @@ public partial class CEnvWindShared : NativeObject
 public partial class CFilterAttributeInt : CBaseFilter
 {
     public CFilterAttributeInt (IntPtr pointer) : base(pointer) {}
+    public CFilterAttributeInt() {}
 
     // m_sAttributeName
     public CUtlStringToken AttributeName => Schema.GetDeclaredClass<CUtlStringToken>(this.Handle, "CFilterAttributeInt", "m_sAttributeName");
@@ -10993,6 +11185,7 @@ public partial class CFilterAttributeInt : CBaseFilter
 public partial class CFilterClass : CBaseFilter
 {
     public CFilterClass (IntPtr pointer) : base(pointer) {}
+    public CFilterClass() {}
 
     // m_iFilterClass
     public string FilterClass
@@ -11006,6 +11199,7 @@ public partial class CFilterClass : CBaseFilter
 public partial class CFilterContext : CBaseFilter
 {
     public CFilterContext (IntPtr pointer) : base(pointer) {}
+    public CFilterContext() {}
 
     // m_iFilterContext
     public string FilterContext
@@ -11019,6 +11213,7 @@ public partial class CFilterContext : CBaseFilter
 public partial class CFilterEnemy : CBaseFilter
 {
     public CFilterEnemy (IntPtr pointer) : base(pointer) {}
+    public CFilterEnemy() {}
 
     // m_iszEnemyName
     public string EnemyName
@@ -11048,12 +11243,14 @@ public partial class CFilterEnemy : CBaseFilter
 public partial class CFilterLOS : CBaseFilter
 {
     public CFilterLOS (IntPtr pointer) : base(pointer) {}
+    public CFilterLOS() {}
 
 }
 
 public partial class CFilterMassGreater : CBaseFilter
 {
     public CFilterMassGreater (IntPtr pointer) : base(pointer) {}
+    public CFilterMassGreater() {}
 
     // m_fFilterMass
     public ref float FilterMass => ref Schema.GetRef<float>(this.Handle, "CFilterMassGreater", "m_fFilterMass");
@@ -11063,6 +11260,7 @@ public partial class CFilterMassGreater : CBaseFilter
 public partial class CFilterModel : CBaseFilter
 {
     public CFilterModel (IntPtr pointer) : base(pointer) {}
+    public CFilterModel() {}
 
     // m_iFilterModel
     public string FilterModel
@@ -11076,6 +11274,7 @@ public partial class CFilterModel : CBaseFilter
 public partial class CFilterMultiple : CBaseFilter
 {
     public CFilterMultiple (IntPtr pointer) : base(pointer) {}
+    public CFilterMultiple() {}
 
     // m_nFilterType
     public ref filter_t FilterType => ref Schema.GetRef<filter_t>(this.Handle, "CFilterMultiple", "m_nFilterType");
@@ -11094,6 +11293,7 @@ public partial class CFilterMultiple : CBaseFilter
 public partial class CFilterName : CBaseFilter
 {
     public CFilterName (IntPtr pointer) : base(pointer) {}
+    public CFilterName() {}
 
     // m_iFilterName
     public string FilterName
@@ -11107,6 +11307,7 @@ public partial class CFilterName : CBaseFilter
 public partial class CFilterProximity : CBaseFilter
 {
     public CFilterProximity (IntPtr pointer) : base(pointer) {}
+    public CFilterProximity() {}
 
     // m_flRadius
     public ref float Radius => ref Schema.GetRef<float>(this.Handle, "CFilterProximity", "m_flRadius");
@@ -11116,6 +11317,7 @@ public partial class CFilterProximity : CBaseFilter
 public partial class CFire : CBaseModelEntity
 {
     public CFire (IntPtr pointer) : base(pointer) {}
+    public CFire() {}
 
     // m_hEffect
     public CHandle<CBaseFire> Effect => Schema.GetDeclaredClass<CHandle<CBaseFire>>(this.Handle, "CFire", "m_hEffect");
@@ -11179,12 +11381,14 @@ public partial class CFire : CBaseModelEntity
 public partial class CFireCrackerBlast : CInferno
 {
     public CFireCrackerBlast (IntPtr pointer) : base(pointer) {}
+    public CFireCrackerBlast() {}
 
 }
 
 public partial class CFireSmoke : CBaseFire
 {
     public CFireSmoke (IntPtr pointer) : base(pointer) {}
+    public CFireSmoke() {}
 
     // m_nFlameModelIndex
     public ref Int32 FlameModelIndex => ref Schema.GetRef<Int32>(this.Handle, "CFireSmoke", "m_nFlameModelIndex");
@@ -11197,6 +11401,7 @@ public partial class CFireSmoke : CBaseFire
 public partial class CFish : CBaseAnimGraph
 {
     public CFish (IntPtr pointer) : base(pointer) {}
+    public CFish() {}
 
     // m_pool
     public CHandle<CFishPool> Pool => Schema.GetDeclaredClass<CHandle<CFishPool>>(this.Handle, "CFish", "m_pool");
@@ -11275,6 +11480,7 @@ public partial class CFish : CBaseAnimGraph
 public partial class CFishPool : CBaseEntity
 {
     public CFishPool (IntPtr pointer) : base(pointer) {}
+    public CFishPool() {}
 
     // m_fishCount
     public ref Int32 FishCount => ref Schema.GetRef<Int32>(this.Handle, "CFishPool", "m_fishCount");
@@ -11302,6 +11508,7 @@ public partial class CFishPool : CBaseEntity
 public partial class CFists : CCSWeaponBase
 {
     public CFists (IntPtr pointer) : base(pointer) {}
+    public CFists() {}
 
     // m_bPlayingUninterruptableAct
     public ref bool PlayingUninterruptableAct => ref Schema.GetRef<bool>(this.Handle, "CFists", "m_bPlayingUninterruptableAct");
@@ -11329,12 +11536,14 @@ public partial class CFists : CCSWeaponBase
 public partial class CFlashbang : CBaseCSGrenade
 {
     public CFlashbang (IntPtr pointer) : base(pointer) {}
+    public CFlashbang() {}
 
 }
 
 public partial class CFlashbangProjectile : CBaseCSGrenadeProjectile
 {
     public CFlashbangProjectile (IntPtr pointer) : base(pointer) {}
+    public CFlashbangProjectile() {}
 
     // m_flTimeToDetonate
     public ref float TimeToDetonate => ref Schema.GetRef<float>(this.Handle, "CFlashbangProjectile", "m_flTimeToDetonate");
@@ -11350,6 +11559,7 @@ public partial class CFlashbangProjectile : CBaseCSGrenadeProjectile
 public partial class CFogController : CBaseEntity
 {
     public CFogController (IntPtr pointer) : base(pointer) {}
+    public CFogController() {}
 
     // m_fog
     public fogparams_t Fog => Schema.GetDeclaredClass<fogparams_t>(this.Handle, "CFogController", "m_fog");
@@ -11365,6 +11575,7 @@ public partial class CFogController : CBaseEntity
 public partial class CFogTrigger : CBaseTrigger
 {
     public CFogTrigger (IntPtr pointer) : base(pointer) {}
+    public CFogTrigger() {}
 
     // m_fog
     public fogparams_t Fog => Schema.GetDeclaredClass<fogparams_t>(this.Handle, "CFogTrigger", "m_fog");
@@ -11374,6 +11585,7 @@ public partial class CFogTrigger : CBaseTrigger
 public partial class CFogVolume : CServerOnlyModelEntity
 {
     public CFogVolume (IntPtr pointer) : base(pointer) {}
+    public CFogVolume() {}
 
     // m_fogName
     public string FogName
@@ -11407,6 +11619,7 @@ public partial class CFogVolume : CServerOnlyModelEntity
 public partial class CFootstepControl : CBaseTrigger
 {
     public CFootstepControl (IntPtr pointer) : base(pointer) {}
+    public CFootstepControl() {}
 
     // m_source
     public string Source
@@ -11427,6 +11640,7 @@ public partial class CFootstepControl : CBaseTrigger
 public partial class CFuncBrush : CBaseModelEntity
 {
     public CFuncBrush (IntPtr pointer) : base(pointer) {}
+    public CFuncBrush() {}
 
     // m_iSolidity
     public ref BrushSolidities_e Solidity => ref Schema.GetRef<BrushSolidities_e>(this.Handle, "CFuncBrush", "m_iSolidity");
@@ -11455,6 +11669,7 @@ public partial class CFuncBrush : CBaseModelEntity
 public partial class CFuncConveyor : CBaseModelEntity
 {
     public CFuncConveyor (IntPtr pointer) : base(pointer) {}
+    public CFuncConveyor() {}
 
     // m_szConveyorModels
     public string SzConveyorModels
@@ -11492,6 +11707,7 @@ public partial class CFuncConveyor : CBaseModelEntity
 public partial class CFuncElectrifiedVolume : CFuncBrush
 {
     public CFuncElectrifiedVolume (IntPtr pointer) : base(pointer) {}
+    public CFuncElectrifiedVolume() {}
 
     // m_EffectName
     public string EffectName
@@ -11526,12 +11742,14 @@ public partial class CFuncElectrifiedVolume : CFuncBrush
 public partial class CFuncIllusionary : CBaseModelEntity
 {
     public CFuncIllusionary (IntPtr pointer) : base(pointer) {}
+    public CFuncIllusionary() {}
 
 }
 
 public partial class CFuncInteractionLayerClip : CBaseModelEntity
 {
     public CFuncInteractionLayerClip (IntPtr pointer) : base(pointer) {}
+    public CFuncInteractionLayerClip() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CFuncInteractionLayerClip", "m_bDisabled");
@@ -11555,6 +11773,7 @@ public partial class CFuncInteractionLayerClip : CBaseModelEntity
 public partial class CFuncLadder : CBaseModelEntity
 {
     public CFuncLadder (IntPtr pointer) : base(pointer) {}
+    public CFuncLadder() {}
 
     // m_vecLadderDir
     public Vector LadderDir => Schema.GetDeclaredClass<Vector>(this.Handle, "CFuncLadder", "m_vecLadderDir");
@@ -11601,12 +11820,14 @@ public partial class CFuncLadder : CBaseModelEntity
 public partial class CFuncLadderAlias_func_useableladder : CFuncLadder
 {
     public CFuncLadderAlias_func_useableladder (IntPtr pointer) : base(pointer) {}
+    public CFuncLadderAlias_func_useableladder() {}
 
 }
 
 public partial class CFuncMonitor : CFuncBrush
 {
     public CFuncMonitor (IntPtr pointer) : base(pointer) {}
+    public CFuncMonitor() {}
 
     // m_targetCamera
     public string TargetCamera
@@ -11648,6 +11869,7 @@ public partial class CFuncMonitor : CFuncBrush
 public partial class CFuncMoveLinear : CBaseToggle
 {
     public CFuncMoveLinear (IntPtr pointer) : base(pointer) {}
+    public CFuncMoveLinear() {}
 
     // m_authoredPosition
     public ref MoveLinearAuthoredPos_t AuthoredPosition => ref Schema.GetRef<MoveLinearAuthoredPos_t>(this.Handle, "CFuncMoveLinear", "m_authoredPosition");
@@ -11705,12 +11927,14 @@ public partial class CFuncMoveLinear : CBaseToggle
 public partial class CFuncMoveLinearAlias_momentary_door : CFuncMoveLinear
 {
     public CFuncMoveLinearAlias_momentary_door (IntPtr pointer) : base(pointer) {}
+    public CFuncMoveLinearAlias_momentary_door() {}
 
 }
 
 public partial class CFuncNavBlocker : CBaseModelEntity
 {
     public CFuncNavBlocker (IntPtr pointer) : base(pointer) {}
+    public CFuncNavBlocker() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CFuncNavBlocker", "m_bDisabled");
@@ -11723,6 +11947,7 @@ public partial class CFuncNavBlocker : CBaseModelEntity
 public partial class CFuncNavObstruction : CBaseModelEntity
 {
     public CFuncNavObstruction (IntPtr pointer) : base(pointer) {}
+    public CFuncNavObstruction() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CFuncNavObstruction", "m_bDisabled");
@@ -11732,6 +11957,7 @@ public partial class CFuncNavObstruction : CBaseModelEntity
 public partial class CFuncPlat : CBasePlatTrain
 {
     public CFuncPlat (IntPtr pointer) : base(pointer) {}
+    public CFuncPlat() {}
 
     // m_sNoise
     public string Noise
@@ -11745,6 +11971,7 @@ public partial class CFuncPlat : CBasePlatTrain
 public partial class CFuncPlatRot : CFuncPlat
 {
     public CFuncPlatRot (IntPtr pointer) : base(pointer) {}
+    public CFuncPlatRot() {}
 
     // m_end
     public QAngle End => Schema.GetDeclaredClass<QAngle>(this.Handle, "CFuncPlatRot", "m_end");
@@ -11757,12 +11984,14 @@ public partial class CFuncPlatRot : CFuncPlat
 public partial class CFuncPropRespawnZone : CBaseEntity
 {
     public CFuncPropRespawnZone (IntPtr pointer) : base(pointer) {}
+    public CFuncPropRespawnZone() {}
 
 }
 
 public partial class CFuncRotating : CBaseModelEntity
 {
     public CFuncRotating (IntPtr pointer) : base(pointer) {}
+    public CFuncRotating() {}
 
     // m_vecMoveAng
     public QAngle MoveAng => Schema.GetDeclaredClass<QAngle>(this.Handle, "CFuncRotating", "m_vecMoveAng");
@@ -11815,6 +12044,7 @@ public partial class CFuncRotating : CBaseModelEntity
 public partial class CFuncShatterglass : CBaseModelEntity
 {
     public CFuncShatterglass (IntPtr pointer) : base(pointer) {}
+    public CFuncShatterglass() {}
 
     // m_hGlassMaterialDamaged
     public CStrongHandle<InfoForResourceTypeIMaterial2> GlassMaterialDamaged => Schema.GetDeclaredClass<CStrongHandle<InfoForResourceTypeIMaterial2>>(this.Handle, "CFuncShatterglass", "m_hGlassMaterialDamaged");
@@ -11933,6 +12163,7 @@ public partial class CFuncShatterglass : CBaseModelEntity
 public partial class CFuncTankTrain : CFuncTrackTrain
 {
     public CFuncTankTrain (IntPtr pointer) : base(pointer) {}
+    public CFuncTankTrain() {}
 
     // m_OnDeath
     public CEntityIOOutput OnDeath => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CFuncTankTrain", "m_OnDeath");
@@ -11942,6 +12173,7 @@ public partial class CFuncTankTrain : CFuncTrackTrain
 public partial class CFuncTimescale : CBaseEntity
 {
     public CFuncTimescale (IntPtr pointer) : base(pointer) {}
+    public CFuncTimescale() {}
 
     // m_flDesiredTimescale
     public ref float DesiredTimescale => ref Schema.GetRef<float>(this.Handle, "CFuncTimescale", "m_flDesiredTimescale");
@@ -11963,12 +12195,14 @@ public partial class CFuncTimescale : CBaseEntity
 public partial class CFuncTrackAuto : CFuncTrackChange
 {
     public CFuncTrackAuto (IntPtr pointer) : base(pointer) {}
+    public CFuncTrackAuto() {}
 
 }
 
 public partial class CFuncTrackChange : CFuncPlatRot
 {
     public CFuncTrackChange (IntPtr pointer) : base(pointer) {}
+    public CFuncTrackChange() {}
 
     // m_trackTop
     public CPathTrack? TrackTop => Schema.GetPointer<CPathTrack>(this.Handle, "CFuncTrackChange", "m_trackTop");
@@ -12014,6 +12248,7 @@ public partial class CFuncTrackChange : CFuncPlatRot
 public partial class CFuncTrackTrain : CBaseModelEntity
 {
     public CFuncTrackTrain (IntPtr pointer) : base(pointer) {}
+    public CFuncTrackTrain() {}
 
     // m_ppath
     public CHandle<CPathTrack> Ppath => Schema.GetDeclaredClass<CHandle<CPathTrack>>(this.Handle, "CFuncTrackTrain", "m_ppath");
@@ -12154,6 +12389,7 @@ public partial class CFuncTrackTrain : CBaseModelEntity
 public partial class CFuncTrain : CBasePlatTrain
 {
     public CFuncTrain (IntPtr pointer) : base(pointer) {}
+    public CFuncTrain() {}
 
     // m_hCurrentTarget
     public CHandle<CBaseEntity> CurrentTarget => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CFuncTrain", "m_hCurrentTarget");
@@ -12182,18 +12418,21 @@ public partial class CFuncTrain : CBasePlatTrain
 public partial class CFuncTrainControls : CBaseModelEntity
 {
     public CFuncTrainControls (IntPtr pointer) : base(pointer) {}
+    public CFuncTrainControls() {}
 
 }
 
 public partial class CFuncVehicleClip : CBaseModelEntity
 {
     public CFuncVehicleClip (IntPtr pointer) : base(pointer) {}
+    public CFuncVehicleClip() {}
 
 }
 
 public partial class CFuncVPhysicsClip : CBaseModelEntity
 {
     public CFuncVPhysicsClip (IntPtr pointer) : base(pointer) {}
+    public CFuncVPhysicsClip() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CFuncVPhysicsClip", "m_bDisabled");
@@ -12203,6 +12442,7 @@ public partial class CFuncVPhysicsClip : CBaseModelEntity
 public partial class CFuncWall : CBaseModelEntity
 {
     public CFuncWall (IntPtr pointer) : base(pointer) {}
+    public CFuncWall() {}
 
     // m_nState
     public ref Int32 State => ref Schema.GetRef<Int32>(this.Handle, "CFuncWall", "m_nState");
@@ -12212,12 +12452,14 @@ public partial class CFuncWall : CBaseModelEntity
 public partial class CFuncWallToggle : CFuncWall
 {
     public CFuncWallToggle (IntPtr pointer) : base(pointer) {}
+    public CFuncWallToggle() {}
 
 }
 
 public partial class CFuncWater : CBaseModelEntity
 {
     public CFuncWater (IntPtr pointer) : base(pointer) {}
+    public CFuncWater() {}
 
     // m_BuoyancyHelper
     public CBuoyancyHelper BuoyancyHelper => Schema.GetDeclaredClass<CBuoyancyHelper>(this.Handle, "CFuncWater", "m_BuoyancyHelper");
@@ -12227,6 +12469,7 @@ public partial class CFuncWater : CBaseModelEntity
 public partial class CGameChoreoServices : IChoreoServices
 {
     public CGameChoreoServices (IntPtr pointer) : base(pointer) {}
+    public CGameChoreoServices() {}
 
     // m_hOwner
     public CHandle<CBaseAnimGraph> Owner => Schema.GetDeclaredClass<CHandle<CBaseAnimGraph>>(this.Handle, "CGameChoreoServices", "m_hOwner");
@@ -12244,12 +12487,14 @@ public partial class CGameChoreoServices : IChoreoServices
 public partial class CGameEnd : CRulePointEntity
 {
     public CGameEnd (IntPtr pointer) : base(pointer) {}
+    public CGameEnd() {}
 
 }
 
 public partial class CGameGibManager : CBaseEntity
 {
     public CGameGibManager (IntPtr pointer) : base(pointer) {}
+    public CGameGibManager() {}
 
     // m_bAllowNewGibs
     public ref bool AllowNewGibs => ref Schema.GetRef<bool>(this.Handle, "CGameGibManager", "m_bAllowNewGibs");
@@ -12268,6 +12513,7 @@ public partial class CGameGibManager : CBaseEntity
 public partial class CGameMoney : CRulePointEntity
 {
     public CGameMoney (IntPtr pointer) : base(pointer) {}
+    public CGameMoney() {}
 
     // m_OnMoneySpent
     public CEntityIOOutput OnMoneySpent => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CGameMoney", "m_OnMoneySpent");
@@ -12290,12 +12536,14 @@ public partial class CGameMoney : CRulePointEntity
 public partial class CGamePlayerEquip : CRulePointEntity
 {
     public CGamePlayerEquip (IntPtr pointer) : base(pointer) {}
+    public CGamePlayerEquip() {}
 
 }
 
 public partial class CGamePlayerZone : CRuleBrushEntity
 {
     public CGamePlayerZone (IntPtr pointer) : base(pointer) {}
+    public CGamePlayerZone() {}
 
     // m_OnPlayerInZone
     public CEntityIOOutput OnPlayerInZone => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CGamePlayerZone", "m_OnPlayerInZone");
@@ -12308,6 +12556,7 @@ public partial class CGamePlayerZone : CRuleBrushEntity
 public partial class CGameRules : NativeObject
 {
     public CGameRules (IntPtr pointer) : base(pointer) {}
+    public CGameRules() {}
 
     // m_szQuestName
     public string QuestName
@@ -12324,12 +12573,14 @@ public partial class CGameRules : NativeObject
 public partial class CGameRulesProxy : CBaseEntity
 {
     public CGameRulesProxy (IntPtr pointer) : base(pointer) {}
+    public CGameRulesProxy() {}
 
 }
 
 public partial class CGameSceneNode : NativeObject
 {
     public CGameSceneNode (IntPtr pointer) : base(pointer) {}
+    public CGameSceneNode() {}
 
     // m_nodeToWorld
     public CTransform NodeToWorld => Schema.GetDeclaredClass<CTransform>(this.Handle, "CGameSceneNode", "m_nodeToWorld");
@@ -12413,6 +12664,7 @@ public partial class CGameSceneNode : NativeObject
 public partial class CGameText : CRulePointEntity
 {
     public CGameText (IntPtr pointer) : base(pointer) {}
+    public CGameText() {}
 
     // m_iszMessage
     public string Message
@@ -12429,6 +12681,7 @@ public partial class CGameText : CRulePointEntity
 public partial class CGenericConstraint : CPhysConstraint
 {
     public CGenericConstraint (IntPtr pointer) : base(pointer) {}
+    public CGenericConstraint() {}
 
     // m_nLinearMotionX
     public ref JointMotion_t LinearMotionX => ref Schema.GetRef<JointMotion_t>(this.Handle, "CGenericConstraint", "m_nLinearMotionX");
@@ -12579,6 +12832,7 @@ public partial class CGenericConstraint : CPhysConstraint
 public partial class CGlowProperty : NativeObject
 {
     public CGlowProperty (IntPtr pointer) : base(pointer) {}
+    public CGlowProperty() {}
 
     // m_fGlowColor
     public Vector GlowColor => Schema.GetDeclaredClass<Vector>(this.Handle, "CGlowProperty", "m_fGlowColor");
@@ -12622,6 +12876,7 @@ public partial class CGlowProperty : NativeObject
 public partial class CGradientFog : CBaseEntity
 {
     public CGradientFog (IntPtr pointer) : base(pointer) {}
+    public CGradientFog() {}
 
     // m_hGradientFogTexture
     public CStrongHandle<InfoForResourceTypeCTextureBase> GradientFogTexture => Schema.GetDeclaredClass<CStrongHandle<InfoForResourceTypeCTextureBase>>(this.Handle, "CGradientFog", "m_hGradientFogTexture");
@@ -12680,6 +12935,7 @@ public partial class CGradientFog : CBaseEntity
 public partial class CGunTarget : CBaseToggle
 {
     public CGunTarget (IntPtr pointer) : base(pointer) {}
+    public CGunTarget() {}
 
     // m_on
     public ref bool On => ref Schema.GetRef<bool>(this.Handle, "CGunTarget", "m_on");
@@ -12695,12 +12951,14 @@ public partial class CGunTarget : CBaseToggle
 public partial class CHandleDummy : CBaseEntity
 {
     public CHandleDummy (IntPtr pointer) : base(pointer) {}
+    public CHandleDummy() {}
 
 }
 
 public partial class CHandleTest : CBaseEntity
 {
     public CHandleTest (IntPtr pointer) : base(pointer) {}
+    public CHandleTest() {}
 
     // m_Handle
     public CHandle<CBaseEntity> TestHandle => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CHandleTest", "m_Handle");
@@ -12713,6 +12971,7 @@ public partial class CHandleTest : CBaseEntity
 public partial class ChangeAccessorFieldPathIndex_t : NativeObject
 {
     public ChangeAccessorFieldPathIndex_t (IntPtr pointer) : base(pointer) {}
+    public ChangeAccessorFieldPathIndex_t() {}
 
     // m_Value
     public ref Int16 Value => ref Schema.GetRef<Int16>(this.Handle, "ChangeAccessorFieldPathIndex_t", "m_Value");
@@ -12722,18 +12981,21 @@ public partial class ChangeAccessorFieldPathIndex_t : NativeObject
 public partial class CHEGrenade : CBaseCSGrenade
 {
     public CHEGrenade (IntPtr pointer) : base(pointer) {}
+    public CHEGrenade() {}
 
 }
 
 public partial class CHEGrenadeProjectile : CBaseCSGrenadeProjectile
 {
     public CHEGrenadeProjectile (IntPtr pointer) : base(pointer) {}
+    public CHEGrenadeProjectile() {}
 
 }
 
 public partial class CHitboxComponent : CEntityComponent
 {
     public CHitboxComponent (IntPtr pointer) : base(pointer) {}
+    public CHitboxComponent() {}
 
     // m_bvDisabledHitGroups
     public Span<UInt32> DisabledHitGroups => Schema.GetFixedArray<UInt32>(this.Handle, "CHitboxComponent", "m_bvDisabledHitGroups", 1);
@@ -12743,6 +13005,7 @@ public partial class CHitboxComponent : CEntityComponent
 public partial class CHostage : CHostageExpresserShim
 {
     public CHostage (IntPtr pointer) : base(pointer) {}
+    public CHostage() {}
 
     // m_OnHostageBeginGrab
     public CEntityIOOutput OnHostageBeginGrab => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CHostage", "m_OnHostageBeginGrab");
@@ -12866,18 +13129,21 @@ public partial class CHostage : CHostageExpresserShim
 public partial class CHostageAlias_info_hostage_spawn : CHostage
 {
     public CHostageAlias_info_hostage_spawn (IntPtr pointer) : base(pointer) {}
+    public CHostageAlias_info_hostage_spawn() {}
 
 }
 
 public partial class CHostageCarriableProp : CBaseAnimGraph
 {
     public CHostageCarriableProp (IntPtr pointer) : base(pointer) {}
+    public CHostageCarriableProp() {}
 
 }
 
 public partial class CHostageExpresserShim : CBaseCombatCharacter
 {
     public CHostageExpresserShim (IntPtr pointer) : base(pointer) {}
+    public CHostageExpresserShim() {}
 
     // m_pExpresser
     public CAI_Expresser? Expresser => Schema.GetPointer<CAI_Expresser>(this.Handle, "CHostageExpresserShim", "m_pExpresser");
@@ -12887,18 +13153,21 @@ public partial class CHostageExpresserShim : CBaseCombatCharacter
 public partial class CHostageRescueZone : CHostageRescueZoneShim
 {
     public CHostageRescueZone (IntPtr pointer) : base(pointer) {}
+    public CHostageRescueZone() {}
 
 }
 
 public partial class CHostageRescueZoneShim : CBaseTrigger
 {
     public CHostageRescueZoneShim (IntPtr pointer) : base(pointer) {}
+    public CHostageRescueZoneShim() {}
 
 }
 
 public partial class CInButtonState : NativeObject
 {
     public CInButtonState (IntPtr pointer) : base(pointer) {}
+    public CInButtonState() {}
 
     // m_pButtonStates
     public Span<UInt64> ButtonStates => Schema.GetFixedArray<UInt64>(this.Handle, "CInButtonState", "m_pButtonStates", 3);
@@ -12908,12 +13177,14 @@ public partial class CInButtonState : NativeObject
 public partial class CIncendiaryGrenade : CMolotovGrenade
 {
     public CIncendiaryGrenade (IntPtr pointer) : base(pointer) {}
+    public CIncendiaryGrenade() {}
 
 }
 
 public partial class CInferno : CBaseModelEntity
 {
     public CInferno (IntPtr pointer) : base(pointer) {}
+    public CInferno() {}
 
     // m_firePositions
     public Span<Vector> FirePositions => Schema.GetFixedArray<Vector>(this.Handle, "CInferno", "m_firePositions", 64);
@@ -12992,18 +13263,21 @@ public partial class CInferno : CBaseModelEntity
 public partial class CInfoData : CServerOnlyEntity
 {
     public CInfoData (IntPtr pointer) : base(pointer) {}
+    public CInfoData() {}
 
 }
 
 public partial class CInfoDeathmatchSpawn : SpawnPoint
 {
     public CInfoDeathmatchSpawn (IntPtr pointer) : base(pointer) {}
+    public CInfoDeathmatchSpawn() {}
 
 }
 
 public partial class CInfoDynamicShadowHint : CPointEntity
 {
     public CInfoDynamicShadowHint (IntPtr pointer) : base(pointer) {}
+    public CInfoDynamicShadowHint() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CInfoDynamicShadowHint", "m_bDisabled");
@@ -13025,6 +13299,7 @@ public partial class CInfoDynamicShadowHint : CPointEntity
 public partial class CInfoDynamicShadowHintBox : CInfoDynamicShadowHint
 {
     public CInfoDynamicShadowHintBox (IntPtr pointer) : base(pointer) {}
+    public CInfoDynamicShadowHintBox() {}
 
     // m_vBoxMins
     public Vector BoxMins => Schema.GetDeclaredClass<Vector>(this.Handle, "CInfoDynamicShadowHintBox", "m_vBoxMins");
@@ -13037,12 +13312,14 @@ public partial class CInfoDynamicShadowHintBox : CInfoDynamicShadowHint
 public partial class CInfoEnemyTerroristSpawn : SpawnPointCoopEnemy
 {
     public CInfoEnemyTerroristSpawn (IntPtr pointer) : base(pointer) {}
+    public CInfoEnemyTerroristSpawn() {}
 
 }
 
 public partial class CInfoGameEventProxy : CPointEntity
 {
     public CInfoGameEventProxy (IntPtr pointer) : base(pointer) {}
+    public CInfoGameEventProxy() {}
 
     // m_iszEventName
     public string EventName
@@ -13059,42 +13336,49 @@ public partial class CInfoGameEventProxy : CPointEntity
 public partial class CInfoInstructorHintBombTargetA : CPointEntity
 {
     public CInfoInstructorHintBombTargetA (IntPtr pointer) : base(pointer) {}
+    public CInfoInstructorHintBombTargetA() {}
 
 }
 
 public partial class CInfoInstructorHintBombTargetB : CPointEntity
 {
     public CInfoInstructorHintBombTargetB (IntPtr pointer) : base(pointer) {}
+    public CInfoInstructorHintBombTargetB() {}
 
 }
 
 public partial class CInfoInstructorHintHostageRescueZone : CPointEntity
 {
     public CInfoInstructorHintHostageRescueZone (IntPtr pointer) : base(pointer) {}
+    public CInfoInstructorHintHostageRescueZone() {}
 
 }
 
 public partial class CInfoInstructorHintTarget : CPointEntity
 {
     public CInfoInstructorHintTarget (IntPtr pointer) : base(pointer) {}
+    public CInfoInstructorHintTarget() {}
 
 }
 
 public partial class CInfoLadderDismount : CBaseEntity
 {
     public CInfoLadderDismount (IntPtr pointer) : base(pointer) {}
+    public CInfoLadderDismount() {}
 
 }
 
 public partial class CInfoLandmark : CPointEntity
 {
     public CInfoLandmark (IntPtr pointer) : base(pointer) {}
+    public CInfoLandmark() {}
 
 }
 
 public partial class CInfoOffscreenPanoramaTexture : CPointEntity
 {
     public CInfoOffscreenPanoramaTexture (IntPtr pointer) : base(pointer) {}
+    public CInfoOffscreenPanoramaTexture() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CInfoOffscreenPanoramaTexture", "m_bDisabled");
@@ -13143,18 +13427,21 @@ public partial class CInfoOffscreenPanoramaTexture : CPointEntity
 public partial class CInfoParticleTarget : CPointEntity
 {
     public CInfoParticleTarget (IntPtr pointer) : base(pointer) {}
+    public CInfoParticleTarget() {}
 
 }
 
 public partial class CInfoPlayerCounterterrorist : SpawnPoint
 {
     public CInfoPlayerCounterterrorist (IntPtr pointer) : base(pointer) {}
+    public CInfoPlayerCounterterrorist() {}
 
 }
 
 public partial class CInfoPlayerStart : CPointEntity
 {
     public CInfoPlayerStart (IntPtr pointer) : base(pointer) {}
+    public CInfoPlayerStart() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CInfoPlayerStart", "m_bDisabled");
@@ -13164,18 +13451,21 @@ public partial class CInfoPlayerStart : CPointEntity
 public partial class CInfoPlayerTerrorist : SpawnPoint
 {
     public CInfoPlayerTerrorist (IntPtr pointer) : base(pointer) {}
+    public CInfoPlayerTerrorist() {}
 
 }
 
 public partial class CInfoSpawnGroupLandmark : CPointEntity
 {
     public CInfoSpawnGroupLandmark (IntPtr pointer) : base(pointer) {}
+    public CInfoSpawnGroupLandmark() {}
 
 }
 
 public partial class CInfoSpawnGroupLoadUnload : CLogicalEntity
 {
     public CInfoSpawnGroupLoadUnload (IntPtr pointer) : base(pointer) {}
+    public CInfoSpawnGroupLoadUnload() {}
 
     // m_OnSpawnGroupLoadStarted
     public CEntityIOOutput OnSpawnGroupLoadStarted => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CInfoSpawnGroupLoadUnload", "m_OnSpawnGroupLoadStarted");
@@ -13231,24 +13521,28 @@ public partial class CInfoSpawnGroupLoadUnload : CLogicalEntity
 public partial class CInfoTarget : CPointEntity
 {
     public CInfoTarget (IntPtr pointer) : base(pointer) {}
+    public CInfoTarget() {}
 
 }
 
 public partial class CInfoTargetServerOnly : CServerOnlyPointEntity
 {
     public CInfoTargetServerOnly (IntPtr pointer) : base(pointer) {}
+    public CInfoTargetServerOnly() {}
 
 }
 
 public partial class CInfoTeleportDestination : CPointEntity
 {
     public CInfoTeleportDestination (IntPtr pointer) : base(pointer) {}
+    public CInfoTeleportDestination() {}
 
 }
 
 public partial class CInfoVisibilityBox : CBaseEntity
 {
     public CInfoVisibilityBox (IntPtr pointer) : base(pointer) {}
+    public CInfoVisibilityBox() {}
 
     // m_nMode
     public ref Int32 Mode => ref Schema.GetRef<Int32>(this.Handle, "CInfoVisibilityBox", "m_nMode");
@@ -13264,6 +13558,7 @@ public partial class CInfoVisibilityBox : CBaseEntity
 public partial class CInfoWorldLayer : CBaseEntity
 {
     public CInfoWorldLayer (IntPtr pointer) : base(pointer) {}
+    public CInfoWorldLayer() {}
 
     // m_pOutputOnEntitiesSpawned
     public CEntityIOOutput OutputOnEntitiesSpawned => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CInfoWorldLayer", "m_pOutputOnEntitiesSpawned");
@@ -13299,6 +13594,7 @@ public partial class CInfoWorldLayer : CBaseEntity
 public partial class CInstancedSceneEntity : CSceneEntity
 {
     public CInstancedSceneEntity (IntPtr pointer) : base(pointer) {}
+    public CInstancedSceneEntity() {}
 
     // m_hOwner
     public CHandle<CBaseEntity> Owner => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CInstancedSceneEntity", "m_hOwner");
@@ -13320,6 +13616,7 @@ public partial class CInstancedSceneEntity : CSceneEntity
 public partial class CInstructorEventEntity : CPointEntity
 {
     public CInstructorEventEntity (IntPtr pointer) : base(pointer) {}
+    public CInstructorEventEntity() {}
 
     // m_iszName
     public string Name
@@ -13343,6 +13640,7 @@ public partial class CInstructorEventEntity : CPointEntity
 public partial class CIronSightController : NativeObject
 {
     public CIronSightController (IntPtr pointer) : base(pointer) {}
+    public CIronSightController() {}
 
     // m_bIronSightAvailable
     public ref bool IronSightAvailable => ref Schema.GetRef<bool>(this.Handle, "CIronSightController", "m_bIronSightAvailable");
@@ -13361,6 +13659,7 @@ public partial class CIronSightController : NativeObject
 public partial class CItem : CBaseAnimGraph
 {
     public CItem (IntPtr pointer) : base(pointer) {}
+    public CItem() {}
 
     // m_OnPlayerTouch
     public CEntityIOOutput OnPlayerTouch => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CItem", "m_OnPlayerTouch");
@@ -13391,18 +13690,21 @@ public partial class CItem : CBaseAnimGraph
 public partial class CItem_Healthshot : CWeaponBaseItem
 {
     public CItem_Healthshot (IntPtr pointer) : base(pointer) {}
+    public CItem_Healthshot() {}
 
 }
 
 public partial class CItemAssaultSuit : CItem
 {
     public CItemAssaultSuit (IntPtr pointer) : base(pointer) {}
+    public CItemAssaultSuit() {}
 
 }
 
 public partial class CItemDefuser : CItem
 {
     public CItemDefuser (IntPtr pointer) : base(pointer) {}
+    public CItemDefuser() {}
 
     // m_entitySpottedState
     public EntitySpottedState_t EntitySpottedState => Schema.GetDeclaredClass<EntitySpottedState_t>(this.Handle, "CItemDefuser", "m_entitySpottedState");
@@ -13415,12 +13717,14 @@ public partial class CItemDefuser : CItem
 public partial class CItemDefuserAlias_item_defuser : CItemDefuser
 {
     public CItemDefuserAlias_item_defuser (IntPtr pointer) : base(pointer) {}
+    public CItemDefuserAlias_item_defuser() {}
 
 }
 
 public partial class CItemDogtags : CItem
 {
     public CItemDogtags (IntPtr pointer) : base(pointer) {}
+    public CItemDogtags() {}
 
     // m_OwningPlayer
     public CHandle<CCSPlayerPawn> OwningPlayer => Schema.GetDeclaredClass<CHandle<CCSPlayerPawn>>(this.Handle, "CItemDogtags", "m_OwningPlayer");
@@ -13433,6 +13737,7 @@ public partial class CItemDogtags : CItem
 public partial class CItemGeneric : CItem
 {
     public CItemGeneric (IntPtr pointer) : base(pointer) {}
+    public CItemGeneric() {}
 
     // m_bHasTriggerRadius
     public ref bool HasTriggerRadius => ref Schema.GetRef<bool>(this.Handle, "CItemGeneric", "m_bHasTriggerRadius");
@@ -13575,6 +13880,7 @@ public partial class CItemGeneric : CItem
 public partial class CItemGenericTriggerHelper : CBaseModelEntity
 {
     public CItemGenericTriggerHelper (IntPtr pointer) : base(pointer) {}
+    public CItemGenericTriggerHelper() {}
 
     // m_hParentItem
     public CHandle<CItemGeneric> ParentItem => Schema.GetDeclaredClass<CHandle<CItemGeneric>>(this.Handle, "CItemGenericTriggerHelper", "m_hParentItem");
@@ -13584,24 +13890,28 @@ public partial class CItemGenericTriggerHelper : CBaseModelEntity
 public partial class CItemHeavyAssaultSuit : CItemAssaultSuit
 {
     public CItemHeavyAssaultSuit (IntPtr pointer) : base(pointer) {}
+    public CItemHeavyAssaultSuit() {}
 
 }
 
 public partial class CItemKevlar : CItem
 {
     public CItemKevlar (IntPtr pointer) : base(pointer) {}
+    public CItemKevlar() {}
 
 }
 
 public partial class CItemSoda : CBaseAnimGraph
 {
     public CItemSoda (IntPtr pointer) : base(pointer) {}
+    public CItemSoda() {}
 
 }
 
 public partial class CKeepUpright : CPointEntity
 {
     public CKeepUpright (IntPtr pointer) : base(pointer) {}
+    public CKeepUpright() {}
 
     // m_worldGoalAxis
     public Vector WorldGoalAxis => Schema.GetDeclaredClass<Vector>(this.Handle, "CKeepUpright", "m_worldGoalAxis");
@@ -13633,6 +13943,7 @@ public partial class CKeepUpright : CPointEntity
 public partial class CKnife : CCSWeaponBase
 {
     public CKnife (IntPtr pointer) : base(pointer) {}
+    public CKnife() {}
 
     // m_bFirstAttack
     public ref bool FirstAttack => ref Schema.GetRef<bool>(this.Handle, "CKnife", "m_bFirstAttack");
@@ -13642,6 +13953,7 @@ public partial class CKnife : CCSWeaponBase
 public partial class CLightComponent : CEntityComponent
 {
     public CLightComponent (IntPtr pointer) : base(pointer) {}
+    public CLightComponent() {}
 
     // __m_pChainEntity
     public CNetworkVarChainer __m_pChainEntity => Schema.GetDeclaredClass<CNetworkVarChainer>(this.Handle, "CLightComponent", "__m_pChainEntity");
@@ -13869,12 +14181,14 @@ public partial class CLightComponent : CEntityComponent
 public partial class CLightDirectionalEntity : CLightEntity
 {
     public CLightDirectionalEntity (IntPtr pointer) : base(pointer) {}
+    public CLightDirectionalEntity() {}
 
 }
 
 public partial class CLightEntity : CBaseModelEntity
 {
     public CLightEntity (IntPtr pointer) : base(pointer) {}
+    public CLightEntity() {}
 
     // m_CLightComponent
     public CLightComponent? CLightComponent => Schema.GetPointer<CLightComponent>(this.Handle, "CLightEntity", "m_CLightComponent");
@@ -13884,12 +14198,14 @@ public partial class CLightEntity : CBaseModelEntity
 public partial class CLightEnvironmentEntity : CLightDirectionalEntity
 {
     public CLightEnvironmentEntity (IntPtr pointer) : base(pointer) {}
+    public CLightEnvironmentEntity() {}
 
 }
 
 public partial class CLightGlow : CBaseModelEntity
 {
     public CLightGlow (IntPtr pointer) : base(pointer) {}
+    public CLightGlow() {}
 
     // m_nHorizontalSize
     public ref UInt32 HorizontalSize => ref Schema.GetRef<UInt32>(this.Handle, "CLightGlow", "m_nHorizontalSize");
@@ -13917,18 +14233,21 @@ public partial class CLightGlow : CBaseModelEntity
 public partial class CLightOrthoEntity : CLightEntity
 {
     public CLightOrthoEntity (IntPtr pointer) : base(pointer) {}
+    public CLightOrthoEntity() {}
 
 }
 
 public partial class CLightSpotEntity : CLightEntity
 {
     public CLightSpotEntity (IntPtr pointer) : base(pointer) {}
+    public CLightSpotEntity() {}
 
 }
 
 public partial class CLogicAchievement : CLogicalEntity
 {
     public CLogicAchievement (IntPtr pointer) : base(pointer) {}
+    public CLogicAchievement() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CLogicAchievement", "m_bDisabled");
@@ -13948,6 +14267,7 @@ public partial class CLogicAchievement : CLogicalEntity
 public partial class CLogicActiveAutosave : CLogicAutosave
 {
     public CLogicActiveAutosave (IntPtr pointer) : base(pointer) {}
+    public CLogicActiveAutosave() {}
 
     // m_TriggerHitPoints
     public ref Int32 TriggerHitPoints => ref Schema.GetRef<Int32>(this.Handle, "CLogicActiveAutosave", "m_TriggerHitPoints");
@@ -13966,12 +14286,14 @@ public partial class CLogicActiveAutosave : CLogicAutosave
 public partial class CLogicalEntity : CServerOnlyEntity
 {
     public CLogicalEntity (IntPtr pointer) : base(pointer) {}
+    public CLogicalEntity() {}
 
 }
 
 public partial class CLogicAuto : CBaseEntity
 {
     public CLogicAuto (IntPtr pointer) : base(pointer) {}
+    public CLogicAuto() {}
 
     // m_OnMapSpawn
     public CEntityIOOutput OnMapSpawn => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CLogicAuto", "m_OnMapSpawn");
@@ -14015,6 +14337,7 @@ public partial class CLogicAuto : CBaseEntity
 public partial class CLogicAutosave : CLogicalEntity
 {
     public CLogicAutosave (IntPtr pointer) : base(pointer) {}
+    public CLogicAutosave() {}
 
     // m_bForceNewLevelUnit
     public ref bool ForceNewLevelUnit => ref Schema.GetRef<bool>(this.Handle, "CLogicAutosave", "m_bForceNewLevelUnit");
@@ -14030,6 +14353,7 @@ public partial class CLogicAutosave : CLogicalEntity
 public partial class CLogicBranch : CLogicalEntity
 {
     public CLogicBranch (IntPtr pointer) : base(pointer) {}
+    public CLogicBranch() {}
 
     // m_bInValue
     public ref bool InValue => ref Schema.GetRef<bool>(this.Handle, "CLogicBranch", "m_bInValue");
@@ -14048,6 +14372,7 @@ public partial class CLogicBranch : CLogicalEntity
 public partial class CLogicBranchList : CLogicalEntity
 {
     public CLogicBranchList (IntPtr pointer) : base(pointer) {}
+    public CLogicBranchList() {}
 
     // m_nLogicBranchNames
     public Span<string> LogicBranchNames => Schema.GetFixedArray<string>(this.Handle, "CLogicBranchList", "m_nLogicBranchNames", 16);
@@ -14070,6 +14395,7 @@ public partial class CLogicBranchList : CLogicalEntity
 public partial class CLogicCase : CLogicalEntity
 {
     public CLogicCase (IntPtr pointer) : base(pointer) {}
+    public CLogicCase() {}
 
     // m_nCase
     public Span<string> Case => Schema.GetFixedArray<string>(this.Handle, "CLogicCase", "m_nCase", 32);
@@ -14091,6 +14417,7 @@ public partial class CLogicCase : CLogicalEntity
 public partial class CLogicCollisionPair : CLogicalEntity
 {
     public CLogicCollisionPair (IntPtr pointer) : base(pointer) {}
+    public CLogicCollisionPair() {}
 
     // m_nameAttach1
     public string NameAttach1
@@ -14117,6 +14444,7 @@ public partial class CLogicCollisionPair : CLogicalEntity
 public partial class CLogicCompare : CLogicalEntity
 {
     public CLogicCompare (IntPtr pointer) : base(pointer) {}
+    public CLogicCompare() {}
 
     // m_flInValue
     public ref float InValue => ref Schema.GetRef<float>(this.Handle, "CLogicCompare", "m_flInValue");
@@ -14129,6 +14457,7 @@ public partial class CLogicCompare : CLogicalEntity
 public partial class CLogicDistanceAutosave : CLogicalEntity
 {
     public CLogicDistanceAutosave (IntPtr pointer) : base(pointer) {}
+    public CLogicDistanceAutosave() {}
 
     // m_iszTargetEntity
     public string TargetEntity
@@ -14157,6 +14486,7 @@ public partial class CLogicDistanceAutosave : CLogicalEntity
 public partial class CLogicDistanceCheck : CLogicalEntity
 {
     public CLogicDistanceCheck (IntPtr pointer) : base(pointer) {}
+    public CLogicDistanceCheck() {}
 
     // m_iszEntityA
     public string EntityA
@@ -14192,6 +14522,7 @@ public partial class CLogicDistanceCheck : CLogicalEntity
 public partial class CLogicEventListener : CLogicalEntity
 {
     public CLogicEventListener (IntPtr pointer) : base(pointer) {}
+    public CLogicEventListener() {}
 
     // m_strEventName
     public string StrEventName
@@ -14214,6 +14545,7 @@ public partial class CLogicEventListener : CLogicalEntity
 public partial class CLogicGameEvent : CLogicalEntity
 {
     public CLogicGameEvent (IntPtr pointer) : base(pointer) {}
+    public CLogicGameEvent() {}
 
     // m_iszEventName
     public string EventName
@@ -14227,6 +14559,7 @@ public partial class CLogicGameEvent : CLogicalEntity
 public partial class CLogicGameEventListener : CLogicalEntity
 {
     public CLogicGameEventListener (IntPtr pointer) : base(pointer) {}
+    public CLogicGameEventListener() {}
 
     // m_OnEventFired
     public CEntityIOOutput OnEventFired => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CLogicGameEventListener", "m_OnEventFired");
@@ -14256,6 +14589,7 @@ public partial class CLogicGameEventListener : CLogicalEntity
 public partial class CLogicLineToEntity : CLogicalEntity
 {
     public CLogicLineToEntity (IntPtr pointer) : base(pointer) {}
+    public CLogicLineToEntity() {}
 
     // m_SourceName
     public string SourceName
@@ -14275,6 +14609,7 @@ public partial class CLogicLineToEntity : CLogicalEntity
 public partial class CLogicMeasureMovement : CLogicalEntity
 {
     public CLogicMeasureMovement (IntPtr pointer) : base(pointer) {}
+    public CLogicMeasureMovement() {}
 
     // m_strMeasureTarget
     public string StrMeasureTarget
@@ -14320,6 +14655,7 @@ public partial class CLogicMeasureMovement : CLogicalEntity
 public partial class CLogicNavigation : CLogicalEntity
 {
     public CLogicNavigation (IntPtr pointer) : base(pointer) {}
+    public CLogicNavigation() {}
 
     // m_isOn
     public ref bool IsOn => ref Schema.GetRef<bool>(this.Handle, "CLogicNavigation", "m_isOn");
@@ -14332,6 +14668,7 @@ public partial class CLogicNavigation : CLogicalEntity
 public partial class CLogicNPCCounter : CBaseEntity
 {
     public CLogicNPCCounter (IntPtr pointer) : base(pointer) {}
+    public CLogicNPCCounter() {}
 
     // m_OnMinCountAll
     public CEntityIOOutput OnMinCountAll => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CLogicNPCCounter", "m_OnMinCountAll");
@@ -14474,6 +14811,7 @@ public partial class CLogicNPCCounter : CBaseEntity
 public partial class CLogicNPCCounterAABB : CLogicNPCCounter
 {
     public CLogicNPCCounterAABB (IntPtr pointer) : base(pointer) {}
+    public CLogicNPCCounterAABB() {}
 
     // m_vDistanceOuterMins
     public Vector DistanceOuterMins => Schema.GetDeclaredClass<Vector>(this.Handle, "CLogicNPCCounterAABB", "m_vDistanceOuterMins");
@@ -14492,12 +14830,14 @@ public partial class CLogicNPCCounterAABB : CLogicNPCCounter
 public partial class CLogicNPCCounterOBB : CLogicNPCCounterAABB
 {
     public CLogicNPCCounterOBB (IntPtr pointer) : base(pointer) {}
+    public CLogicNPCCounterOBB() {}
 
 }
 
 public partial class CLogicPlayerProxy : CLogicalEntity
 {
     public CLogicPlayerProxy (IntPtr pointer) : base(pointer) {}
+    public CLogicPlayerProxy() {}
 
     // m_hPlayer
     public CHandle<CBaseEntity> Player => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CLogicPlayerProxy", "m_hPlayer");
@@ -14516,12 +14856,14 @@ public partial class CLogicPlayerProxy : CLogicalEntity
 public partial class CLogicProximity : CPointEntity
 {
     public CLogicProximity (IntPtr pointer) : base(pointer) {}
+    public CLogicProximity() {}
 
 }
 
 public partial class CLogicRelay : CLogicalEntity
 {
     public CLogicRelay (IntPtr pointer) : base(pointer) {}
+    public CLogicRelay() {}
 
     // m_OnTrigger
     public CEntityIOOutput OnTrigger => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CLogicRelay", "m_OnTrigger");
@@ -14549,12 +14891,14 @@ public partial class CLogicRelay : CLogicalEntity
 public partial class CLogicScript : CPointEntity
 {
     public CLogicScript (IntPtr pointer) : base(pointer) {}
+    public CLogicScript() {}
 
 }
 
 public partial class CMapInfo : CPointEntity
 {
     public CMapInfo (IntPtr pointer) : base(pointer) {}
+    public CMapInfo() {}
 
     // m_iBuyingStatus
     public ref Int32 BuyingStatus => ref Schema.GetRef<Int32>(this.Handle, "CMapInfo", "m_iBuyingStatus");
@@ -14585,6 +14929,7 @@ public partial class CMapInfo : CPointEntity
 public partial class CMapVetoPickController : CBaseEntity
 {
     public CMapVetoPickController (IntPtr pointer) : base(pointer) {}
+    public CMapVetoPickController() {}
 
     // m_bPlayedIntroVcd
     public ref bool PlayedIntroVcd => ref Schema.GetRef<bool>(this.Handle, "CMapVetoPickController", "m_bPlayedIntroVcd");
@@ -14648,6 +14993,7 @@ public partial class CMapVetoPickController : CBaseEntity
 public partial class CMarkupVolume : CBaseModelEntity
 {
     public CMarkupVolume (IntPtr pointer) : base(pointer) {}
+    public CMarkupVolume() {}
 
     // m_bEnabled
     public ref bool Enabled => ref Schema.GetRef<bool>(this.Handle, "CMarkupVolume", "m_bEnabled");
@@ -14657,6 +15003,7 @@ public partial class CMarkupVolume : CBaseModelEntity
 public partial class CMarkupVolumeTagged : CMarkupVolume
 {
     public CMarkupVolumeTagged (IntPtr pointer) : base(pointer) {}
+    public CMarkupVolumeTagged() {}
 
     // m_bIsGroup
     public ref bool IsGroup => ref Schema.GetRef<bool>(this.Handle, "CMarkupVolumeTagged", "m_bIsGroup");
@@ -14678,12 +15025,14 @@ public partial class CMarkupVolumeTagged : CMarkupVolume
 public partial class CMarkupVolumeTagged_Nav : CMarkupVolumeTagged
 {
     public CMarkupVolumeTagged_Nav (IntPtr pointer) : base(pointer) {}
+    public CMarkupVolumeTagged_Nav() {}
 
 }
 
 public partial class CMarkupVolumeTagged_NavGame : CMarkupVolumeWithRef
 {
     public CMarkupVolumeTagged_NavGame (IntPtr pointer) : base(pointer) {}
+    public CMarkupVolumeTagged_NavGame() {}
 
     // m_bFloodFillAttribute
     public ref bool FloodFillAttribute => ref Schema.GetRef<bool>(this.Handle, "CMarkupVolumeTagged_NavGame", "m_bFloodFillAttribute");
@@ -14693,6 +15042,7 @@ public partial class CMarkupVolumeTagged_NavGame : CMarkupVolumeWithRef
 public partial class CMarkupVolumeWithRef : CMarkupVolumeTagged
 {
     public CMarkupVolumeWithRef (IntPtr pointer) : base(pointer) {}
+    public CMarkupVolumeWithRef() {}
 
     // m_bUseRef
     public ref bool UseRef => ref Schema.GetRef<bool>(this.Handle, "CMarkupVolumeWithRef", "m_bUseRef");
@@ -14708,6 +15058,7 @@ public partial class CMarkupVolumeWithRef : CMarkupVolumeTagged
 public partial class CMathColorBlend : CLogicalEntity
 {
     public CMathColorBlend (IntPtr pointer) : base(pointer) {}
+    public CMathColorBlend() {}
 
     // m_flInMin
     public ref float InMin => ref Schema.GetRef<float>(this.Handle, "CMathColorBlend", "m_flInMin");
@@ -14734,6 +15085,7 @@ public partial class CMathColorBlend : CLogicalEntity
 public partial class CMathCounter : CLogicalEntity
 {
     public CMathCounter (IntPtr pointer) : base(pointer) {}
+    public CMathCounter() {}
 
     // m_flMin
     public ref float Min => ref Schema.GetRef<float>(this.Handle, "CMathCounter", "m_flMin");
@@ -14767,6 +15119,7 @@ public partial class CMathCounter : CLogicalEntity
 public partial class CMathRemap : CLogicalEntity
 {
     public CMathRemap (IntPtr pointer) : base(pointer) {}
+    public CMathRemap() {}
 
     // m_flInMin
     public ref float InMin => ref Schema.GetRef<float>(this.Handle, "CMathRemap", "m_flInMin");
@@ -14803,6 +15156,7 @@ public partial class CMathRemap : CLogicalEntity
 public partial class CMelee : CCSWeaponBase
 {
     public CMelee (IntPtr pointer) : base(pointer) {}
+    public CMelee() {}
 
     // m_flThrowAt
     public ref float ThrowAt => ref Schema.GetRef<float>(this.Handle, "CMelee", "m_flThrowAt");
@@ -14818,6 +15172,7 @@ public partial class CMelee : CCSWeaponBase
 public partial class CMessage : CPointEntity
 {
     public CMessage (IntPtr pointer) : base(pointer) {}
+    public CMessage() {}
 
     // m_iszMessage
     public string Message
@@ -14850,6 +15205,7 @@ public partial class CMessage : CPointEntity
 public partial class CMessageEntity : CPointEntity
 {
     public CMessageEntity (IntPtr pointer) : base(pointer) {}
+    public CMessageEntity() {}
 
     // m_radius
     public ref Int32 Radius => ref Schema.GetRef<Int32>(this.Handle, "CMessageEntity", "m_radius");
@@ -14875,12 +15231,14 @@ public partial class CMessageEntity : CPointEntity
 public partial class CModelPointEntity : CBaseModelEntity
 {
     public CModelPointEntity (IntPtr pointer) : base(pointer) {}
+    public CModelPointEntity() {}
 
 }
 
 public partial class CModelState : NativeObject
 {
     public CModelState (IntPtr pointer) : base(pointer) {}
+    public CModelState() {}
 
     // m_hModel
     public CStrongHandle<InfoForResourceTypeCModel> Model => Schema.GetDeclaredClass<CStrongHandle<InfoForResourceTypeCModel>>(this.Handle, "CModelState", "m_hModel");
@@ -14912,12 +15270,14 @@ public partial class CModelState : NativeObject
 public partial class CMolotovGrenade : CBaseCSGrenade
 {
     public CMolotovGrenade (IntPtr pointer) : base(pointer) {}
+    public CMolotovGrenade() {}
 
 }
 
 public partial class CMolotovProjectile : CBaseCSGrenadeProjectile
 {
     public CMolotovProjectile (IntPtr pointer) : base(pointer) {}
+    public CMolotovProjectile() {}
 
     // m_bIsIncGrenade
     public ref bool IsIncGrenade => ref Schema.GetRef<bool>(this.Handle, "CMolotovProjectile", "m_bIsIncGrenade");
@@ -14936,6 +15296,7 @@ public partial class CMolotovProjectile : CBaseCSGrenadeProjectile
 public partial class CMomentaryRotButton : CRotButton
 {
     public CMomentaryRotButton (IntPtr pointer) : base(pointer) {}
+    public CMomentaryRotButton() {}
 
     // m_OnUnpressed
     public CEntityIOOutput OnUnpressed => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CMomentaryRotButton", "m_OnUnpressed");
@@ -14985,6 +15346,7 @@ public partial class CMomentaryRotButton : CRotButton
 public partial class CMotorController : NativeObject
 {
     public CMotorController (IntPtr pointer) : base(pointer) {}
+    public CMotorController() {}
 
     // m_speed
     public ref float Speed => ref Schema.GetRef<float>(this.Handle, "CMotorController", "m_speed");
@@ -15003,6 +15365,7 @@ public partial class CMotorController : NativeObject
 public partial class CMultiLightProxy : CLogicalEntity
 {
     public CMultiLightProxy (IntPtr pointer) : base(pointer) {}
+    public CMultiLightProxy() {}
 
     // m_iszLightNameFilter
     public string LightNameFilter
@@ -15041,6 +15404,7 @@ public partial class CMultiLightProxy : CLogicalEntity
 public partial class CMultiplayer_Expresser : CAI_ExpresserWithFollowup
 {
     public CMultiplayer_Expresser (IntPtr pointer) : base(pointer) {}
+    public CMultiplayer_Expresser() {}
 
     // m_bAllowMultipleScenes
     public ref bool AllowMultipleScenes => ref Schema.GetRef<bool>(this.Handle, "CMultiplayer_Expresser", "m_bAllowMultipleScenes");
@@ -15050,12 +15414,14 @@ public partial class CMultiplayer_Expresser : CAI_ExpresserWithFollowup
 public partial class CMultiplayRules : CGameRules
 {
     public CMultiplayRules (IntPtr pointer) : base(pointer) {}
+    public CMultiplayRules() {}
 
 }
 
 public partial class CMultiSource : CLogicalEntity
 {
     public CMultiSource (IntPtr pointer) : base(pointer) {}
+    public CMultiSource() {}
 
     // m_rgEntities
     public Span<CHandle<CBaseEntity>> RgEntities => Schema.GetFixedArray<CHandle<CBaseEntity>>(this.Handle, "CMultiSource", "m_rgEntities", 32);
@@ -15081,6 +15447,7 @@ public partial class CMultiSource : CLogicalEntity
 public partial class CNavLinkAreaEntity : CPointEntity
 {
     public CNavLinkAreaEntity (IntPtr pointer) : base(pointer) {}
+    public CNavLinkAreaEntity() {}
 
     // m_flWidth
     public ref float Width => ref Schema.GetRef<float>(this.Handle, "CNavLinkAreaEntity", "m_flWidth");
@@ -15138,6 +15505,7 @@ public partial class CNavLinkAreaEntity : CPointEntity
 public partial class CNavSpaceInfo : CPointEntity
 {
     public CNavSpaceInfo (IntPtr pointer) : base(pointer) {}
+    public CNavSpaceInfo() {}
 
     // m_bCreateFlightSpace
     public ref bool CreateFlightSpace => ref Schema.GetRef<bool>(this.Handle, "CNavSpaceInfo", "m_bCreateFlightSpace");
@@ -15147,12 +15515,14 @@ public partial class CNavSpaceInfo : CPointEntity
 public partial class CNavWalkable : CPointEntity
 {
     public CNavWalkable (IntPtr pointer) : base(pointer) {}
+    public CNavWalkable() {}
 
 }
 
 public partial class CNetworkedSequenceOperation : NativeObject
 {
     public CNetworkedSequenceOperation (IntPtr pointer) : base(pointer) {}
+    public CNetworkedSequenceOperation() {}
 
     // m_hSequence
     public ref Int32 Sequence => ref Schema.GetRef<Int32>(this.Handle, "CNetworkedSequenceOperation", "m_hSequence");
@@ -15183,6 +15553,7 @@ public partial class CNetworkedSequenceOperation : NativeObject
 public partial class CNetworkOriginCellCoordQuantizedVector : NativeObject
 {
     public CNetworkOriginCellCoordQuantizedVector (IntPtr pointer) : base(pointer) {}
+    public CNetworkOriginCellCoordQuantizedVector() {}
 
     // m_cellX
     public ref UInt16 CellX => ref Schema.GetRef<UInt16>(this.Handle, "CNetworkOriginCellCoordQuantizedVector", "m_cellX");
@@ -15210,6 +15581,7 @@ public partial class CNetworkOriginCellCoordQuantizedVector : NativeObject
 public partial class CNetworkTransmitComponent : NativeObject
 {
     public CNetworkTransmitComponent (IntPtr pointer) : base(pointer) {}
+    public CNetworkTransmitComponent() {}
 
     // m_nTransmitStateOwnedCounter
     public ref byte TransmitStateOwnedCounter => ref Schema.GetRef<byte>(this.Handle, "CNetworkTransmitComponent", "m_nTransmitStateOwnedCounter");
@@ -15219,6 +15591,7 @@ public partial class CNetworkTransmitComponent : NativeObject
 public partial class CNetworkVarChainer : NativeObject
 {
     public CNetworkVarChainer (IntPtr pointer) : base(pointer) {}
+    public CNetworkVarChainer() {}
 
     // m_PathIndex
     public ChangeAccessorFieldPathIndex_t PathIndex => Schema.GetDeclaredClass<ChangeAccessorFieldPathIndex_t>(this.Handle, "CNetworkVarChainer", "m_PathIndex");
@@ -15228,6 +15601,7 @@ public partial class CNetworkVarChainer : NativeObject
 public partial class CNetworkVelocityVector : NativeObject
 {
     public CNetworkVelocityVector (IntPtr pointer) : base(pointer) {}
+    public CNetworkVelocityVector() {}
 
     // m_vecX
     public float X => Schema.GetDeclaredClass<float>(this.Handle, "CNetworkVelocityVector", "m_vecX");
@@ -15243,6 +15617,7 @@ public partial class CNetworkVelocityVector : NativeObject
 public partial class CNetworkViewOffsetVector : NativeObject
 {
     public CNetworkViewOffsetVector (IntPtr pointer) : base(pointer) {}
+    public CNetworkViewOffsetVector() {}
 
     // m_vecX
     public float X => Schema.GetDeclaredClass<float>(this.Handle, "CNetworkViewOffsetVector", "m_vecX");
@@ -15258,12 +15633,14 @@ public partial class CNetworkViewOffsetVector : NativeObject
 public partial class CNullEntity : CBaseEntity
 {
     public CNullEntity (IntPtr pointer) : base(pointer) {}
+    public CNullEntity() {}
 
 }
 
 public partial class COmniLight : CBarnLight
 {
     public COmniLight (IntPtr pointer) : base(pointer) {}
+    public COmniLight() {}
 
     // m_flInnerAngle
     public ref float InnerAngle => ref Schema.GetRef<float>(this.Handle, "COmniLight", "m_flInnerAngle");
@@ -15279,6 +15656,7 @@ public partial class COmniLight : CBarnLight
 public partial class constraint_axislimit_t : NativeObject
 {
     public constraint_axislimit_t (IntPtr pointer) : base(pointer) {}
+    public constraint_axislimit_t() {}
 
     // flMinRotation
     public ref float FlMinRotation => ref Schema.GetRef<float>(this.Handle, "constraint_axislimit_t", "flMinRotation");
@@ -15297,6 +15675,7 @@ public partial class constraint_axislimit_t : NativeObject
 public partial class constraint_breakableparams_t : NativeObject
 {
     public constraint_breakableparams_t (IntPtr pointer) : base(pointer) {}
+    public constraint_breakableparams_t() {}
 
     // strength
     public ref float Strength => ref Schema.GetRef<float>(this.Handle, "constraint_breakableparams_t", "strength");
@@ -15318,6 +15697,7 @@ public partial class constraint_breakableparams_t : NativeObject
 public partial class constraint_hingeparams_t : NativeObject
 {
     public constraint_hingeparams_t (IntPtr pointer) : base(pointer) {}
+    public constraint_hingeparams_t() {}
 
     // worldPosition
     public Vector WorldPosition => Schema.GetDeclaredClass<Vector>(this.Handle, "constraint_hingeparams_t", "worldPosition");
@@ -15336,6 +15716,7 @@ public partial class constraint_hingeparams_t : NativeObject
 public partial class ConstraintSoundInfo : NativeObject
 {
     public ConstraintSoundInfo (IntPtr pointer) : base(pointer) {}
+    public ConstraintSoundInfo() {}
 
     // m_vSampler
     public VelocitySampler Sampler => Schema.GetDeclaredClass<VelocitySampler>(this.Handle, "ConstraintSoundInfo", "m_vSampler");
@@ -15374,6 +15755,7 @@ public partial class ConstraintSoundInfo : NativeObject
 public partial class COrnamentProp : CDynamicProp
 {
     public COrnamentProp (IntPtr pointer) : base(pointer) {}
+    public COrnamentProp() {}
 
     // m_initialOwner
     public string InitialOwner
@@ -15387,6 +15769,7 @@ public partial class COrnamentProp : CDynamicProp
 public partial class CountdownTimer : NativeObject
 {
     public CountdownTimer (IntPtr pointer) : base(pointer) {}
+    public CountdownTimer() {}
 
     // m_duration
     public ref float Duration => ref Schema.GetRef<float>(this.Handle, "CountdownTimer", "m_duration");
@@ -15405,6 +15788,7 @@ public partial class CountdownTimer : NativeObject
 public partial class CParticleSystem : CBaseModelEntity
 {
     public CParticleSystem (IntPtr pointer) : base(pointer) {}
+    public CParticleSystem() {}
 
     // m_szSnapshotFileName
     public string SnapshotFileName
@@ -15489,6 +15873,7 @@ public partial class CParticleSystem : CBaseModelEntity
 public partial class CPathCorner : CPointEntity
 {
     public CPathCorner (IntPtr pointer) : base(pointer) {}
+    public CPathCorner() {}
 
     // m_flWait
     public ref float Wait => ref Schema.GetRef<float>(this.Handle, "CPathCorner", "m_flWait");
@@ -15504,12 +15889,14 @@ public partial class CPathCorner : CPointEntity
 public partial class CPathCornerCrash : CPathCorner
 {
     public CPathCornerCrash (IntPtr pointer) : base(pointer) {}
+    public CPathCornerCrash() {}
 
 }
 
 public partial class CPathKeyFrame : CLogicalEntity
 {
     public CPathKeyFrame (IntPtr pointer) : base(pointer) {}
+    public CPathKeyFrame() {}
 
     // m_Origin
     public Vector Origin => Schema.GetDeclaredClass<Vector>(this.Handle, "CPathKeyFrame", "m_Origin");
@@ -15544,6 +15931,7 @@ public partial class CPathKeyFrame : CLogicalEntity
 public partial class CPathParticleRope : CBaseEntity
 {
     public CPathParticleRope (IntPtr pointer) : base(pointer) {}
+    public CPathParticleRope() {}
 
     // m_bStartActive
     public ref bool StartActive => ref Schema.GetRef<bool>(this.Handle, "CPathParticleRope", "m_bStartActive");
@@ -15606,12 +15994,14 @@ public partial class CPathParticleRope : CBaseEntity
 public partial class CPathParticleRopeAlias_path_particle_rope_clientside : CPathParticleRope
 {
     public CPathParticleRopeAlias_path_particle_rope_clientside (IntPtr pointer) : base(pointer) {}
+    public CPathParticleRopeAlias_path_particle_rope_clientside() {}
 
 }
 
 public partial class CPathTrack : CPointEntity
 {
     public CPathTrack (IntPtr pointer) : base(pointer) {}
+    public CPathTrack() {}
 
     // m_pnext
     public CPathTrack? Pnext => Schema.GetPointer<CPathTrack>(this.Handle, "CPathTrack", "m_pnext");
@@ -15649,6 +16039,7 @@ public partial class CPathTrack : CPointEntity
 public partial class CPhysBallSocket : CPhysConstraint
 {
     public CPhysBallSocket (IntPtr pointer) : base(pointer) {}
+    public CPhysBallSocket() {}
 
     // m_flFriction
     public ref float Friction => ref Schema.GetRef<float>(this.Handle, "CPhysBallSocket", "m_flFriction");
@@ -15673,6 +16064,7 @@ public partial class CPhysBallSocket : CPhysConstraint
 public partial class CPhysBox : CBreakable
 {
     public CPhysBox (IntPtr pointer) : base(pointer) {}
+    public CPhysBox() {}
 
     // m_damageType
     public ref Int32 DamageType => ref Schema.GetRef<Int32>(this.Handle, "CPhysBox", "m_damageType");
@@ -15724,6 +16116,7 @@ public partial class CPhysBox : CBreakable
 public partial class CPhysConstraint : CLogicalEntity
 {
     public CPhysConstraint (IntPtr pointer) : base(pointer) {}
+    public CPhysConstraint() {}
 
     // m_nameAttach1
     public string NameAttach1
@@ -15766,6 +16159,7 @@ public partial class CPhysConstraint : CLogicalEntity
 public partial class CPhysExplosion : CPointEntity
 {
     public CPhysExplosion (IntPtr pointer) : base(pointer) {}
+    public CPhysExplosion() {}
 
     // m_bExplodeOnSpawn
     public ref bool ExplodeOnSpawn => ref Schema.GetRef<bool>(this.Handle, "CPhysExplosion", "m_bExplodeOnSpawn");
@@ -15803,6 +16197,7 @@ public partial class CPhysExplosion : CPointEntity
 public partial class CPhysFixed : CPhysConstraint
 {
     public CPhysFixed (IntPtr pointer) : base(pointer) {}
+    public CPhysFixed() {}
 
     // m_flLinearFrequency
     public ref float LinearFrequency => ref Schema.GetRef<float>(this.Handle, "CPhysFixed", "m_flLinearFrequency");
@@ -15827,6 +16222,7 @@ public partial class CPhysFixed : CPhysConstraint
 public partial class CPhysForce : CPointEntity
 {
     public CPhysForce (IntPtr pointer) : base(pointer) {}
+    public CPhysForce() {}
 
     // m_nameAttach
     public string NameAttach
@@ -15855,6 +16251,7 @@ public partial class CPhysForce : CPointEntity
 public partial class CPhysHinge : CPhysConstraint
 {
     public CPhysHinge (IntPtr pointer) : base(pointer) {}
+    public CPhysHinge() {}
 
     // m_soundInfo
     public ConstraintSoundInfo SoundInfo => Schema.GetDeclaredClass<ConstraintSoundInfo>(this.Handle, "CPhysHinge", "m_soundInfo");
@@ -15915,18 +16312,21 @@ public partial class CPhysHinge : CPhysConstraint
 public partial class CPhysHingeAlias_phys_hinge_local : CPhysHinge
 {
     public CPhysHingeAlias_phys_hinge_local (IntPtr pointer) : base(pointer) {}
+    public CPhysHingeAlias_phys_hinge_local() {}
 
 }
 
 public partial class CPhysicalButton : CBaseButton
 {
     public CPhysicalButton (IntPtr pointer) : base(pointer) {}
+    public CPhysicalButton() {}
 
 }
 
 public partial class CPhysicsEntitySolver : CLogicalEntity
 {
     public CPhysicsEntitySolver (IntPtr pointer) : base(pointer) {}
+    public CPhysicsEntitySolver() {}
 
     // m_hMovingEntity
     public CHandle<CBaseEntity> MovingEntity => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CPhysicsEntitySolver", "m_hMovingEntity");
@@ -15945,6 +16345,7 @@ public partial class CPhysicsEntitySolver : CLogicalEntity
 public partial class CPhysicsProp : CBreakableProp
 {
     public CPhysicsProp (IntPtr pointer) : base(pointer) {}
+    public CPhysicsProp() {}
 
     // m_MotionEnabled
     public CEntityIOOutput MotionEnabled => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CPhysicsProp", "m_MotionEnabled");
@@ -16057,18 +16458,21 @@ public partial class CPhysicsProp : CBreakableProp
 public partial class CPhysicsPropMultiplayer : CPhysicsProp
 {
     public CPhysicsPropMultiplayer (IntPtr pointer) : base(pointer) {}
+    public CPhysicsPropMultiplayer() {}
 
 }
 
 public partial class CPhysicsPropOverride : CPhysicsProp
 {
     public CPhysicsPropOverride (IntPtr pointer) : base(pointer) {}
+    public CPhysicsPropOverride() {}
 
 }
 
 public partial class CPhysicsPropRespawnable : CPhysicsProp
 {
     public CPhysicsPropRespawnable (IntPtr pointer) : base(pointer) {}
+    public CPhysicsPropRespawnable() {}
 
     // m_vOriginalSpawnOrigin
     public Vector OriginalSpawnOrigin => Schema.GetDeclaredClass<Vector>(this.Handle, "CPhysicsPropRespawnable", "m_vOriginalSpawnOrigin");
@@ -16090,6 +16494,7 @@ public partial class CPhysicsPropRespawnable : CPhysicsProp
 public partial class CPhysicsShake : NativeObject
 {
     public CPhysicsShake (IntPtr pointer) : base(pointer) {}
+    public CPhysicsShake() {}
 
     // m_force
     public Vector Force => Schema.GetDeclaredClass<Vector>(this.Handle, "CPhysicsShake", "m_force");
@@ -16099,6 +16504,7 @@ public partial class CPhysicsShake : NativeObject
 public partial class CPhysicsSpring : CBaseEntity
 {
     public CPhysicsSpring (IntPtr pointer) : base(pointer) {}
+    public CPhysicsSpring() {}
 
     // m_flFrequency
     public ref float Frequency => ref Schema.GetRef<float>(this.Handle, "CPhysicsSpring", "m_flFrequency");
@@ -16137,6 +16543,7 @@ public partial class CPhysicsSpring : CBaseEntity
 public partial class CPhysicsWire : CBaseEntity
 {
     public CPhysicsWire (IntPtr pointer) : base(pointer) {}
+    public CPhysicsWire() {}
 
     // m_nDensity
     public ref Int32 Density => ref Schema.GetRef<Int32>(this.Handle, "CPhysicsWire", "m_nDensity");
@@ -16146,6 +16553,7 @@ public partial class CPhysicsWire : CBaseEntity
 public partial class CPhysImpact : CPointEntity
 {
     public CPhysImpact (IntPtr pointer) : base(pointer) {}
+    public CPhysImpact() {}
 
     // m_damage
     public ref float Damage => ref Schema.GetRef<float>(this.Handle, "CPhysImpact", "m_damage");
@@ -16165,6 +16573,7 @@ public partial class CPhysImpact : CPointEntity
 public partial class CPhysLength : CPhysConstraint
 {
     public CPhysLength (IntPtr pointer) : base(pointer) {}
+    public CPhysLength() {}
 
     // m_offset
     public Span<Vector> Offset => Schema.GetFixedArray<Vector>(this.Handle, "CPhysLength", "m_offset", 2);
@@ -16189,6 +16598,7 @@ public partial class CPhysLength : CPhysConstraint
 public partial class CPhysMagnet : CBaseAnimGraph
 {
     public CPhysMagnet (IntPtr pointer) : base(pointer) {}
+    public CPhysMagnet() {}
 
     // m_OnMagnetAttach
     public CEntityIOOutput OnMagnetAttach => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CPhysMagnet", "m_OnMagnetAttach");
@@ -16231,6 +16641,7 @@ public partial class CPhysMagnet : CBaseAnimGraph
 public partial class CPhysMotor : CLogicalEntity
 {
     public CPhysMotor (IntPtr pointer) : base(pointer) {}
+    public CPhysMotor() {}
 
     // m_nameAttach
     public string NameAttach
@@ -16262,6 +16673,7 @@ public partial class CPhysMotor : CLogicalEntity
 public partial class CPhysPulley : CPhysConstraint
 {
     public CPhysPulley (IntPtr pointer) : base(pointer) {}
+    public CPhysPulley() {}
 
     // m_position2
     public Vector Position2 => Schema.GetDeclaredClass<Vector>(this.Handle, "CPhysPulley", "m_position2");
@@ -16280,6 +16692,7 @@ public partial class CPhysPulley : CPhysConstraint
 public partial class CPhysSlideConstraint : CPhysConstraint
 {
     public CPhysSlideConstraint (IntPtr pointer) : base(pointer) {}
+    public CPhysSlideConstraint() {}
 
     // m_axisEnd
     public Vector AxisEnd => Schema.GetDeclaredClass<Vector>(this.Handle, "CPhysSlideConstraint", "m_axisEnd");
@@ -16316,6 +16729,7 @@ public partial class CPhysSlideConstraint : CPhysConstraint
 public partial class CPhysThruster : CPhysForce
 {
     public CPhysThruster (IntPtr pointer) : base(pointer) {}
+    public CPhysThruster() {}
 
     // m_localOrigin
     public Vector LocalOrigin => Schema.GetDeclaredClass<Vector>(this.Handle, "CPhysThruster", "m_localOrigin");
@@ -16325,6 +16739,7 @@ public partial class CPhysThruster : CPhysForce
 public partial class CPhysTorque : CPhysForce
 {
     public CPhysTorque (IntPtr pointer) : base(pointer) {}
+    public CPhysTorque() {}
 
     // m_axis
     public Vector Axis => Schema.GetDeclaredClass<Vector>(this.Handle, "CPhysTorque", "m_axis");
@@ -16334,6 +16749,7 @@ public partial class CPhysTorque : CPhysForce
 public partial class CPhysWheelConstraint : CPhysConstraint
 {
     public CPhysWheelConstraint (IntPtr pointer) : base(pointer) {}
+    public CPhysWheelConstraint() {}
 
     // m_flSuspensionFrequency
     public ref float SuspensionFrequency => ref Schema.GetRef<float>(this.Handle, "CPhysWheelConstraint", "m_flSuspensionFrequency");
@@ -16373,6 +16789,7 @@ public partial class CPhysWheelConstraint : CPhysConstraint
 public partial class CPlantedC4 : CBaseAnimGraph
 {
     public CPlantedC4 (IntPtr pointer) : base(pointer) {}
+    public CPlantedC4() {}
 
     // m_bBombTicking
     public ref bool BombTicking => ref Schema.GetRef<bool>(this.Handle, "CPlantedC4", "m_bBombTicking");
@@ -16460,6 +16877,7 @@ public partial class CPlantedC4 : CBaseAnimGraph
 public partial class CPlatTrigger : CBaseModelEntity
 {
     public CPlatTrigger (IntPtr pointer) : base(pointer) {}
+    public CPlatTrigger() {}
 
     // m_pPlatform
     public CHandle<CFuncPlat> Platform => Schema.GetDeclaredClass<CHandle<CFuncPlat>>(this.Handle, "CPlatTrigger", "m_pPlatform");
@@ -16469,12 +16887,14 @@ public partial class CPlatTrigger : CBaseModelEntity
 public partial class CPlayer_AutoaimServices : CPlayerPawnComponent
 {
     public CPlayer_AutoaimServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_AutoaimServices() {}
 
 }
 
 public partial class CPlayer_CameraServices : CPlayerPawnComponent
 {
     public CPlayer_CameraServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_CameraServices() {}
 
     // m_vecCsViewPunchAngle
     public QAngle CsViewPunchAngle => Schema.GetDeclaredClass<QAngle>(this.Handle, "CPlayer_CameraServices", "m_vecCsViewPunchAngle");
@@ -16517,18 +16937,21 @@ public partial class CPlayer_CameraServices : CPlayerPawnComponent
 public partial class CPlayer_FlashlightServices : CPlayerPawnComponent
 {
     public CPlayer_FlashlightServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_FlashlightServices() {}
 
 }
 
 public partial class CPlayer_ItemServices : CPlayerPawnComponent
 {
     public CPlayer_ItemServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_ItemServices() {}
 
 }
 
 public partial class CPlayer_MovementServices : CPlayerPawnComponent
 {
     public CPlayer_MovementServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_MovementServices() {}
 
     // m_nImpulse
     public ref Int32 Impulse => ref Schema.GetRef<Int32>(this.Handle, "CPlayer_MovementServices", "m_nImpulse");
@@ -16580,6 +17003,7 @@ public partial class CPlayer_MovementServices : CPlayerPawnComponent
 public partial class CPlayer_MovementServices_Humanoid : CPlayer_MovementServices
 {
     public CPlayer_MovementServices_Humanoid (IntPtr pointer) : base(pointer) {}
+    public CPlayer_MovementServices_Humanoid() {}
 
     // m_flStepSoundTime
     public ref float StepSoundTime => ref Schema.GetRef<float>(this.Handle, "CPlayer_MovementServices_Humanoid", "m_flStepSoundTime");
@@ -16628,6 +17052,7 @@ public partial class CPlayer_MovementServices_Humanoid : CPlayer_MovementService
 public partial class CPlayer_ObserverServices : CPlayerPawnComponent
 {
     public CPlayer_ObserverServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_ObserverServices() {}
 
     // m_iObserverMode
     public ref byte ObserverMode => ref Schema.GetRef<byte>(this.Handle, "CPlayer_ObserverServices", "m_iObserverMode");
@@ -16646,24 +17071,28 @@ public partial class CPlayer_ObserverServices : CPlayerPawnComponent
 public partial class CPlayer_UseServices : CPlayerPawnComponent
 {
     public CPlayer_UseServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_UseServices() {}
 
 }
 
 public partial class CPlayer_ViewModelServices : CPlayerPawnComponent
 {
     public CPlayer_ViewModelServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_ViewModelServices() {}
 
 }
 
 public partial class CPlayer_WaterServices : CPlayerPawnComponent
 {
     public CPlayer_WaterServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_WaterServices() {}
 
 }
 
 public partial class CPlayer_WeaponServices : CPlayerPawnComponent
 {
     public CPlayer_WeaponServices (IntPtr pointer) : base(pointer) {}
+    public CPlayer_WeaponServices() {}
 
     // m_bAllowSwitchToNoWeapon
     public ref bool AllowSwitchToNoWeapon => ref Schema.GetRef<bool>(this.Handle, "CPlayer_WeaponServices", "m_bAllowSwitchToNoWeapon");
@@ -16688,6 +17117,7 @@ public partial class CPlayer_WeaponServices : CPlayerPawnComponent
 public partial class CPlayerControllerComponent : NativeObject
 {
     public CPlayerControllerComponent (IntPtr pointer) : base(pointer) {}
+    public CPlayerControllerComponent() {}
 
     // __m_pChainEntity
     public CNetworkVarChainer __m_pChainEntity => Schema.GetDeclaredClass<CNetworkVarChainer>(this.Handle, "CPlayerControllerComponent", "__m_pChainEntity");
@@ -16697,6 +17127,7 @@ public partial class CPlayerControllerComponent : NativeObject
 public partial class CPlayerPawnComponent : NativeObject
 {
     public CPlayerPawnComponent (IntPtr pointer) : base(pointer) {}
+    public CPlayerPawnComponent() {}
 
     // __m_pChainEntity
     public CNetworkVarChainer __m_pChainEntity => Schema.GetDeclaredClass<CNetworkVarChainer>(this.Handle, "CPlayerPawnComponent", "__m_pChainEntity");
@@ -16706,6 +17137,7 @@ public partial class CPlayerPawnComponent : NativeObject
 public partial class CPlayerPing : CBaseEntity
 {
     public CPlayerPing (IntPtr pointer) : base(pointer) {}
+    public CPlayerPing() {}
 
     // m_hPlayer
     public CHandle<CCSPlayerPawn> Player => Schema.GetDeclaredClass<CHandle<CCSPlayerPawn>>(this.Handle, "CPlayerPing", "m_hPlayer");
@@ -16731,6 +17163,7 @@ public partial class CPlayerPing : CBaseEntity
 public partial class CPlayerSprayDecal : CModelPointEntity
 {
     public CPlayerSprayDecal (IntPtr pointer) : base(pointer) {}
+    public CPlayerSprayDecal() {}
 
     // m_nUniqueID
     public ref Int32 UniqueID => ref Schema.GetRef<Int32>(this.Handle, "CPlayerSprayDecal", "m_nUniqueID");
@@ -16782,6 +17215,7 @@ public partial class CPlayerSprayDecal : CModelPointEntity
 public partial class CPlayerVisibility : CBaseEntity
 {
     public CPlayerVisibility (IntPtr pointer) : base(pointer) {}
+    public CPlayerVisibility() {}
 
     // m_flVisibilityStrength
     public ref float VisibilityStrength => ref Schema.GetRef<float>(this.Handle, "CPlayerVisibility", "m_flVisibilityStrength");
@@ -16806,6 +17240,7 @@ public partial class CPlayerVisibility : CBaseEntity
 public partial class CPointAngleSensor : CPointEntity
 {
     public CPointAngleSensor (IntPtr pointer) : base(pointer) {}
+    public CPointAngleSensor() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CPointAngleSensor", "m_bDisabled");
@@ -16846,6 +17281,7 @@ public partial class CPointAngleSensor : CPointEntity
 public partial class CPointAngularVelocitySensor : CPointEntity
 {
     public CPointAngularVelocitySensor (IntPtr pointer) : base(pointer) {}
+    public CPointAngularVelocitySensor() {}
 
     // m_hTargetEntity
     public CHandle<CBaseEntity> TargetEntity => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CPointAngularVelocitySensor", "m_hTargetEntity");
@@ -16897,12 +17333,14 @@ public partial class CPointAngularVelocitySensor : CPointEntity
 public partial class CPointBroadcastClientCommand : CPointEntity
 {
     public CPointBroadcastClientCommand (IntPtr pointer) : base(pointer) {}
+    public CPointBroadcastClientCommand() {}
 
 }
 
 public partial class CPointCamera : CBaseEntity
 {
     public CPointCamera (IntPtr pointer) : base(pointer) {}
+    public CPointCamera() {}
 
     // m_FOV
     public ref float FOV => ref Schema.GetRef<float>(this.Handle, "CPointCamera", "m_FOV");
@@ -16988,6 +17426,7 @@ public partial class CPointCamera : CBaseEntity
 public partial class CPointCameraVFOV : CPointCamera
 {
     public CPointCameraVFOV (IntPtr pointer) : base(pointer) {}
+    public CPointCameraVFOV() {}
 
     // m_flVerticalFOV
     public ref float VerticalFOV => ref Schema.GetRef<float>(this.Handle, "CPointCameraVFOV", "m_flVerticalFOV");
@@ -16997,12 +17436,14 @@ public partial class CPointCameraVFOV : CPointCamera
 public partial class CPointClientCommand : CPointEntity
 {
     public CPointClientCommand (IntPtr pointer) : base(pointer) {}
+    public CPointClientCommand() {}
 
 }
 
 public partial class CPointClientUIDialog : CBaseClientUIEntity
 {
     public CPointClientUIDialog (IntPtr pointer) : base(pointer) {}
+    public CPointClientUIDialog() {}
 
     // m_hActivator
     public CHandle<CBaseEntity> Activator => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CPointClientUIDialog", "m_hActivator");
@@ -17015,6 +17456,7 @@ public partial class CPointClientUIDialog : CBaseClientUIEntity
 public partial class CPointClientUIWorldPanel : CBaseClientUIEntity
 {
     public CPointClientUIWorldPanel (IntPtr pointer) : base(pointer) {}
+    public CPointClientUIWorldPanel() {}
 
     // m_bIgnoreInput
     public ref bool IgnoreInput => ref Schema.GetRef<bool>(this.Handle, "CPointClientUIWorldPanel", "m_bIgnoreInput");
@@ -17090,6 +17532,7 @@ public partial class CPointClientUIWorldPanel : CBaseClientUIEntity
 public partial class CPointClientUIWorldTextPanel : CPointClientUIWorldPanel
 {
     public CPointClientUIWorldTextPanel (IntPtr pointer) : base(pointer) {}
+    public CPointClientUIWorldTextPanel() {}
 
     // m_messageText
     public string MessageText
@@ -17103,6 +17546,7 @@ public partial class CPointClientUIWorldTextPanel : CPointClientUIWorldPanel
 public partial class CPointCommentaryNode : CBaseAnimGraph
 {
     public CPointCommentaryNode (IntPtr pointer) : base(pointer) {}
+    public CPointCommentaryNode() {}
 
     // m_iszPreCommands
     public string PreCommands
@@ -17227,12 +17671,14 @@ public partial class CPointCommentaryNode : CBaseAnimGraph
 public partial class CPointEntity : CBaseEntity
 {
     public CPointEntity (IntPtr pointer) : base(pointer) {}
+    public CPointEntity() {}
 
 }
 
 public partial class CPointEntityFinder : CBaseEntity
 {
     public CPointEntityFinder (IntPtr pointer) : base(pointer) {}
+    public CPointEntityFinder() {}
 
     // m_hEntity
     public CHandle<CBaseEntity> Entity => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CPointEntityFinder", "m_hEntity");
@@ -17268,6 +17714,7 @@ public partial class CPointEntityFinder : CBaseEntity
 public partial class CPointGamestatsCounter : CPointEntity
 {
     public CPointGamestatsCounter (IntPtr pointer) : base(pointer) {}
+    public CPointGamestatsCounter() {}
 
     // m_strStatisticName
     public string StrStatisticName
@@ -17284,6 +17731,7 @@ public partial class CPointGamestatsCounter : CPointEntity
 public partial class CPointGiveAmmo : CPointEntity
 {
     public CPointGiveAmmo (IntPtr pointer) : base(pointer) {}
+    public CPointGiveAmmo() {}
 
     // m_pActivator
     public CHandle<CBaseEntity> Activator => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CPointGiveAmmo", "m_pActivator");
@@ -17293,6 +17741,7 @@ public partial class CPointGiveAmmo : CPointEntity
 public partial class CPointHurt : CPointEntity
 {
     public CPointHurt (IntPtr pointer) : base(pointer) {}
+    public CPointHurt() {}
 
     // m_nDamage
     public ref Int32 Damage => ref Schema.GetRef<Int32>(this.Handle, "CPointHurt", "m_nDamage");
@@ -17321,6 +17770,7 @@ public partial class CPointHurt : CPointEntity
 public partial class CPointPrefab : CServerOnlyPointEntity
 {
     public CPointPrefab (IntPtr pointer) : base(pointer) {}
+    public CPointPrefab() {}
 
     // m_targetMapName
     public string TargetMapName
@@ -17357,6 +17807,7 @@ public partial class CPointPrefab : CServerOnlyPointEntity
 public partial class CPointProximitySensor : CPointEntity
 {
     public CPointProximitySensor (IntPtr pointer) : base(pointer) {}
+    public CPointProximitySensor() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CPointProximitySensor", "m_bDisabled");
@@ -17369,6 +17820,7 @@ public partial class CPointProximitySensor : CPointEntity
 public partial class CPointPulse : CBaseEntity
 {
     public CPointPulse (IntPtr pointer) : base(pointer) {}
+    public CPointPulse() {}
 
     // m_sNameFixupStaticPrefix
     public string NameFixupStaticPrefix
@@ -17396,6 +17848,7 @@ public partial class CPointPulse : CBaseEntity
 public partial class CPointPush : CPointEntity
 {
     public CPointPush (IntPtr pointer) : base(pointer) {}
+    public CPointPush() {}
 
     // m_bEnabled
     public ref bool Enabled => ref Schema.GetRef<bool>(this.Handle, "CPointPush", "m_bEnabled");
@@ -17427,18 +17880,21 @@ public partial class CPointPush : CPointEntity
 public partial class CPointScript : CBaseEntity
 {
     public CPointScript (IntPtr pointer) : base(pointer) {}
+    public CPointScript() {}
 
 }
 
 public partial class CPointServerCommand : CPointEntity
 {
     public CPointServerCommand (IntPtr pointer) : base(pointer) {}
+    public CPointServerCommand() {}
 
 }
 
 public partial class CPointTeleport : CServerOnlyPointEntity
 {
     public CPointTeleport (IntPtr pointer) : base(pointer) {}
+    public CPointTeleport() {}
 
     // m_vSaveOrigin
     public Vector SaveOrigin => Schema.GetDeclaredClass<Vector>(this.Handle, "CPointTeleport", "m_vSaveOrigin");
@@ -17457,6 +17913,7 @@ public partial class CPointTeleport : CServerOnlyPointEntity
 public partial class CPointTemplate : CLogicalEntity
 {
     public CPointTemplate (IntPtr pointer) : base(pointer) {}
+    public CPointTemplate() {}
 
     // m_iszWorldName
     public string WorldName
@@ -17505,6 +17962,7 @@ public partial class CPointTemplate : CLogicalEntity
 public partial class CPointValueRemapper : CBaseEntity
 {
     public CPointValueRemapper (IntPtr pointer) : base(pointer) {}
+    public CPointValueRemapper() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CPointValueRemapper", "m_bDisabled");
@@ -17681,6 +18139,7 @@ public partial class CPointValueRemapper : CBaseEntity
 public partial class CPointVelocitySensor : CPointEntity
 {
     public CPointVelocitySensor (IntPtr pointer) : base(pointer) {}
+    public CPointVelocitySensor() {}
 
     // m_hTargetEntity
     public CHandle<CBaseEntity> TargetEntity => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CPointVelocitySensor", "m_hTargetEntity");
@@ -17702,6 +18161,7 @@ public partial class CPointVelocitySensor : CPointEntity
 public partial class CPointWorldText : CModelPointEntity
 {
     public CPointWorldText (IntPtr pointer) : base(pointer) {}
+    public CPointWorldText() {}
 
     // m_messageText
     public string MessageText
@@ -17753,6 +18213,7 @@ public partial class CPointWorldText : CModelPointEntity
 public partial class CPostProcessingVolume : CBaseTrigger
 {
     public CPostProcessingVolume (IntPtr pointer) : base(pointer) {}
+    public CPostProcessingVolume() {}
 
     // m_hPostSettings
     public CStrongHandle<InfoForResourceTypeCPostProcessingResource> PostSettings => Schema.GetDeclaredClass<CStrongHandle<InfoForResourceTypeCPostProcessingResource>>(this.Handle, "CPostProcessingVolume", "m_hPostSettings");
@@ -17807,24 +18268,28 @@ public partial class CPostProcessingVolume : CBaseTrigger
 public partial class CPrecipitation : CBaseTrigger
 {
     public CPrecipitation (IntPtr pointer) : base(pointer) {}
+    public CPrecipitation() {}
 
 }
 
 public partial class CPrecipitationBlocker : CBaseModelEntity
 {
     public CPrecipitationBlocker (IntPtr pointer) : base(pointer) {}
+    public CPrecipitationBlocker() {}
 
 }
 
 public partial class CPredictedViewModel : CBaseViewModel
 {
     public CPredictedViewModel (IntPtr pointer) : base(pointer) {}
+    public CPredictedViewModel() {}
 
 }
 
 public partial class CProjectedDecal : CPointEntity
 {
     public CProjectedDecal (IntPtr pointer) : base(pointer) {}
+    public CProjectedDecal() {}
 
     // m_nTexture
     public ref Int32 Texture => ref Schema.GetRef<Int32>(this.Handle, "CProjectedDecal", "m_nTexture");
@@ -17837,6 +18302,7 @@ public partial class CProjectedDecal : CPointEntity
 public partial class CPropDoorRotating : CBasePropDoor
 {
     public CPropDoorRotating (IntPtr pointer) : base(pointer) {}
+    public CPropDoorRotating() {}
 
     // m_vecAxis
     public Vector Axis => Schema.GetDeclaredClass<Vector>(this.Handle, "CPropDoorRotating", "m_vecAxis");
@@ -17894,6 +18360,7 @@ public partial class CPropDoorRotating : CBasePropDoor
 public partial class CPropDoorRotatingBreakable : CPropDoorRotating
 {
     public CPropDoorRotatingBreakable (IntPtr pointer) : base(pointer) {}
+    public CPropDoorRotatingBreakable() {}
 
     // m_bBreakable
     public ref bool Breakable => ref Schema.GetRef<bool>(this.Handle, "CPropDoorRotatingBreakable", "m_bBreakable");
@@ -17912,12 +18379,14 @@ public partial class CPropDoorRotatingBreakable : CPropDoorRotating
 public partial class CPushable : CBreakable
 {
     public CPushable (IntPtr pointer) : base(pointer) {}
+    public CPushable() {}
 
 }
 
 public partial class CRagdollConstraint : CPhysConstraint
 {
     public CRagdollConstraint (IntPtr pointer) : base(pointer) {}
+    public CRagdollConstraint() {}
 
     // m_xmin
     public ref float Xmin => ref Schema.GetRef<float>(this.Handle, "CRagdollConstraint", "m_xmin");
@@ -17951,6 +18420,7 @@ public partial class CRagdollConstraint : CPhysConstraint
 public partial class CRagdollMagnet : CPointEntity
 {
     public CRagdollMagnet (IntPtr pointer) : base(pointer) {}
+    public CRagdollMagnet() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CRagdollMagnet", "m_bDisabled");
@@ -17969,6 +18439,7 @@ public partial class CRagdollMagnet : CPointEntity
 public partial class CRagdollManager : CBaseEntity
 {
     public CRagdollManager (IntPtr pointer) : base(pointer) {}
+    public CRagdollManager() {}
 
     // m_iCurrentMaxRagdollCount
     public ref sbyte CurrentMaxRagdollCount => ref Schema.GetRef<sbyte>(this.Handle, "CRagdollManager", "m_iCurrentMaxRagdollCount");
@@ -17984,6 +18455,7 @@ public partial class CRagdollManager : CBaseEntity
 public partial class CRagdollProp : CBaseAnimGraph
 {
     public CRagdollProp (IntPtr pointer) : base(pointer) {}
+    public CRagdollProp() {}
 
     // m_ragdoll
     public ragdoll_t Ragdoll => Schema.GetDeclaredClass<ragdoll_t>(this.Handle, "CRagdollProp", "m_ragdoll");
@@ -18082,12 +18554,14 @@ public partial class CRagdollProp : CBaseAnimGraph
 public partial class CRagdollPropAlias_physics_prop_ragdoll : CRagdollProp
 {
     public CRagdollPropAlias_physics_prop_ragdoll (IntPtr pointer) : base(pointer) {}
+    public CRagdollPropAlias_physics_prop_ragdoll() {}
 
 }
 
 public partial class CRagdollPropAttached : CRagdollProp
 {
     public CRagdollPropAttached (IntPtr pointer) : base(pointer) {}
+    public CRagdollPropAttached() {}
 
     // m_boneIndexAttached
     public ref UInt32 BoneIndexAttached => ref Schema.GetRef<UInt32>(this.Handle, "CRagdollPropAttached", "m_boneIndexAttached");
@@ -18112,6 +18586,7 @@ public partial class CRagdollPropAttached : CRagdollProp
 public partial class CRectLight : CBarnLight
 {
     public CRectLight (IntPtr pointer) : base(pointer) {}
+    public CRectLight() {}
 
     // m_bShowLight
     public ref bool ShowLight => ref Schema.GetRef<bool>(this.Handle, "CRectLight", "m_bShowLight");
@@ -18121,6 +18596,7 @@ public partial class CRectLight : CBarnLight
 public partial class CRenderComponent : CEntityComponent
 {
     public CRenderComponent (IntPtr pointer) : base(pointer) {}
+    public CRenderComponent() {}
 
     // __m_pChainEntity
     public CNetworkVarChainer __m_pChainEntity => Schema.GetDeclaredClass<CNetworkVarChainer>(this.Handle, "CRenderComponent", "__m_pChainEntity");
@@ -18142,6 +18618,7 @@ public partial class CRenderComponent : CEntityComponent
 public partial class CRetakeGameRules : NativeObject
 {
     public CRetakeGameRules (IntPtr pointer) : base(pointer) {}
+    public CRetakeGameRules() {}
 
     // m_nMatchSeed
     public ref Int32 MatchSeed => ref Schema.GetRef<Int32>(this.Handle, "CRetakeGameRules", "m_nMatchSeed");
@@ -18163,6 +18640,7 @@ public partial class CRetakeGameRules : NativeObject
 public partial class CRevertSaved : CModelPointEntity
 {
     public CRevertSaved (IntPtr pointer) : base(pointer) {}
+    public CRevertSaved() {}
 
     // m_loadTime
     public ref float LoadTime => ref Schema.GetRef<float>(this.Handle, "CRevertSaved", "m_loadTime");
@@ -18178,6 +18656,7 @@ public partial class CRevertSaved : CModelPointEntity
 public partial class CRopeKeyframe : CBaseModelEntity
 {
     public CRopeKeyframe (IntPtr pointer) : base(pointer) {}
+    public CRopeKeyframe() {}
 
     // m_RopeFlags
     public ref UInt16 RopeFlags => ref Schema.GetRef<UInt16>(this.Handle, "CRopeKeyframe", "m_RopeFlags");
@@ -18251,18 +18730,21 @@ public partial class CRopeKeyframe : CBaseModelEntity
 public partial class CRopeKeyframeAlias_move_rope : CRopeKeyframe
 {
     public CRopeKeyframeAlias_move_rope (IntPtr pointer) : base(pointer) {}
+    public CRopeKeyframeAlias_move_rope() {}
 
 }
 
 public partial class CRotButton : CBaseButton
 {
     public CRotButton (IntPtr pointer) : base(pointer) {}
+    public CRotButton() {}
 
 }
 
 public partial class CRotDoor : CBaseDoor
 {
     public CRotDoor (IntPtr pointer) : base(pointer) {}
+    public CRotDoor() {}
 
     // m_bSolidBsp
     public ref bool SolidBsp => ref Schema.GetRef<bool>(this.Handle, "CRotDoor", "m_bSolidBsp");
@@ -18272,12 +18754,14 @@ public partial class CRotDoor : CBaseDoor
 public partial class CRuleBrushEntity : CRuleEntity
 {
     public CRuleBrushEntity (IntPtr pointer) : base(pointer) {}
+    public CRuleBrushEntity() {}
 
 }
 
 public partial class CRuleEntity : CBaseModelEntity
 {
     public CRuleEntity (IntPtr pointer) : base(pointer) {}
+    public CRuleEntity() {}
 
     // m_iszMaster
     public string Master
@@ -18291,6 +18775,7 @@ public partial class CRuleEntity : CBaseModelEntity
 public partial class CRulePointEntity : CRuleEntity
 {
     public CRulePointEntity (IntPtr pointer) : base(pointer) {}
+    public CRulePointEntity() {}
 
     // m_Score
     public ref Int32 Score => ref Schema.GetRef<Int32>(this.Handle, "CRulePointEntity", "m_Score");
@@ -18300,6 +18785,7 @@ public partial class CRulePointEntity : CRuleEntity
 public partial class CSceneEntity : CPointEntity
 {
     public CSceneEntity (IntPtr pointer) : base(pointer) {}
+    public CSceneEntity() {}
 
     // m_iszSceneFile
     public string SceneFile
@@ -18539,12 +19025,14 @@ public partial class CSceneEntity : CPointEntity
 public partial class CSceneEntityAlias_logic_choreographed_scene : CSceneEntity
 {
     public CSceneEntityAlias_logic_choreographed_scene (IntPtr pointer) : base(pointer) {}
+    public CSceneEntityAlias_logic_choreographed_scene() {}
 
 }
 
 public partial class CSceneListManager : CLogicalEntity
 {
     public CSceneListManager (IntPtr pointer) : base(pointer) {}
+    public CSceneListManager() {}
 
     // m_hListManagers
     public NetworkedVector<CHandle<CSceneListManager>> ListManagers => Schema.GetDeclaredClass<NetworkedVector<CHandle<CSceneListManager>>>(this.Handle, "CSceneListManager", "m_hListManagers");
@@ -18560,6 +19048,7 @@ public partial class CSceneListManager : CLogicalEntity
 public partial class CScriptComponent : CEntityComponent
 {
     public CScriptComponent (IntPtr pointer) : base(pointer) {}
+    public CScriptComponent() {}
 
     // m_scriptClassName
     public string ScriptClassName
@@ -18573,6 +19062,7 @@ public partial class CScriptComponent : CEntityComponent
 public partial class CScriptedSequence : CBaseEntity
 {
     public CScriptedSequence (IntPtr pointer) : base(pointer) {}
+    public CScriptedSequence() {}
 
     // m_iszEntry
     public string Entry
@@ -18797,6 +19287,7 @@ public partial class CScriptedSequence : CBaseEntity
 public partial class CScriptItem : CItem
 {
     public CScriptItem (IntPtr pointer) : base(pointer) {}
+    public CScriptItem() {}
 
     // m_OnPlayerPickup
     public CEntityIOOutput OnPlayerPickup => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CScriptItem", "m_OnPlayerPickup");
@@ -18809,6 +19300,7 @@ public partial class CScriptItem : CItem
 public partial class CScriptNavBlocker : CFuncNavBlocker
 {
     public CScriptNavBlocker (IntPtr pointer) : base(pointer) {}
+    public CScriptNavBlocker() {}
 
     // m_vExtent
     public Vector Extent => Schema.GetDeclaredClass<Vector>(this.Handle, "CScriptNavBlocker", "m_vExtent");
@@ -18818,6 +19310,7 @@ public partial class CScriptNavBlocker : CFuncNavBlocker
 public partial class CScriptTriggerHurt : CTriggerHurt
 {
     public CScriptTriggerHurt (IntPtr pointer) : base(pointer) {}
+    public CScriptTriggerHurt() {}
 
     // m_vExtent
     public Vector Extent => Schema.GetDeclaredClass<Vector>(this.Handle, "CScriptTriggerHurt", "m_vExtent");
@@ -18827,6 +19320,7 @@ public partial class CScriptTriggerHurt : CTriggerHurt
 public partial class CScriptTriggerMultiple : CTriggerMultiple
 {
     public CScriptTriggerMultiple (IntPtr pointer) : base(pointer) {}
+    public CScriptTriggerMultiple() {}
 
     // m_vExtent
     public Vector Extent => Schema.GetDeclaredClass<Vector>(this.Handle, "CScriptTriggerMultiple", "m_vExtent");
@@ -18836,6 +19330,7 @@ public partial class CScriptTriggerMultiple : CTriggerMultiple
 public partial class CScriptTriggerOnce : CTriggerOnce
 {
     public CScriptTriggerOnce (IntPtr pointer) : base(pointer) {}
+    public CScriptTriggerOnce() {}
 
     // m_vExtent
     public Vector Extent => Schema.GetDeclaredClass<Vector>(this.Handle, "CScriptTriggerOnce", "m_vExtent");
@@ -18845,6 +19340,7 @@ public partial class CScriptTriggerOnce : CTriggerOnce
 public partial class CScriptTriggerPush : CTriggerPush
 {
     public CScriptTriggerPush (IntPtr pointer) : base(pointer) {}
+    public CScriptTriggerPush() {}
 
     // m_vExtent
     public Vector Extent => Schema.GetDeclaredClass<Vector>(this.Handle, "CScriptTriggerPush", "m_vExtent");
@@ -18854,12 +19350,14 @@ public partial class CScriptTriggerPush : CTriggerPush
 public partial class CSensorGrenade : CBaseCSGrenade
 {
     public CSensorGrenade (IntPtr pointer) : base(pointer) {}
+    public CSensorGrenade() {}
 
 }
 
 public partial class CSensorGrenadeProjectile : CBaseCSGrenadeProjectile
 {
     public CSensorGrenadeProjectile (IntPtr pointer) : base(pointer) {}
+    public CSensorGrenadeProjectile() {}
 
     // m_fExpireTime
     public ref float ExpireTime => ref Schema.GetRef<float>(this.Handle, "CSensorGrenadeProjectile", "m_fExpireTime");
@@ -18875,30 +19373,35 @@ public partial class CSensorGrenadeProjectile : CBaseCSGrenadeProjectile
 public partial class CServerOnlyEntity : CBaseEntity
 {
     public CServerOnlyEntity (IntPtr pointer) : base(pointer) {}
+    public CServerOnlyEntity() {}
 
 }
 
 public partial class CServerOnlyModelEntity : CBaseModelEntity
 {
     public CServerOnlyModelEntity (IntPtr pointer) : base(pointer) {}
+    public CServerOnlyModelEntity() {}
 
 }
 
 public partial class CServerOnlyPointEntity : CServerOnlyEntity
 {
     public CServerOnlyPointEntity (IntPtr pointer) : base(pointer) {}
+    public CServerOnlyPointEntity() {}
 
 }
 
 public partial class CServerRagdollTrigger : CBaseTrigger
 {
     public CServerRagdollTrigger (IntPtr pointer) : base(pointer) {}
+    public CServerRagdollTrigger() {}
 
 }
 
 public partial class CShatterGlassShardPhysics : CPhysicsProp
 {
     public CShatterGlassShardPhysics (IntPtr pointer) : base(pointer) {}
+    public CShatterGlassShardPhysics() {}
 
     // m_bDebris
     public ref bool Debris => ref Schema.GetRef<bool>(this.Handle, "CShatterGlassShardPhysics", "m_bDebris");
@@ -18914,18 +19417,21 @@ public partial class CShatterGlassShardPhysics : CPhysicsProp
 public partial class CShower : CModelPointEntity
 {
     public CShower (IntPtr pointer) : base(pointer) {}
+    public CShower() {}
 
 }
 
 public partial class CSimpleMarkupVolumeTagged : CMarkupVolumeTagged
 {
     public CSimpleMarkupVolumeTagged (IntPtr pointer) : base(pointer) {}
+    public CSimpleMarkupVolumeTagged() {}
 
 }
 
 public partial class CSkeletonAnimationController : ISkeletonAnimationController
 {
     public CSkeletonAnimationController (IntPtr pointer) : base(pointer) {}
+    public CSkeletonAnimationController() {}
 
     // m_pSkeletonInstance
     public CSkeletonInstance? SkeletonInstance => Schema.GetPointer<CSkeletonInstance>(this.Handle, "CSkeletonAnimationController", "m_pSkeletonInstance");
@@ -18935,6 +19441,7 @@ public partial class CSkeletonAnimationController : ISkeletonAnimationController
 public partial class CSkeletonInstance : CGameSceneNode
 {
     public CSkeletonInstance (IntPtr pointer) : base(pointer) {}
+    public CSkeletonInstance() {}
 
     // m_modelState
     public CModelState ModelState => Schema.GetDeclaredClass<CModelState>(this.Handle, "CSkeletonInstance", "m_modelState");
@@ -18961,6 +19468,7 @@ public partial class CSkeletonInstance : CGameSceneNode
 public partial class CSkyboxReference : CBaseEntity
 {
     public CSkyboxReference (IntPtr pointer) : base(pointer) {}
+    public CSkyboxReference() {}
 
     // m_worldGroupId
     public WorldGroupId_t WorldGroupId => Schema.GetDeclaredClass<WorldGroupId_t>(this.Handle, "CSkyboxReference", "m_worldGroupId");
@@ -18973,6 +19481,7 @@ public partial class CSkyboxReference : CBaseEntity
 public partial class CSkyCamera : CBaseEntity
 {
     public CSkyCamera (IntPtr pointer) : base(pointer) {}
+    public CSkyCamera() {}
 
     // m_skyboxData
     public sky3dparams_t SkyboxData => Schema.GetDeclaredClass<sky3dparams_t>(this.Handle, "CSkyCamera", "m_skyboxData");
@@ -18991,6 +19500,7 @@ public partial class CSkyCamera : CBaseEntity
 public partial class CSMatchStats_t : CSPerRoundStats_t
 {
     public CSMatchStats_t (IntPtr pointer) : base(pointer) {}
+    public CSMatchStats_t() {}
 
     // m_iEnemy5Ks
     public ref Int32 Enemy5Ks => ref Schema.GetRef<Int32>(this.Handle, "CSMatchStats_t", "m_iEnemy5Ks");
@@ -19054,12 +19564,14 @@ public partial class CSMatchStats_t : CSPerRoundStats_t
 public partial class CSmokeGrenade : CBaseCSGrenade
 {
     public CSmokeGrenade (IntPtr pointer) : base(pointer) {}
+    public CSmokeGrenade() {}
 
 }
 
 public partial class CSmokeGrenadeProjectile : CBaseCSGrenadeProjectile
 {
     public CSmokeGrenadeProjectile (IntPtr pointer) : base(pointer) {}
+    public CSmokeGrenadeProjectile() {}
 
     // m_nSmokeEffectTickBegin
     public ref Int32 SmokeEffectTickBegin => ref Schema.GetRef<Int32>(this.Handle, "CSmokeGrenadeProjectile", "m_nSmokeEffectTickBegin");
@@ -19090,6 +19602,7 @@ public partial class CSmokeGrenadeProjectile : CBaseCSGrenadeProjectile
 public partial class CSound : NativeObject
 {
     public CSound (IntPtr pointer) : base(pointer) {}
+    public CSound() {}
 
     // m_hOwner
     public CHandle<CBaseEntity> Owner => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CSound", "m_hOwner");
@@ -19132,6 +19645,7 @@ public partial class CSound : NativeObject
 public partial class CSoundAreaEntityBase : CBaseEntity
 {
     public CSoundAreaEntityBase (IntPtr pointer) : base(pointer) {}
+    public CSoundAreaEntityBase() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CSoundAreaEntityBase", "m_bDisabled");
@@ -19151,6 +19665,7 @@ public partial class CSoundAreaEntityBase : CBaseEntity
 public partial class CSoundAreaEntityOrientedBox : CSoundAreaEntityBase
 {
     public CSoundAreaEntityOrientedBox (IntPtr pointer) : base(pointer) {}
+    public CSoundAreaEntityOrientedBox() {}
 
     // m_vMin
     public Vector Min => Schema.GetDeclaredClass<Vector>(this.Handle, "CSoundAreaEntityOrientedBox", "m_vMin");
@@ -19163,6 +19678,7 @@ public partial class CSoundAreaEntityOrientedBox : CSoundAreaEntityBase
 public partial class CSoundAreaEntitySphere : CSoundAreaEntityBase
 {
     public CSoundAreaEntitySphere (IntPtr pointer) : base(pointer) {}
+    public CSoundAreaEntitySphere() {}
 
     // m_flRadius
     public ref float Radius => ref Schema.GetRef<float>(this.Handle, "CSoundAreaEntitySphere", "m_flRadius");
@@ -19172,6 +19688,7 @@ public partial class CSoundAreaEntitySphere : CSoundAreaEntityBase
 public partial class CSoundEnt : CPointEntity
 {
     public CSoundEnt (IntPtr pointer) : base(pointer) {}
+    public CSoundEnt() {}
 
     // m_iFreeSound
     public ref Int32 FreeSound => ref Schema.GetRef<Int32>(this.Handle, "CSoundEnt", "m_iFreeSound");
@@ -19190,6 +19707,7 @@ public partial class CSoundEnt : CPointEntity
 public partial class CSoundEventAABBEntity : CSoundEventEntity
 {
     public CSoundEventAABBEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundEventAABBEntity() {}
 
     // m_vMins
     public Vector Mins => Schema.GetDeclaredClass<Vector>(this.Handle, "CSoundEventAABBEntity", "m_vMins");
@@ -19202,6 +19720,7 @@ public partial class CSoundEventAABBEntity : CSoundEventEntity
 public partial class CSoundEventEntity : CBaseEntity
 {
     public CSoundEventEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundEventEntity() {}
 
     // m_bStartOnSpawn
     public ref bool StartOnSpawn => ref Schema.GetRef<bool>(this.Handle, "CSoundEventEntity", "m_bStartOnSpawn");
@@ -19253,12 +19772,14 @@ public partial class CSoundEventEntity : CBaseEntity
 public partial class CSoundEventEntityAlias_snd_event_point : CSoundEventEntity
 {
     public CSoundEventEntityAlias_snd_event_point (IntPtr pointer) : base(pointer) {}
+    public CSoundEventEntityAlias_snd_event_point() {}
 
 }
 
 public partial class CSoundEventOBBEntity : CSoundEventEntity
 {
     public CSoundEventOBBEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundEventOBBEntity() {}
 
     // m_vMins
     public Vector Mins => Schema.GetDeclaredClass<Vector>(this.Handle, "CSoundEventOBBEntity", "m_vMins");
@@ -19271,6 +19792,7 @@ public partial class CSoundEventOBBEntity : CSoundEventEntity
 public partial class CSoundEventParameter : CBaseEntity
 {
     public CSoundEventParameter (IntPtr pointer) : base(pointer) {}
+    public CSoundEventParameter() {}
 
     // m_iszParamName
     public string ParamName
@@ -19287,6 +19809,7 @@ public partial class CSoundEventParameter : CBaseEntity
 public partial class CSoundEventPathCornerEntity : CSoundEventEntity
 {
     public CSoundEventPathCornerEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundEventPathCornerEntity() {}
 
     // m_iszPathCorner
     public string PathCorner
@@ -19315,6 +19838,7 @@ public partial class CSoundEventPathCornerEntity : CSoundEventEntity
 public partial class CSoundOpvarSetAABBEntity : CSoundOpvarSetPointEntity
 {
     public CSoundOpvarSetAABBEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundOpvarSetAABBEntity() {}
 
     // m_vDistanceInnerMins
     public Vector DistanceInnerMins => Schema.GetDeclaredClass<Vector>(this.Handle, "CSoundOpvarSetAABBEntity", "m_vDistanceInnerMins");
@@ -19348,6 +19872,7 @@ public partial class CSoundOpvarSetAABBEntity : CSoundOpvarSetPointEntity
 public partial class CSoundOpvarSetEntity : CBaseEntity
 {
     public CSoundOpvarSetEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundOpvarSetEntity() {}
 
     // m_iszStackName
     public string StackName
@@ -19394,12 +19919,14 @@ public partial class CSoundOpvarSetEntity : CBaseEntity
 public partial class CSoundOpvarSetOBBEntity : CSoundOpvarSetAABBEntity
 {
     public CSoundOpvarSetOBBEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundOpvarSetOBBEntity() {}
 
 }
 
 public partial class CSoundOpvarSetOBBWindEntity : CSoundOpvarSetPointBase
 {
     public CSoundOpvarSetOBBWindEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundOpvarSetOBBWindEntity() {}
 
     // m_vMins
     public Vector Mins => Schema.GetDeclaredClass<Vector>(this.Handle, "CSoundOpvarSetOBBWindEntity", "m_vMins");
@@ -19430,6 +19957,7 @@ public partial class CSoundOpvarSetOBBWindEntity : CSoundOpvarSetPointBase
 public partial class CSoundOpvarSetPathCornerEntity : CSoundOpvarSetPointEntity
 {
     public CSoundOpvarSetPathCornerEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundOpvarSetPathCornerEntity() {}
 
     // m_flDistMinSqr
     public ref float DistMinSqr => ref Schema.GetRef<float>(this.Handle, "CSoundOpvarSetPathCornerEntity", "m_flDistMinSqr");
@@ -19449,6 +19977,7 @@ public partial class CSoundOpvarSetPathCornerEntity : CSoundOpvarSetPointEntity
 public partial class CSoundOpvarSetPointBase : CBaseEntity
 {
     public CSoundOpvarSetPointBase (IntPtr pointer) : base(pointer) {}
+    public CSoundOpvarSetPointBase() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CSoundOpvarSetPointBase", "m_bDisabled");
@@ -19498,6 +20027,7 @@ public partial class CSoundOpvarSetPointBase : CBaseEntity
 public partial class CSoundOpvarSetPointEntity : CSoundOpvarSetPointBase
 {
     public CSoundOpvarSetPointEntity (IntPtr pointer) : base(pointer) {}
+    public CSoundOpvarSetPointEntity() {}
 
     // m_OnEnter
     public CEntityIOOutput OnEnter => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CSoundOpvarSetPointEntity", "m_OnEnter");
@@ -19574,6 +20104,7 @@ public partial class CSoundOpvarSetPointEntity : CSoundOpvarSetPointBase
 public partial class CSoundStackSave : CLogicalEntity
 {
     public CSoundStackSave (IntPtr pointer) : base(pointer) {}
+    public CSoundStackSave() {}
 
     // m_iszStackName
     public string StackName
@@ -19587,6 +20118,7 @@ public partial class CSoundStackSave : CLogicalEntity
 public partial class CSPerRoundStats_t : NativeObject
 {
     public CSPerRoundStats_t (IntPtr pointer) : base(pointer) {}
+    public CSPerRoundStats_t() {}
 
     // m_iKills
     public ref Int32 Kills => ref Schema.GetRef<Int32>(this.Handle, "CSPerRoundStats_t", "m_iKills");
@@ -19632,12 +20164,14 @@ public partial class CSPerRoundStats_t : NativeObject
 public partial class CSplineConstraint : CPhysConstraint
 {
     public CSplineConstraint (IntPtr pointer) : base(pointer) {}
+    public CSplineConstraint() {}
 
 }
 
 public partial class CSpotlightEnd : CBaseModelEntity
 {
     public CSpotlightEnd (IntPtr pointer) : base(pointer) {}
+    public CSpotlightEnd() {}
 
     // m_flLightScale
     public ref float LightScale => ref Schema.GetRef<float>(this.Handle, "CSpotlightEnd", "m_flLightScale");
@@ -19656,6 +20190,7 @@ public partial class CSpotlightEnd : CBaseModelEntity
 public partial class CSprite : CBaseModelEntity
 {
     public CSprite (IntPtr pointer) : base(pointer) {}
+    public CSprite() {}
 
     // m_hSpriteMaterial
     public CStrongHandle<InfoForResourceTypeIMaterial2> SpriteMaterial => Schema.GetDeclaredClass<CStrongHandle<InfoForResourceTypeIMaterial2>>(this.Handle, "CSprite", "m_hSpriteMaterial");
@@ -19729,18 +20264,21 @@ public partial class CSprite : CBaseModelEntity
 public partial class CSpriteAlias_env_glow : CSprite
 {
     public CSpriteAlias_env_glow (IntPtr pointer) : base(pointer) {}
+    public CSpriteAlias_env_glow() {}
 
 }
 
 public partial class CSpriteOriented : CSprite
 {
     public CSpriteOriented (IntPtr pointer) : base(pointer) {}
+    public CSpriteOriented() {}
 
 }
 
 public partial class CSun : CBaseModelEntity
 {
     public CSun (IntPtr pointer) : base(pointer) {}
+    public CSun() {}
 
     // m_vDirection
     public Vector Direction => Schema.GetDeclaredClass<Vector>(this.Handle, "CSun", "m_vDirection");
@@ -19801,12 +20339,14 @@ public partial class CSun : CBaseModelEntity
 public partial class CTablet : CCSWeaponBase
 {
     public CTablet (IntPtr pointer) : base(pointer) {}
+    public CTablet() {}
 
 }
 
 public partial class CTakeDamageInfo : NativeObject
 {
     public CTakeDamageInfo (IntPtr pointer) : base(pointer) {}
+    public CTakeDamageInfo() {}
 
     // m_vecDamageForce
     public Vector DamageForce => Schema.GetDeclaredClass<Vector>(this.Handle, "CTakeDamageInfo", "m_vecDamageForce");
@@ -19864,6 +20404,7 @@ public partial class CTakeDamageInfo : NativeObject
 public partial class CTankTargetChange : CPointEntity
 {
     public CTankTargetChange (IntPtr pointer) : base(pointer) {}
+    public CTankTargetChange() {}
 
     // m_newTargetName
     public string NewTargetName
@@ -19877,6 +20418,7 @@ public partial class CTankTargetChange : CPointEntity
 public partial class CTankTrainAI : CPointEntity
 {
     public CTankTrainAI (IntPtr pointer) : base(pointer) {}
+    public CTankTrainAI() {}
 
     // m_hTrain
     public CHandle<CFuncTrackTrain> Train => Schema.GetDeclaredClass<CHandle<CFuncTrackTrain>>(this.Handle, "CTankTrainAI", "m_hTrain");
@@ -19920,6 +20462,7 @@ public partial class CTankTrainAI : CPointEntity
 public partial class CTeam : CBaseEntity
 {
     public CTeam (IntPtr pointer) : base(pointer) {}
+    public CTeam() {}
 
     // m_aPlayerControllers
     public NetworkedVector<CHandle<CBasePlayerController>> PlayerControllers => Schema.GetDeclaredClass<NetworkedVector<CHandle<CBasePlayerController>>>(this.Handle, "CTeam", "m_aPlayerControllers");
@@ -19942,12 +20485,14 @@ public partial class CTeam : CBaseEntity
 public partial class CTeamplayRules : CMultiplayRules
 {
     public CTeamplayRules (IntPtr pointer) : base(pointer) {}
+    public CTeamplayRules() {}
 
 }
 
 public partial class CTestEffect : CBaseEntity
 {
     public CTestEffect (IntPtr pointer) : base(pointer) {}
+    public CTestEffect() {}
 
     // m_iLoop
     public ref Int32 Loop => ref Schema.GetRef<Int32>(this.Handle, "CTestEffect", "m_iLoop");
@@ -19969,6 +20514,7 @@ public partial class CTestEffect : CBaseEntity
 public partial class CTextureBasedAnimatable : CBaseModelEntity
 {
     public CTextureBasedAnimatable (IntPtr pointer) : base(pointer) {}
+    public CTextureBasedAnimatable() {}
 
     // m_bLoop
     public ref bool Loop => ref Schema.GetRef<bool>(this.Handle, "CTextureBasedAnimatable", "m_bLoop");
@@ -19999,6 +20545,7 @@ public partial class CTextureBasedAnimatable : CBaseModelEntity
 public partial class CTimerEntity : CLogicalEntity
 {
     public CTimerEntity (IntPtr pointer) : base(pointer) {}
+    public CTimerEntity() {}
 
     // m_OnTimer
     public CEntityIOOutput OnTimer => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CTimerEntity", "m_OnTimer");
@@ -20044,6 +20591,7 @@ public partial class CTimerEntity : CLogicalEntity
 public partial class CTonemapController2 : CBaseEntity
 {
     public CTonemapController2 (IntPtr pointer) : base(pointer) {}
+    public CTonemapController2() {}
 
     // m_flAutoExposureMin
     public ref float AutoExposureMin => ref Schema.GetRef<float>(this.Handle, "CTonemapController2", "m_flAutoExposureMin");
@@ -20074,12 +20622,14 @@ public partial class CTonemapController2 : CBaseEntity
 public partial class CTonemapController2Alias_env_tonemap_controller2 : CTonemapController2
 {
     public CTonemapController2Alias_env_tonemap_controller2 (IntPtr pointer) : base(pointer) {}
+    public CTonemapController2Alias_env_tonemap_controller2() {}
 
 }
 
 public partial class CTonemapTrigger : CBaseTrigger
 {
     public CTonemapTrigger (IntPtr pointer) : base(pointer) {}
+    public CTonemapTrigger() {}
 
     // m_tonemapControllerName
     public string TonemapControllerName
@@ -20096,12 +20646,14 @@ public partial class CTonemapTrigger : CBaseTrigger
 public partial class CTouchExpansionComponent : CEntityComponent
 {
     public CTouchExpansionComponent (IntPtr pointer) : base(pointer) {}
+    public CTouchExpansionComponent() {}
 
 }
 
 public partial class CTriggerActiveWeaponDetect : CBaseTrigger
 {
     public CTriggerActiveWeaponDetect (IntPtr pointer) : base(pointer) {}
+    public CTriggerActiveWeaponDetect() {}
 
     // m_OnTouchedActiveWeapon
     public CEntityIOOutput OnTouchedActiveWeapon => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CTriggerActiveWeaponDetect", "m_OnTouchedActiveWeapon");
@@ -20118,12 +20670,14 @@ public partial class CTriggerActiveWeaponDetect : CBaseTrigger
 public partial class CTriggerBombReset : CBaseTrigger
 {
     public CTriggerBombReset (IntPtr pointer) : base(pointer) {}
+    public CTriggerBombReset() {}
 
 }
 
 public partial class CTriggerBrush : CBaseModelEntity
 {
     public CTriggerBrush (IntPtr pointer) : base(pointer) {}
+    public CTriggerBrush() {}
 
     // m_OnStartTouch
     public CEntityIOOutput OnStartTouch => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CTriggerBrush", "m_OnStartTouch");
@@ -20145,6 +20699,7 @@ public partial class CTriggerBrush : CBaseModelEntity
 public partial class CTriggerBuoyancy : CBaseTrigger
 {
     public CTriggerBuoyancy (IntPtr pointer) : base(pointer) {}
+    public CTriggerBuoyancy() {}
 
     // m_BuoyancyHelper
     public CBuoyancyHelper BuoyancyHelper => Schema.GetDeclaredClass<CBuoyancyHelper>(this.Handle, "CTriggerBuoyancy", "m_BuoyancyHelper");
@@ -20157,12 +20712,14 @@ public partial class CTriggerBuoyancy : CBaseTrigger
 public partial class CTriggerCallback : CBaseTrigger
 {
     public CTriggerCallback (IntPtr pointer) : base(pointer) {}
+    public CTriggerCallback() {}
 
 }
 
 public partial class CTriggerDetectBulletFire : CBaseTrigger
 {
     public CTriggerDetectBulletFire (IntPtr pointer) : base(pointer) {}
+    public CTriggerDetectBulletFire() {}
 
     // m_bPlayerFireOnly
     public ref bool PlayerFireOnly => ref Schema.GetRef<bool>(this.Handle, "CTriggerDetectBulletFire", "m_bPlayerFireOnly");
@@ -20175,6 +20732,7 @@ public partial class CTriggerDetectBulletFire : CBaseTrigger
 public partial class CTriggerDetectExplosion : CBaseTrigger
 {
     public CTriggerDetectExplosion (IntPtr pointer) : base(pointer) {}
+    public CTriggerDetectExplosion() {}
 
     // m_OnDetectedExplosion
     public CEntityIOOutput OnDetectedExplosion => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CTriggerDetectExplosion", "m_OnDetectedExplosion");
@@ -20184,6 +20742,7 @@ public partial class CTriggerDetectExplosion : CBaseTrigger
 public partial class CTriggerFan : CBaseTrigger
 {
     public CTriggerFan (IntPtr pointer) : base(pointer) {}
+    public CTriggerFan() {}
 
     // m_vFanOrigin
     public Vector FanOrigin => Schema.GetDeclaredClass<Vector>(this.Handle, "CTriggerFan", "m_vFanOrigin");
@@ -20223,6 +20782,7 @@ public partial class CTriggerFan : CBaseTrigger
 public partial class CTriggerGameEvent : CBaseTrigger
 {
     public CTriggerGameEvent (IntPtr pointer) : base(pointer) {}
+    public CTriggerGameEvent() {}
 
     // m_strStartTouchEventName
     public string StrStartTouchEventName
@@ -20250,18 +20810,21 @@ public partial class CTriggerGameEvent : CBaseTrigger
 public partial class CTriggerGravity : CBaseTrigger
 {
     public CTriggerGravity (IntPtr pointer) : base(pointer) {}
+    public CTriggerGravity() {}
 
 }
 
 public partial class CTriggerHostageReset : CBaseTrigger
 {
     public CTriggerHostageReset (IntPtr pointer) : base(pointer) {}
+    public CTriggerHostageReset() {}
 
 }
 
 public partial class CTriggerHurt : CBaseTrigger
 {
     public CTriggerHurt (IntPtr pointer) : base(pointer) {}
+    public CTriggerHurt() {}
 
     // m_flOriginalDamage
     public ref float OriginalDamage => ref Schema.GetRef<float>(this.Handle, "CTriggerHurt", "m_flOriginalDamage");
@@ -20310,12 +20873,14 @@ public partial class CTriggerHurt : CBaseTrigger
 public partial class CTriggerHurtGhost : CTriggerHurt
 {
     public CTriggerHurtGhost (IntPtr pointer) : base(pointer) {}
+    public CTriggerHurtGhost() {}
 
 }
 
 public partial class CTriggerImpact : CTriggerMultiple
 {
     public CTriggerImpact (IntPtr pointer) : base(pointer) {}
+    public CTriggerImpact() {}
 
     // m_flMagnitude
     public ref float Magnitude => ref Schema.GetRef<float>(this.Handle, "CTriggerImpact", "m_flMagnitude");
@@ -20331,6 +20896,7 @@ public partial class CTriggerImpact : CTriggerMultiple
 public partial class CTriggerLerpObject : CBaseTrigger
 {
     public CTriggerLerpObject (IntPtr pointer) : base(pointer) {}
+    public CTriggerLerpObject() {}
 
     // m_iszLerpTarget
     public string IszLerpTarget
@@ -20387,6 +20953,7 @@ public partial class CTriggerLerpObject : CBaseTrigger
 public partial class CTriggerLook : CTriggerOnce
 {
     public CTriggerLook (IntPtr pointer) : base(pointer) {}
+    public CTriggerLook() {}
 
     // m_hLookTarget
     public CHandle<CBaseEntity> LookTarget => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CTriggerLook", "m_hLookTarget");
@@ -20438,6 +21005,7 @@ public partial class CTriggerLook : CTriggerOnce
 public partial class CTriggerMultiple : CBaseTrigger
 {
     public CTriggerMultiple (IntPtr pointer) : base(pointer) {}
+    public CTriggerMultiple() {}
 
     // m_OnTrigger
     public CEntityIOOutput OnTrigger => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CTriggerMultiple", "m_OnTrigger");
@@ -20447,12 +21015,14 @@ public partial class CTriggerMultiple : CBaseTrigger
 public partial class CTriggerOnce : CTriggerMultiple
 {
     public CTriggerOnce (IntPtr pointer) : base(pointer) {}
+    public CTriggerOnce() {}
 
 }
 
 public partial class CTriggerPhysics : CBaseTrigger
 {
     public CTriggerPhysics (IntPtr pointer) : base(pointer) {}
+    public CTriggerPhysics() {}
 
     // m_gravityScale
     public ref float GravityScale => ref Schema.GetRef<float>(this.Handle, "CTriggerPhysics", "m_gravityScale");
@@ -20498,6 +21068,7 @@ public partial class CTriggerPhysics : CBaseTrigger
 public partial class CTriggerProximity : CBaseTrigger
 {
     public CTriggerProximity (IntPtr pointer) : base(pointer) {}
+    public CTriggerProximity() {}
 
     // m_hMeasureTarget
     public CHandle<CBaseEntity> HMeasureTarget => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CTriggerProximity", "m_hMeasureTarget");
@@ -20520,6 +21091,7 @@ public partial class CTriggerProximity : CBaseTrigger
 public partial class CTriggerPush : CBaseTrigger
 {
     public CTriggerPush (IntPtr pointer) : base(pointer) {}
+    public CTriggerPush() {}
 
     // m_angPushEntitySpace
     public QAngle PushEntitySpace => Schema.GetDeclaredClass<QAngle>(this.Handle, "CTriggerPush", "m_angPushEntitySpace");
@@ -20541,6 +21113,7 @@ public partial class CTriggerPush : CBaseTrigger
 public partial class CTriggerRemove : CBaseTrigger
 {
     public CTriggerRemove (IntPtr pointer) : base(pointer) {}
+    public CTriggerRemove() {}
 
     // m_OnRemove
     public CEntityIOOutput OnRemove => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CTriggerRemove", "m_OnRemove");
@@ -20550,6 +21123,7 @@ public partial class CTriggerRemove : CBaseTrigger
 public partial class CTriggerSave : CBaseTrigger
 {
     public CTriggerSave (IntPtr pointer) : base(pointer) {}
+    public CTriggerSave() {}
 
     // m_bForceNewLevelUnit
     public ref bool ForceNewLevelUnit => ref Schema.GetRef<bool>(this.Handle, "CTriggerSave", "m_bForceNewLevelUnit");
@@ -20565,6 +21139,7 @@ public partial class CTriggerSave : CBaseTrigger
 public partial class CTriggerSndSosOpvar : CBaseTrigger
 {
     public CTriggerSndSosOpvar (IntPtr pointer) : base(pointer) {}
+    public CTriggerSndSosOpvar() {}
 
     // m_hTouchingPlayers
     public NetworkedVector<CHandle<CBaseEntity>> TouchingPlayers => Schema.GetDeclaredClass<NetworkedVector<CHandle<CBaseEntity>>>(this.Handle, "CTriggerSndSosOpvar", "m_hTouchingPlayers");
@@ -20640,6 +21215,7 @@ public partial class CTriggerSndSosOpvar : CBaseTrigger
 public partial class CTriggerSoundscape : CBaseTrigger
 {
     public CTriggerSoundscape (IntPtr pointer) : base(pointer) {}
+    public CTriggerSoundscape() {}
 
     // m_hSoundscape
     public CHandle<CEnvSoundscapeTriggerable> Soundscape => Schema.GetDeclaredClass<CHandle<CEnvSoundscapeTriggerable>>(this.Handle, "CTriggerSoundscape", "m_hSoundscape");
@@ -20659,6 +21235,7 @@ public partial class CTriggerSoundscape : CBaseTrigger
 public partial class CTriggerTeleport : CBaseTrigger
 {
     public CTriggerTeleport (IntPtr pointer) : base(pointer) {}
+    public CTriggerTeleport() {}
 
     // m_iLandmark
     public string Landmark
@@ -20678,6 +21255,7 @@ public partial class CTriggerTeleport : CBaseTrigger
 public partial class CTriggerToggleSave : CBaseTrigger
 {
     public CTriggerToggleSave (IntPtr pointer) : base(pointer) {}
+    public CTriggerToggleSave() {}
 
     // m_bDisabled
     public ref bool Disabled => ref Schema.GetRef<bool>(this.Handle, "CTriggerToggleSave", "m_bDisabled");
@@ -20687,12 +21265,14 @@ public partial class CTriggerToggleSave : CBaseTrigger
 public partial class CTriggerTripWire : CBaseTrigger
 {
     public CTriggerTripWire (IntPtr pointer) : base(pointer) {}
+    public CTriggerTripWire() {}
 
 }
 
 public partial class CTriggerVolume : CBaseModelEntity
 {
     public CTriggerVolume (IntPtr pointer) : base(pointer) {}
+    public CTriggerVolume() {}
 
     // m_iFilterName
     public string FilterName
@@ -20709,24 +21289,28 @@ public partial class CTriggerVolume : CBaseModelEntity
 public partial class CTripWireFire : CBaseCSGrenade
 {
     public CTripWireFire (IntPtr pointer) : base(pointer) {}
+    public CTripWireFire() {}
 
 }
 
 public partial class CTripWireFireProjectile : CBaseGrenade
 {
     public CTripWireFireProjectile (IntPtr pointer) : base(pointer) {}
+    public CTripWireFireProjectile() {}
 
 }
 
 public partial class CVariantDefaultAllocator : NativeObject
 {
     public CVariantDefaultAllocator (IntPtr pointer) : base(pointer) {}
+    public CVariantDefaultAllocator() {}
 
 }
 
 public partial class CVoteController : CBaseEntity
 {
     public CVoteController (IntPtr pointer) : base(pointer) {}
+    public CVoteController() {}
 
     // m_iActiveIssueIndex
     public ref Int32 ActiveIssueIndex => ref Schema.GetRef<Int32>(this.Handle, "CVoteController", "m_iActiveIssueIndex");
@@ -20772,24 +21356,28 @@ public partial class CVoteController : CBaseEntity
 public partial class CWaterBullet : CBaseAnimGraph
 {
     public CWaterBullet (IntPtr pointer) : base(pointer) {}
+    public CWaterBullet() {}
 
 }
 
 public partial class CWeaponAug : CCSWeaponBaseGun
 {
     public CWeaponAug (IntPtr pointer) : base(pointer) {}
+    public CWeaponAug() {}
 
 }
 
 public partial class CWeaponAWP : CCSWeaponBaseGun
 {
     public CWeaponAWP (IntPtr pointer) : base(pointer) {}
+    public CWeaponAWP() {}
 
 }
 
 public partial class CWeaponBaseItem : CCSWeaponBase
 {
     public CWeaponBaseItem (IntPtr pointer) : base(pointer) {}
+    public CWeaponBaseItem() {}
 
     // m_SequenceCompleteTimer
     public CountdownTimer SequenceCompleteTimer => Schema.GetDeclaredClass<CountdownTimer>(this.Handle, "CWeaponBaseItem", "m_SequenceCompleteTimer");
@@ -20802,156 +21390,182 @@ public partial class CWeaponBaseItem : CCSWeaponBase
 public partial class CWeaponBizon : CCSWeaponBaseGun
 {
     public CWeaponBizon (IntPtr pointer) : base(pointer) {}
+    public CWeaponBizon() {}
 
 }
 
 public partial class CWeaponCZ75a : CCSWeaponBaseGun
 {
     public CWeaponCZ75a (IntPtr pointer) : base(pointer) {}
+    public CWeaponCZ75a() {}
 
 }
 
 public partial class CWeaponElite : CCSWeaponBaseGun
 {
     public CWeaponElite (IntPtr pointer) : base(pointer) {}
+    public CWeaponElite() {}
 
 }
 
 public partial class CWeaponFamas : CCSWeaponBaseGun
 {
     public CWeaponFamas (IntPtr pointer) : base(pointer) {}
+    public CWeaponFamas() {}
 
 }
 
 public partial class CWeaponFiveSeven : CCSWeaponBaseGun
 {
     public CWeaponFiveSeven (IntPtr pointer) : base(pointer) {}
+    public CWeaponFiveSeven() {}
 
 }
 
 public partial class CWeaponG3SG1 : CCSWeaponBaseGun
 {
     public CWeaponG3SG1 (IntPtr pointer) : base(pointer) {}
+    public CWeaponG3SG1() {}
 
 }
 
 public partial class CWeaponGalilAR : CCSWeaponBaseGun
 {
     public CWeaponGalilAR (IntPtr pointer) : base(pointer) {}
+    public CWeaponGalilAR() {}
 
 }
 
 public partial class CWeaponGlock : CCSWeaponBaseGun
 {
     public CWeaponGlock (IntPtr pointer) : base(pointer) {}
+    public CWeaponGlock() {}
 
 }
 
 public partial class CWeaponHKP2000 : CCSWeaponBaseGun
 {
     public CWeaponHKP2000 (IntPtr pointer) : base(pointer) {}
+    public CWeaponHKP2000() {}
 
 }
 
 public partial class CWeaponM249 : CCSWeaponBaseGun
 {
     public CWeaponM249 (IntPtr pointer) : base(pointer) {}
+    public CWeaponM249() {}
 
 }
 
 public partial class CWeaponM4A1 : CCSWeaponBaseGun
 {
     public CWeaponM4A1 (IntPtr pointer) : base(pointer) {}
+    public CWeaponM4A1() {}
 
 }
 
 public partial class CWeaponM4A1Silencer : CCSWeaponBaseGun
 {
     public CWeaponM4A1Silencer (IntPtr pointer) : base(pointer) {}
+    public CWeaponM4A1Silencer() {}
 
 }
 
 public partial class CWeaponMAC10 : CCSWeaponBaseGun
 {
     public CWeaponMAC10 (IntPtr pointer) : base(pointer) {}
+    public CWeaponMAC10() {}
 
 }
 
 public partial class CWeaponMag7 : CCSWeaponBaseGun
 {
     public CWeaponMag7 (IntPtr pointer) : base(pointer) {}
+    public CWeaponMag7() {}
 
 }
 
 public partial class CWeaponMP5SD : CCSWeaponBaseGun
 {
     public CWeaponMP5SD (IntPtr pointer) : base(pointer) {}
+    public CWeaponMP5SD() {}
 
 }
 
 public partial class CWeaponMP7 : CCSWeaponBaseGun
 {
     public CWeaponMP7 (IntPtr pointer) : base(pointer) {}
+    public CWeaponMP7() {}
 
 }
 
 public partial class CWeaponMP9 : CCSWeaponBaseGun
 {
     public CWeaponMP9 (IntPtr pointer) : base(pointer) {}
+    public CWeaponMP9() {}
 
 }
 
 public partial class CWeaponNegev : CCSWeaponBaseGun
 {
     public CWeaponNegev (IntPtr pointer) : base(pointer) {}
+    public CWeaponNegev() {}
 
 }
 
 public partial class CWeaponNOVA : CCSWeaponBase
 {
     public CWeaponNOVA (IntPtr pointer) : base(pointer) {}
+    public CWeaponNOVA() {}
 
 }
 
 public partial class CWeaponP250 : CCSWeaponBaseGun
 {
     public CWeaponP250 (IntPtr pointer) : base(pointer) {}
+    public CWeaponP250() {}
 
 }
 
 public partial class CWeaponP90 : CCSWeaponBaseGun
 {
     public CWeaponP90 (IntPtr pointer) : base(pointer) {}
+    public CWeaponP90() {}
 
 }
 
 public partial class CWeaponRevolver : CCSWeaponBaseGun
 {
     public CWeaponRevolver (IntPtr pointer) : base(pointer) {}
+    public CWeaponRevolver() {}
 
 }
 
 public partial class CWeaponSawedoff : CCSWeaponBase
 {
     public CWeaponSawedoff (IntPtr pointer) : base(pointer) {}
+    public CWeaponSawedoff() {}
 
 }
 
 public partial class CWeaponSCAR20 : CCSWeaponBaseGun
 {
     public CWeaponSCAR20 (IntPtr pointer) : base(pointer) {}
+    public CWeaponSCAR20() {}
 
 }
 
 public partial class CWeaponSG556 : CCSWeaponBaseGun
 {
     public CWeaponSG556 (IntPtr pointer) : base(pointer) {}
+    public CWeaponSG556() {}
 
 }
 
 public partial class CWeaponShield : CCSWeaponBaseGun
 {
     public CWeaponShield (IntPtr pointer) : base(pointer) {}
+    public CWeaponShield() {}
 
     // m_flBulletDamageAbsorbed
     public ref float BulletDamageAbsorbed => ref Schema.GetRef<float>(this.Handle, "CWeaponShield", "m_flBulletDamageAbsorbed");
@@ -20967,12 +21581,14 @@ public partial class CWeaponShield : CCSWeaponBaseGun
 public partial class CWeaponSSG08 : CCSWeaponBaseGun
 {
     public CWeaponSSG08 (IntPtr pointer) : base(pointer) {}
+    public CWeaponSSG08() {}
 
 }
 
 public partial class CWeaponTaser : CCSWeaponBaseGun
 {
     public CWeaponTaser (IntPtr pointer) : base(pointer) {}
+    public CWeaponTaser() {}
 
     // m_fFireTime
     public ref float FireTime => ref Schema.GetRef<float>(this.Handle, "CWeaponTaser", "m_fFireTime");
@@ -20982,42 +21598,49 @@ public partial class CWeaponTaser : CCSWeaponBaseGun
 public partial class CWeaponTec9 : CCSWeaponBaseGun
 {
     public CWeaponTec9 (IntPtr pointer) : base(pointer) {}
+    public CWeaponTec9() {}
 
 }
 
 public partial class CWeaponUMP45 : CCSWeaponBaseGun
 {
     public CWeaponUMP45 (IntPtr pointer) : base(pointer) {}
+    public CWeaponUMP45() {}
 
 }
 
 public partial class CWeaponUSPSilencer : CCSWeaponBaseGun
 {
     public CWeaponUSPSilencer (IntPtr pointer) : base(pointer) {}
+    public CWeaponUSPSilencer() {}
 
 }
 
 public partial class CWeaponXM1014 : CCSWeaponBase
 {
     public CWeaponXM1014 (IntPtr pointer) : base(pointer) {}
+    public CWeaponXM1014() {}
 
 }
 
 public partial class CWeaponZoneRepulsor : CCSWeaponBaseGun
 {
     public CWeaponZoneRepulsor (IntPtr pointer) : base(pointer) {}
+    public CWeaponZoneRepulsor() {}
 
 }
 
 public partial class CWorld : CBaseModelEntity
 {
     public CWorld (IntPtr pointer) : base(pointer) {}
+    public CWorld() {}
 
 }
 
 public partial class dynpitchvol_base_t : NativeObject
 {
     public dynpitchvol_base_t (IntPtr pointer) : base(pointer) {}
+    public dynpitchvol_base_t() {}
 
     // preset
     public ref Int32 Preset => ref Schema.GetRef<Int32>(this.Handle, "dynpitchvol_base_t", "preset");
@@ -21099,12 +21722,14 @@ public partial class dynpitchvol_base_t : NativeObject
 public partial class dynpitchvol_t : dynpitchvol_base_t
 {
     public dynpitchvol_t (IntPtr pointer) : base(pointer) {}
+    public dynpitchvol_t() {}
 
 }
 
 public partial class EntityRenderAttribute_t : NativeObject
 {
     public EntityRenderAttribute_t (IntPtr pointer) : base(pointer) {}
+    public EntityRenderAttribute_t() {}
 
     // m_ID
     public CUtlStringToken ID => Schema.GetDeclaredClass<CUtlStringToken>(this.Handle, "EntityRenderAttribute_t", "m_ID");
@@ -21117,6 +21742,7 @@ public partial class EntityRenderAttribute_t : NativeObject
 public partial class EntitySpottedState_t : NativeObject
 {
     public EntitySpottedState_t (IntPtr pointer) : base(pointer) {}
+    public EntitySpottedState_t() {}
 
     // m_bSpotted
     public ref bool Spotted => ref Schema.GetRef<bool>(this.Handle, "EntitySpottedState_t", "m_bSpotted");
@@ -21129,6 +21755,7 @@ public partial class EntitySpottedState_t : NativeObject
 public partial class Extent : NativeObject
 {
     public Extent (IntPtr pointer) : base(pointer) {}
+    public Extent() {}
 
     // lo
     public Vector Lo => Schema.GetDeclaredClass<Vector>(this.Handle, "Extent", "lo");
@@ -21141,6 +21768,7 @@ public partial class Extent : NativeObject
 public partial class FilterDamageType : CBaseFilter
 {
     public FilterDamageType (IntPtr pointer) : base(pointer) {}
+    public FilterDamageType() {}
 
     // m_iDamageType
     public ref Int32 DamageType => ref Schema.GetRef<Int32>(this.Handle, "FilterDamageType", "m_iDamageType");
@@ -21150,6 +21778,7 @@ public partial class FilterDamageType : CBaseFilter
 public partial class FilterHealth : CBaseFilter
 {
     public FilterHealth (IntPtr pointer) : base(pointer) {}
+    public FilterHealth() {}
 
     // m_bAdrenalineActive
     public ref bool AdrenalineActive => ref Schema.GetRef<bool>(this.Handle, "FilterHealth", "m_bAdrenalineActive");
@@ -21165,6 +21794,7 @@ public partial class FilterHealth : CBaseFilter
 public partial class FilterTeam : CBaseFilter
 {
     public FilterTeam (IntPtr pointer) : base(pointer) {}
+    public FilterTeam() {}
 
     // m_iFilterTeam
     public ref Int32 Value => ref Schema.GetRef<Int32>(this.Handle, "FilterTeam", "m_iFilterTeam");
@@ -21174,6 +21804,7 @@ public partial class FilterTeam : CBaseFilter
 public partial class fogparams_t : NativeObject
 {
     public fogparams_t (IntPtr pointer) : base(pointer) {}
+    public fogparams_t() {}
 
     // dirPrimary
     public Vector DirPrimary => Schema.GetDeclaredClass<Vector>(this.Handle, "fogparams_t", "dirPrimary");
@@ -21271,6 +21902,7 @@ public partial class fogparams_t : NativeObject
 public partial class fogplayerparams_t : NativeObject
 {
     public fogplayerparams_t (IntPtr pointer) : base(pointer) {}
+    public fogplayerparams_t() {}
 
     // m_hCtrl
     public CHandle<CFogController> Ctrl => Schema.GetDeclaredClass<CHandle<CFogController>>(this.Handle, "fogplayerparams_t", "m_hCtrl");
@@ -21327,6 +21959,7 @@ public partial class fogplayerparams_t : NativeObject
 public partial class hudtextparms_t : NativeObject
 {
     public hudtextparms_t (IntPtr pointer) : base(pointer) {}
+    public hudtextparms_t() {}
 
     // color1
     public Color Color1
@@ -21359,48 +21992,56 @@ public partial class hudtextparms_t : NativeObject
 public partial class IChoreoServices : NativeObject
 {
     public IChoreoServices (IntPtr pointer) : base(pointer) {}
+    public IChoreoServices() {}
 
 }
 
 public partial class IEconItemInterface : NativeObject
 {
     public IEconItemInterface (IntPtr pointer) : base(pointer) {}
+    public IEconItemInterface() {}
 
 }
 
 public partial class InfoForResourceTypeCModel : NativeObject
 {
     public InfoForResourceTypeCModel (IntPtr pointer) : base(pointer) {}
+    public InfoForResourceTypeCModel() {}
 
 }
 
 public partial class InfoForResourceTypeCPostProcessingResource : NativeObject
 {
     public InfoForResourceTypeCPostProcessingResource (IntPtr pointer) : base(pointer) {}
+    public InfoForResourceTypeCPostProcessingResource() {}
 
 }
 
 public partial class InfoForResourceTypeCTextureBase : NativeObject
 {
     public InfoForResourceTypeCTextureBase (IntPtr pointer) : base(pointer) {}
+    public InfoForResourceTypeCTextureBase() {}
 
 }
 
 public partial class InfoForResourceTypeIMaterial2 : NativeObject
 {
     public InfoForResourceTypeIMaterial2 (IntPtr pointer) : base(pointer) {}
+    public InfoForResourceTypeIMaterial2() {}
 
 }
 
 public partial class InfoForResourceTypeIParticleSystemDefinition : NativeObject
 {
     public InfoForResourceTypeIParticleSystemDefinition (IntPtr pointer) : base(pointer) {}
+    public InfoForResourceTypeIParticleSystemDefinition() {}
 
 }
 
 public partial class IntervalTimer : NativeObject
 {
     public IntervalTimer (IntPtr pointer) : base(pointer) {}
+    public IntervalTimer() {}
 
     // m_timestamp
     public ref float Timestamp => ref Schema.GetRef<float>(this.Handle, "IntervalTimer", "m_timestamp");
@@ -21413,12 +22054,14 @@ public partial class IntervalTimer : NativeObject
 public partial class ISkeletonAnimationController : NativeObject
 {
     public ISkeletonAnimationController (IntPtr pointer) : base(pointer) {}
+    public ISkeletonAnimationController() {}
 
 }
 
 public partial class lerpdata_t : NativeObject
 {
     public lerpdata_t (IntPtr pointer) : base(pointer) {}
+    public lerpdata_t() {}
 
     // m_hEnt
     public CHandle<CBaseEntity> Ent => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "lerpdata_t", "m_hEnt");
@@ -21443,6 +22086,7 @@ public partial class lerpdata_t : NativeObject
 public partial class locksound_t : NativeObject
 {
     public locksound_t (IntPtr pointer) : base(pointer) {}
+    public locksound_t() {}
 
     // sLockedSound
     public string SLockedSound
@@ -21466,6 +22110,7 @@ public partial class locksound_t : NativeObject
 public partial class magnetted_objects_t : NativeObject
 {
     public magnetted_objects_t (IntPtr pointer) : base(pointer) {}
+    public magnetted_objects_t() {}
 
     // hEntity
     public CHandle<CBaseEntity> HEntity => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "magnetted_objects_t", "hEntity");
@@ -21475,6 +22120,7 @@ public partial class magnetted_objects_t : NativeObject
 public partial class ParticleIndex_t : NativeObject
 {
     public ParticleIndex_t (IntPtr pointer) : base(pointer) {}
+    public ParticleIndex_t() {}
 
     // m_Value
     public ref Int32 Value => ref Schema.GetRef<Int32>(this.Handle, "ParticleIndex_t", "m_Value");
@@ -21484,6 +22130,7 @@ public partial class ParticleIndex_t : NativeObject
 public partial class PhysicsRagdollPose_t : NativeObject
 {
     public PhysicsRagdollPose_t (IntPtr pointer) : base(pointer) {}
+    public PhysicsRagdollPose_t() {}
 
     // __m_pChainEntity
     public CNetworkVarChainer __m_pChainEntity => Schema.GetDeclaredClass<CNetworkVarChainer>(this.Handle, "PhysicsRagdollPose_t", "__m_pChainEntity");
@@ -21499,6 +22146,7 @@ public partial class PhysicsRagdollPose_t : NativeObject
 public partial class ragdoll_t : NativeObject
 {
     public ragdoll_t (IntPtr pointer) : base(pointer) {}
+    public ragdoll_t() {}
 
     // list
     public NetworkedVector<ragdollelement_t> List => Schema.GetDeclaredClass<NetworkedVector<ragdollelement_t>>(this.Handle, "ragdoll_t", "list");
@@ -21517,6 +22165,7 @@ public partial class ragdoll_t : NativeObject
 public partial class ragdollelement_t : NativeObject
 {
     public ragdollelement_t (IntPtr pointer) : base(pointer) {}
+    public ragdollelement_t() {}
 
     // originParentSpace
     public Vector OriginParentSpace => Schema.GetDeclaredClass<Vector>(this.Handle, "ragdollelement_t", "originParentSpace");
@@ -21532,6 +22181,7 @@ public partial class ragdollelement_t : NativeObject
 public partial class Relationship_t : NativeObject
 {
     public Relationship_t (IntPtr pointer) : base(pointer) {}
+    public Relationship_t() {}
 
     // disposition
     public ref Disposition_t Disposition => ref Schema.GetRef<Disposition_t>(this.Handle, "Relationship_t", "disposition");
@@ -21544,6 +22194,7 @@ public partial class Relationship_t : NativeObject
 public partial class RelationshipOverride_t : Relationship_t
 {
     public RelationshipOverride_t (IntPtr pointer) : base(pointer) {}
+    public RelationshipOverride_t() {}
 
     // entity
     public CHandle<CBaseEntity> Entity => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "RelationshipOverride_t", "entity");
@@ -21556,6 +22207,7 @@ public partial class RelationshipOverride_t : Relationship_t
 public partial class ResponseContext_t : NativeObject
 {
     public ResponseContext_t (IntPtr pointer) : base(pointer) {}
+    public ResponseContext_t() {}
 
     // m_iszName
     public string Name
@@ -21579,6 +22231,7 @@ public partial class ResponseContext_t : NativeObject
 public partial class ResponseFollowup : NativeObject
 {
     public ResponseFollowup (IntPtr pointer) : base(pointer) {}
+    public ResponseFollowup() {}
 
     // followup_concept
     // followup_contexts
@@ -21599,6 +22252,7 @@ public partial class ResponseFollowup : NativeObject
 public partial class SellbackPurchaseEntry_t : NativeObject
 {
     public SellbackPurchaseEntry_t (IntPtr pointer) : base(pointer) {}
+    public SellbackPurchaseEntry_t() {}
 
     // m_unDefIdx
     public ref UInt16 DefIdx => ref Schema.GetRef<UInt16>(this.Handle, "SellbackPurchaseEntry_t", "m_unDefIdx");
@@ -21620,6 +22274,7 @@ public partial class SellbackPurchaseEntry_t : NativeObject
 public partial class ServerAuthoritativeWeaponSlot_t : NativeObject
 {
     public ServerAuthoritativeWeaponSlot_t (IntPtr pointer) : base(pointer) {}
+    public ServerAuthoritativeWeaponSlot_t() {}
 
     // unClass
     public ref UInt16 UnClass => ref Schema.GetRef<UInt16>(this.Handle, "ServerAuthoritativeWeaponSlot_t", "unClass");
@@ -21635,6 +22290,7 @@ public partial class ServerAuthoritativeWeaponSlot_t : NativeObject
 public partial class shard_model_desc_t : NativeObject
 {
     public shard_model_desc_t (IntPtr pointer) : base(pointer) {}
+    public shard_model_desc_t() {}
 
     // m_nModelID
     public ref Int32 ModelID => ref Schema.GetRef<Int32>(this.Handle, "shard_model_desc_t", "m_nModelID");
@@ -21677,6 +22333,7 @@ public partial class shard_model_desc_t : NativeObject
 public partial class SimpleConstraintSoundProfile : NativeObject
 {
     public SimpleConstraintSoundProfile (IntPtr pointer) : base(pointer) {}
+    public SimpleConstraintSoundProfile() {}
 
     // eKeypoints
     // m_keyPoints
@@ -21690,6 +22347,7 @@ public partial class SimpleConstraintSoundProfile : NativeObject
 public partial class sky3dparams_t : NativeObject
 {
     public sky3dparams_t (IntPtr pointer) : base(pointer) {}
+    public sky3dparams_t() {}
 
     // scale
     public ref Int16 Scale => ref Schema.GetRef<Int16>(this.Handle, "sky3dparams_t", "scale");
@@ -21714,6 +22372,7 @@ public partial class sky3dparams_t : NativeObject
 public partial class SpawnPoint : CServerOnlyPointEntity
 {
     public SpawnPoint (IntPtr pointer) : base(pointer) {}
+    public SpawnPoint() {}
 
     // m_iPriority
     public ref Int32 Priority => ref Schema.GetRef<Int32>(this.Handle, "SpawnPoint", "m_iPriority");
@@ -21729,6 +22388,7 @@ public partial class SpawnPoint : CServerOnlyPointEntity
 public partial class SpawnPointCoopEnemy : SpawnPoint
 {
     public SpawnPointCoopEnemy (IntPtr pointer) : base(pointer) {}
+    public SpawnPointCoopEnemy() {}
 
     // m_szWeaponsToGive
     public string WeaponsToGive
@@ -21772,6 +22432,7 @@ public partial class SpawnPointCoopEnemy : SpawnPoint
 public partial class thinkfunc_t : NativeObject
 {
     public thinkfunc_t (IntPtr pointer) : base(pointer) {}
+    public thinkfunc_t() {}
 
     // m_nContext
     public CUtlStringToken Context => Schema.GetDeclaredClass<CUtlStringToken>(this.Handle, "thinkfunc_t", "m_nContext");
@@ -21787,6 +22448,7 @@ public partial class thinkfunc_t : NativeObject
 public partial class VelocitySampler : NativeObject
 {
     public VelocitySampler (IntPtr pointer) : base(pointer) {}
+    public VelocitySampler() {}
 
     // m_prevSample
     public Vector PrevSample => Schema.GetDeclaredClass<Vector>(this.Handle, "VelocitySampler", "m_prevSample");
@@ -21802,6 +22464,7 @@ public partial class VelocitySampler : NativeObject
 public partial class ViewAngleServerChange_t : NativeObject
 {
     public ViewAngleServerChange_t (IntPtr pointer) : base(pointer) {}
+    public ViewAngleServerChange_t() {}
 
     // nType
     public ref FixAngleSet_t NType => ref Schema.GetRef<FixAngleSet_t>(this.Handle, "ViewAngleServerChange_t", "nType");
@@ -21817,6 +22480,7 @@ public partial class ViewAngleServerChange_t : NativeObject
 public partial class VPhysicsCollisionAttribute_t : NativeObject
 {
     public VPhysicsCollisionAttribute_t (IntPtr pointer) : base(pointer) {}
+    public VPhysicsCollisionAttribute_t() {}
 
     // m_nInteractsAs
     public ref UInt64 InteractsAs => ref Schema.GetRef<UInt64>(this.Handle, "VPhysicsCollisionAttribute_t", "m_nInteractsAs");
@@ -21847,6 +22511,7 @@ public partial class VPhysicsCollisionAttribute_t : NativeObject
 public partial class WeaponPurchaseCount_t : NativeObject
 {
     public WeaponPurchaseCount_t (IntPtr pointer) : base(pointer) {}
+    public WeaponPurchaseCount_t() {}
 
     // m_nItemDefIndex
     public ref UInt16 ItemDefIndex => ref Schema.GetRef<UInt16>(this.Handle, "WeaponPurchaseCount_t", "m_nItemDefIndex");
@@ -21859,6 +22524,7 @@ public partial class WeaponPurchaseCount_t : NativeObject
 public partial class WeaponPurchaseTracker_t : NativeObject
 {
     public WeaponPurchaseTracker_t (IntPtr pointer) : base(pointer) {}
+    public WeaponPurchaseTracker_t() {}
 
     // m_weaponPurchases
     public NetworkedVector<WeaponPurchaseCount_t> WeaponPurchases => Schema.GetDeclaredClass<NetworkedVector<WeaponPurchaseCount_t>>(this.Handle, "WeaponPurchaseTracker_t", "m_weaponPurchases");

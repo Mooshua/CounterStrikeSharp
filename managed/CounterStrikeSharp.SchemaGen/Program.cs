@@ -207,6 +207,7 @@ internal static partial class Program
 
         builder.AppendLine(
             $"    public {classNameCs} (IntPtr pointer) : base(pointer) {{}}");
+        builder.AppendLine($"    public {classNameCs}() {{}}");
         builder.AppendLine();
 
         foreach (var field in schemaClass.Fields)

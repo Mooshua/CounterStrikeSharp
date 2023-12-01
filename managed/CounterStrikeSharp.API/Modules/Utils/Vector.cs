@@ -45,6 +45,11 @@ namespace CounterStrikeSharp.API.Modules.Utils
             this.Z = z ?? 0;
         }
 
+        public Vector()
+        {
+            
+        }
+
         public unsafe ref float X => ref Unsafe.Add(ref *(float*)Handle, 0);
         public unsafe ref float Y => ref Unsafe.Add(ref *(float*)Handle, 1);
         public unsafe ref float Z => ref Unsafe.Add(ref *(float*)Handle, 2);

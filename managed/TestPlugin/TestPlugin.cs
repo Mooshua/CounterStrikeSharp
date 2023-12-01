@@ -174,13 +174,13 @@ namespace TestPlugin
                 cheatsCvar.SetValue(true);
 
                 var numericCvar = ConVar.Find("mp_warmuptime");
-                Logger.LogInformation("mp_warmuptime = {Value}", numericCvar?.GetPrimitiveValue<float>());
+                Logger.LogInformation("mp_warmuptime = {Value}", numericCvar?.AsPrimitive<float>());
 
                 var stringCvar = ConVar.Find("sv_skyname");
                 Logger.LogInformation("sv_skyname = {Value}", stringCvar?.StringValue);
 
                 var fogCvar = ConVar.Find("fog_color");
-                Logger.LogInformation("fog_color = {Value}", fogCvar?.GetNativeValue<Vector>());
+                Logger.LogInformation("fog_color = {Value}", fogCvar?.AsNative<Vector>());
             });
         }
 
