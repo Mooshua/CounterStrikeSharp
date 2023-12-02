@@ -1,5 +1,7 @@
 using System;
 
+using CounterStrikeSharp.API.Engine.Entities;
+
 namespace CounterStrikeSharp.API.Modules.Entities;
 
 public class Player : BaseEntity

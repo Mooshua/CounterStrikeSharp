@@ -16,6 +16,7 @@
 
 using System.Collections.Generic;
 using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Core.Model;
 using CounterStrikeSharp.API.Modules.Timers;
 
 namespace WarcraftPlugin.Effects

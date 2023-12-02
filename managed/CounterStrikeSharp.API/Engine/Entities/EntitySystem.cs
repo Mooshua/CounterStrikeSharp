@@ -1,9 +1,11 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+
+using CounterStrikeSharp.API.Core.Model;
 using CounterStrikeSharp.API.Modules.Memory;
 using CounterStrikeSharp.API.Modules.Utils;
 
-namespace CounterStrikeSharp.API.Modules.Entities;
+namespace CounterStrikeSharp.API.Engine.Entities;
 
 public static class EntitySystem
 {

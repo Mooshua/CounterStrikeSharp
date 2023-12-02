@@ -2,6 +2,8 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Core.Model;
+using CounterStrikeSharp.API.Engine.Entities;
 using CounterStrikeSharp.API.Modules.Entities;
 
 namespace CounterStrikeSharp.API.Modules.Utils;

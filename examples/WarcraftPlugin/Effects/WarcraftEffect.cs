@@ -16,6 +16,7 @@
 
 using System.Drawing;
 using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Core.Model;
 
 namespace WarcraftPlugin.Effects
 {

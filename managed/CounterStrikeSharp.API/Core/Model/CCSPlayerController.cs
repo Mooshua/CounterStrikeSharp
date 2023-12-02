@@ -3,7 +3,7 @@ using CounterStrikeSharp.API.Modules.Entities.Constants;
 using CounterStrikeSharp.API.Modules.Memory;
 using CounterStrikeSharp.API.Modules.Utils;
 
-namespace CounterStrikeSharp.API.Core;
+namespace CounterStrikeSharp.API.Core.Model;
 
 public partial class CCSPlayerController
 {
@@ -24,7 +24,7 @@ public partial class CCSPlayerController
         return VirtualFunctions.GiveNamedItem(PlayerPawn.Value.ItemServices.Handle, item, 0, 0, 0, 0);
     }
 
-    public IntPtr GiveNamedItem(CsItem item) 
+    public IntPtr GiveNamedItem(CsItem item)
     {
         string? itemString = EnumUtils.GetEnumMemberAttributeValue(item);
         if (string.IsNullOrWhiteSpace(itemString))
@@ -49,7 +49,7 @@ public partial class CCSPlayerController
     {
         VirtualFunctions.ClientPrint(this.Handle, HudDestination.Center, message, 0, 0, 0, 0);
     }
-    
+
     public void PrintToCenterHtml(string message)
     {
         var @event = new EventShowSurvivalRespawnStatus(true)

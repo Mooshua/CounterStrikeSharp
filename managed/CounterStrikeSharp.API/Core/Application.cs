@@ -17,8 +17,10 @@
 using System.Linq;
 using System.Text;
 using CounterStrikeSharp.API.Core.Hosting;
+using CounterStrikeSharp.API.Core.Model;
 using CounterStrikeSharp.API.Core.Plugin;
 using CounterStrikeSharp.API.Core.Plugin.Host;
+using CounterStrikeSharp.API.Engine.Commands;
 using CounterStrikeSharp.API.Modules.Admin;
 using CounterStrikeSharp.API.Modules.Commands;
 using CounterStrikeSharp.API.Modules.Menu;
@@ -152,7 +154,7 @@ namespace CounterStrikeSharp.API.Core
                             true);
                         break;
                     }
-                    
+
                     // If our arugment doesn't end in ".dll" - try and construct a path similar to PluginName/PluginName.dll.
                     // We'll assume we have a full path if we have ".dll".
                     var path = info.GetArg(2);
@@ -181,7 +183,7 @@ namespace CounterStrikeSharp.API.Core
                     {
                         plugin.Load(false);
                     }
-                    
+
                     break;
                 }
 

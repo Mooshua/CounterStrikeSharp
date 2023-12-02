@@ -2,7 +2,7 @@
 using CounterStrikeSharp.API.Modules.Memory;
 using CounterStrikeSharp.API.Modules.Utils;
 
-namespace CounterStrikeSharp.API.Core;
+namespace CounterStrikeSharp.API.Core.Model;
 
 public partial class CBaseEntity
 {

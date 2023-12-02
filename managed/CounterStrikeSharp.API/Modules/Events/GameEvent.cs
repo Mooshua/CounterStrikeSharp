@@ -16,6 +16,7 @@
 
 using System;
 using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Core.Model;
 using CounterStrikeSharp.API.Modules.Entities;
 
 namespace CounterStrikeSharp.API.Modules.Events
@@ -35,11 +36,11 @@ namespace CounterStrikeSharp.API.Modules.Events
         public GameEvent(IntPtr pointer) : base(pointer)
         {
         }
-        
+
         public GameEvent(string name, bool force) : this(NativeAPI.CreateEvent(name, force))
         {
         }
-        
+
         public string EventName => NativeAPI.GetEventName(Handle);
 
         public T Get<T>(string name)
@@ -123,7 +124,7 @@ namespace CounterStrikeSharp.API.Modules.Events
         protected void SetEntityIndex(string name, int value) => NativeAPI.SetEventEntityIndex(Handle, name, value);
 
         public void FireEvent(bool dontBroadcast) => NativeAPI.FireEvent(Handle, dontBroadcast);
-        
+
         public void FireEventToClient(CCSPlayerController player) => NativeAPI.FireEventToClient(Handle, (int)player.Index);
     }
 }

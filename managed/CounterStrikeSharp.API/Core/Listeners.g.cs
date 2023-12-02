@@ -1,12 +1,13 @@
 
 using System;
 using CounterStrikeSharp.API.Core.Attributes;
+using CounterStrikeSharp.API.Core.Model;
 using CounterStrikeSharp.API.Modules.Entities;
 
 namespace CounterStrikeSharp.API.Core
 {
     public class Listeners {
-        
+
         /// <summary>
         /// Called when an entity is spawned.
         /// </summary>

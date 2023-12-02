@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using CounterStrikeSharp.API.Modules.Utils;
 
-namespace CounterStrikeSharp.API.Core;
+namespace CounterStrikeSharp.API.Core.Model;
 
 public partial class CNetworkOriginCellCoordQuantizedVector
 {

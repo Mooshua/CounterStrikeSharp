@@ -23,6 +23,8 @@ using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Core.Attributes;
 using CounterStrikeSharp.API.Core.Attributes.Registration;
+using CounterStrikeSharp.API.Core.Model;
+using CounterStrikeSharp.API.Engine.Commands;
 using CounterStrikeSharp.API.Modules.Commands;
 using CounterStrikeSharp.API.Modules.Cvars;
 using CounterStrikeSharp.API.Modules.Entities;
@@ -81,7 +83,7 @@ namespace TestPlugin
                 $"Test Plugin has been loaded, and the hot reload flag was {hotReload}, path is {ModulePath}");
 
             Logger.LogWarning($"Max Players: {Server.MaxPlayers}");
-            
+
             VirtualFunctions.SwitchTeamFunc.Hook(hook =>
             {
                 Logger.LogInformation("Switch team func called");
@@ -111,29 +113,29 @@ namespace TestPlugin
             var virtualFunc = VirtualFunction.Create<IntPtr>(server.Pointer, 91);
             var result = virtualFunc() - 8;
             Logger.LogInformation("Result of virtual func call is {Pointer:X}", result);
-            
+
             _testInjectedClass.Hello();
 
             VirtualFunctions.CBaseTrigger_StartTouchFunc.Hook(h =>
             {
                 var trigger = h.GetParam<CBaseTrigger>(0);
                 var entity = h.GetParam<CBaseEntity>(1);
-                
+
                 Logger.LogInformation("Trigger {Trigger} touched by {Entity}", trigger.DesignerName, entity.DesignerName);
-                
+
                 return HookResult.Continue;
             }, HookMode.Post);
-            
+
             VirtualFunctions.CBaseTrigger_EndTouchFunc.Hook(h =>
             {
                 var trigger = h.GetParam<CBaseTrigger>(0);
                 var entity = h.GetParam<CBaseEntity>(1);
-                
+
                 Logger.LogInformation("Trigger left {Trigger} by {Entity}", trigger.DesignerName, entity.DesignerName);
-                
+
                 return HookResult.Continue;
             }, HookMode.Post);
-            
+
             VirtualFunctions.UTIL_RemoveFunc.Hook(hook =>
             {
                 var entityInstance = hook.GetParam<CEntityInstance>(0);
@@ -141,12 +143,12 @@ namespace TestPlugin
 
                 return HookResult.Continue;
             }, HookMode.Post);
-            
+
             VirtualFunctions.CBaseEntity_TakeDamageOldFunc.Hook((h =>
             {
                 var victim = h.GetParam<CEntityInstance>(0);
                 var damageInfo = h.GetParam<CTakeDamageInfo>(1);
-                
+
                 if (damageInfo.Inflictor.Value.DesignerName == "inferno")
                 {
                     var inferno = new CInferno(damageInfo.Inflictor.Value.Handle);
@@ -232,9 +234,9 @@ namespace TestPlugin
                 Server.NextFrame(() =>
                 {
                     var weaponServices = player.PlayerPawn.Value.WeaponServices.As<CCSPlayer_WeaponServices>();
-                    player.PrintToChat(weaponServices.ActiveWeapon.Value?.DesignerName);    
+                    player.PrintToChat(weaponServices.ActiveWeapon.Value?.DesignerName);
                 });
-                
+
                 // Set player to random colour
                 player.PlayerPawn.Value.Render = Color.FromArgb(Random.Shared.Next(0, 255),
                     Random.Shared.Next(0, 255), Random.Shared.Next(0, 255));
@@ -349,13 +351,13 @@ namespace TestPlugin
                     player.PrintToChat("No players found.");
                     return;
                 }
-                
+
                 foreach (var result in targetResult.Players)
                 {
                     player.PrintToChat($"Target found: {result?.PlayerName}");
                 }
             });
-            
+
             AddCommand("css_menu", "Opens example menu", (player, info) => { ChatMenus.OpenMenu(player, largeMenu); });
             AddCommand("css_gunmenu", "Gun Menu", (player, info) => { ChatMenus.OpenMenu(player, giveItemMenu); });
 
@@ -463,7 +465,7 @@ namespace TestPlugin
                 command.ReplyToCommand(weapon.Value.DesignerName);
             }
         }
-        
+
         [ConsoleCommand("css_entities", "List entities")]
         public void OnCommandEntities(CCSPlayerController? player, CommandInfo command)
         {
@@ -471,13 +473,13 @@ namespace TestPlugin
             {
                 command.ReplyToCommand($"{entity.Index}:{entity.DesignerName}");
             }
-            
+
             foreach (var entity in Utilities.FindAllEntitiesByDesignerName<CBaseEntity>("cs_"))
             {
                 command.ReplyToCommand($"{entity.Index}:{entity.DesignerName}");
             }
         }
-        
+
         [ConsoleCommand("css_colors", "List Chat Colors")]
         public void OnCommandColors(CCSPlayerController? player, CommandInfo command)
         {
@@ -489,7 +491,7 @@ namespace TestPlugin
                 command.ReplyToCommand($" {(char)i}Color 0x{i:x}");
             }
         }
-        
+
         [ConsoleCommand("css_sound", "Play a sound to client")]
         public void OnCommandSound(CCSPlayerController? player, CommandInfo command)
         {

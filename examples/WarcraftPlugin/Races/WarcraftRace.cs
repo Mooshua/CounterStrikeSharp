@@ -17,6 +17,8 @@
 using System;
 using System.Collections.Generic;
 using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Core.Model;
+
 using WarcraftPlugin.Effects;
 using CounterStrikeSharp.API.Modules.Events;
 

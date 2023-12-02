@@ -35,6 +35,7 @@
   <ItemGroup>
     <Folder Include="Engine\" />
     <Folder Include="Modules\Errors" />
+    <Folder Include="Public\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Modules\Disabled\**" />

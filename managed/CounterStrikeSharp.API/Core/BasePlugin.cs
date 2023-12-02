@@ -21,6 +21,8 @@ using System.Linq;
 using System.Reflection;
 using CounterStrikeSharp.API.Core.Attributes;
 using CounterStrikeSharp.API.Core.Attributes.Registration;
+using CounterStrikeSharp.API.Core.Model;
+using CounterStrikeSharp.API.Engine.Commands;
 using CounterStrikeSharp.API.Modules.Admin;
 using CounterStrikeSharp.API.Modules.Commands;
 using CounterStrikeSharp.API.Modules.Events;
@@ -42,9 +44,9 @@ namespace CounterStrikeSharp.API.Core
 
         public abstract string ModuleName { get; }
         public abstract string ModuleVersion { get; }
-        
+
         public virtual string ModuleAuthor { get; }
-        
+
         public virtual string ModuleDescription { get; }
 
         public string ModulePath { get; set; }
@@ -100,7 +102,7 @@ namespace CounterStrikeSharp.API.Core
 
         public readonly Dictionary<Delegate, CallbackSubscriber> CommandHandlers =
             new Dictionary<Delegate, CallbackSubscriber>();
-        
+
         public readonly Dictionary<Delegate, CallbackSubscriber> CommandListeners =
             new Dictionary<Delegate, CallbackSubscriber>();
 
@@ -111,7 +113,7 @@ namespace CounterStrikeSharp.API.Core
             new Dictionary<Delegate, CallbackSubscriber>();
 
         public readonly List<Timer> Timers = new List<Timer>();
-        
+
         public delegate HookResult GameEventHandler<T>(T @event, GameEventInfo info) where T : GameEvent;
 
         private void RegisterEventHandlerInternal<T>(string name, GameEventHandler<T> handler, bool post)
@@ -198,7 +200,7 @@ namespace CounterStrikeSharp.API.Core
 
                 // Do not execute if we shouldn't be calling this command.
                 var helperAttribute = methodInfo?.GetCustomAttribute<CommandHelperAttribute>();
-                if (helperAttribute != null) 
+                if (helperAttribute != null)
                 {
                     switch (helperAttribute.WhoCanExcecute)
                     {
@@ -210,7 +212,7 @@ namespace CounterStrikeSharp.API.Core
                         default: throw new ArgumentException("Unrecognised CommandUsage value passed in CommandHelperAttribute.");
                     }
 
-                    // Technically the command itself counts as the first argument, 
+                    // Technically the command itself counts as the first argument,
                     // but we'll just ignore that for this check.
                     if (helperAttribute.MinArgs != 0 && command.ArgCount - 1 < helperAttribute.MinArgs)
                     {
@@ -451,7 +453,7 @@ namespace CounterStrikeSharp.API.Core
             {
                 subscriber.Dispose();
             }
-            
+
             foreach (var subscriber in CommandListeners.Values)
             {
                 subscriber.Dispose();

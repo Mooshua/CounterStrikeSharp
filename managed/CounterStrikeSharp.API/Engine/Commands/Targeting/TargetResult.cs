@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using CounterStrikeSharp.API.Core.Model;
+
 namespace CounterStrikeSharp.API.Modules.Commands.Targeting;
 
 public class TargetResult : IEnumerable<CCSPlayerController>

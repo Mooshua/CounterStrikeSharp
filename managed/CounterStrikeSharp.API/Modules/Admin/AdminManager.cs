@@ -5,6 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using CounterStrikeSharp.API.Core.Logging;
+using CounterStrikeSharp.API.Core.Model;
+using CounterStrikeSharp.API.Engine.Commands;
+
 using Microsoft.Extensions.Logging;
 
 namespace CounterStrikeSharp.API.Modules.Admin

@@ -1,6 +1,6 @@
 ﻿using CounterStrikeSharp.API.Modules.Commands.Targeting;
 
-namespace CounterStrikeSharp.API.Modules.Commands;
+namespace CounterStrikeSharp.API.Engine.Commands;
 
 public static class CommandExtensions
 {

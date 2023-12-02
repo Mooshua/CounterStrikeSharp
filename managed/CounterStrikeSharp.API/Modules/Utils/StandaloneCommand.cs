@@ -4,6 +4,8 @@ using CounterStrikeSharp.API.Modules.Commands;
 using System;
 using System.Reflection;
 
+using CounterStrikeSharp.API.Core.Model;
+using CounterStrikeSharp.API.Engine.Commands;
 using CounterStrikeSharp.API.Modules.Cvars;
 
 namespace CounterStrikeSharp.API.Modules.Utils;
@@ -41,7 +43,7 @@ public class CommandUtils
             {
                 // I don't know if this is the most sane implementation of this, can be edited in code review.
                 var data = AdminManager.GetCommandOverrideData(name);
-                if (data != null) 
+                if (data != null)
                 {
                     var attrType = (data.CheckType == "all") ? typeof(RequiresPermissions) : typeof(RequiresPermissionsOr);
                     var attr = (BaseRequiresPermissions)Activator.CreateInstance(attrType, args: AdminManager.GetPermissionOverrides(name));
@@ -70,7 +72,7 @@ public class CommandUtils
                     default: throw new ArgumentException("Unrecognised CommandUsage value passed in CommandHelperAttribute.");
                 }
 
-                // Technically the command itself counts as the first argument, 
+                // Technically the command itself counts as the first argument,
                 // but we'll just ignore that for this check.
                 if (helperAttribute.MinArgs != 0 && command.ArgCount - 1 < helperAttribute.MinArgs)
                 {
@@ -86,7 +88,7 @@ public class CommandUtils
         var helperAttribute = methodInfo?.GetCustomAttribute<CommandHelperAttribute>();
 
         var subscriber = new BasePlugin.CallbackSubscriber(handler, wrappedHandler, () => { });
-        NativeAPI.AddCommand(name, description, (helperAttribute?.WhoCanExcecute == CommandUsage.SERVER_ONLY), 
+        NativeAPI.AddCommand(name, description, (helperAttribute?.WhoCanExcecute == CommandUsage.SERVER_ONLY),
             (int)ConCommandFlags.FCVAR_LINKED_CONCOMMAND, subscriber.GetInputArgument());
     }
 }

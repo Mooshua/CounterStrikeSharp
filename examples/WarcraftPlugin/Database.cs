@@ -18,6 +18,7 @@ using System;
 using System.IO;
 using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Core.Model;
 using CounterStrikeSharp.API.Modules.Entities;
 using Dapper;
 using Microsoft.Data.Sqlite;

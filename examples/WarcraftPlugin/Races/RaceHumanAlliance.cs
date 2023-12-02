@@ -18,6 +18,7 @@ using System;
 using System.Drawing;
 using WarcraftPlugin.Effects;
 using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Core.Model;
 using CounterStrikeSharp.API.Modules.Events;
 using CounterStrikeSharp.API.Modules.Timers;
 using CounterStrikeSharp.API.Modules.Utils;

@@ -16,9 +16,9 @@
 
 using System;
 
-namespace CounterStrikeSharp.API.Modules.Entities
+namespace CounterStrikeSharp.API.Engine.Entities
 {
-    public class BaseEntity : NativeObject
+    public class BaseEntity : NativeEntity
     {
         public int Index { get; init; }
 

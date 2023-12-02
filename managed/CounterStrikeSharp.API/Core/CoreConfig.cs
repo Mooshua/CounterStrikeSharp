@@ -25,6 +25,9 @@ using CounterStrikeSharp.API.Modules.Commands;
 using System.Collections.Generic;
 using CounterStrikeSharp.API.Core.Hosting;
 using CounterStrikeSharp.API.Core.Logging;
+using CounterStrikeSharp.API.Core.Model;
+using CounterStrikeSharp.API.Engine.Commands;
+
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -43,7 +46,7 @@ namespace CounterStrikeSharp.API.Core
 
         [JsonPropertyName("FollowCS2ServerGuidelines")]
         public bool FollowCS2ServerGuidelines { get; set; } = true;
-        
+
         [JsonPropertyName("PluginHotReloadEnabled")]
         public bool PluginHotReloadEnabled { get; set; } = true;
     }
@@ -138,7 +141,7 @@ namespace CounterStrikeSharp.API.Core
             {
                 _logger.LogWarning(ex, "Failed to load core configuration, fallback values will be used");
             }
-            
+
             _logger.LogInformation("Successfully loaded core configuration");
         }
     }

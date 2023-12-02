@@ -16,20 +16,21 @@
 
 using System;
 using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Core.Model;
 
-namespace CounterStrikeSharp.API.Modules.Commands
+namespace CounterStrikeSharp.API.Engine.Commands
 {
     public class CommandInfo
     {
         public delegate void CommandCallback(CCSPlayerController? player, CommandInfo commandInfo);
-        
+
         public delegate HookResult CommandListenerCallback(CCSPlayerController? player, CommandInfo commandInfo);
 
         public CCSPlayerController? CallingPlayer { get; }
-        
+
         public IntPtr Handle { get; }
-        
-        internal CommandInfo(IntPtr pointer, CCSPlayerController player) 
+
+        internal CommandInfo(IntPtr pointer, CCSPlayerController player)
         {
             Handle = pointer;
             CallingPlayer = player;
@@ -43,16 +44,16 @@ namespace CounterStrikeSharp.API.Modules.Commands
 
         public string ArgByIndex(int index) => NativeAPI.CommandGetArgByIndex(Handle, index);
         public string GetArg(int index) => NativeAPI.CommandGetArgByIndex(Handle, index);
-        
+
         public void ReplyToCommand(string message, bool console = false) {
-            if (CallingPlayer != null) 
+            if (CallingPlayer != null)
             {
                 if (console) { CallingPlayer.PrintToConsole(message); }
                 else CallingPlayer.PrintToChat(message);
             }
-            else 
+            else
             {
-                Server.PrintToConsole(message);    
+                Server.PrintToConsole(message);
             }
         }
     }

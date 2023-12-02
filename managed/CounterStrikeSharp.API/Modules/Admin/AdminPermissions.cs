@@ -11,6 +11,8 @@ using System.Reflection;
 using System.Numerics;
 using System.Linq;
 using CounterStrikeSharp.API.Core.Logging;
+using CounterStrikeSharp.API.Core.Model;
+
 using Microsoft.Extensions.Logging;
 
 namespace CounterStrikeSharp.API.Modules.Admin

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CounterStrikeSharp.API.Modules.Commands
+namespace CounterStrikeSharp.API.Engine.Commands
 {
     public enum CommandUsage
     {
@@ -22,7 +22,7 @@ namespace CounterStrikeSharp.API.Modules.Commands
         public CommandUsage WhoCanExcecute { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="minArgs">The minimum amount of arguments required to execute this command.</param>
         /// <param name="usage">If the command fails, this string is printed to the caller to show the CommandUtils intended usage.</param>

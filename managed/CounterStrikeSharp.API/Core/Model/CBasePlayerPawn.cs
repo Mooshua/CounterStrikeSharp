@@ -1,7 +1,7 @@
 ﻿using System;
 using CounterStrikeSharp.API.Modules.Memory;
 
-namespace CounterStrikeSharp.API.Core;
+namespace CounterStrikeSharp.API.Core.Model;
 
 public partial class CBasePlayerPawn
 {

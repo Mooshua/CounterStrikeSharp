@@ -21,6 +21,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
+
+using CounterStrikeSharp.API.Core.Model;
+using CounterStrikeSharp.API.Engine.Entities;
 using CounterStrikeSharp.API.Modules.Commands.Targeting;
 using CounterStrikeSharp.API.Modules.Entities;
 
@@ -84,7 +87,7 @@ namespace CounterStrikeSharp.API
                 yield return new PointerTo<T>(pEntity.Handle).Value;
             }
         }
-        
+
         public static IEnumerable<CEntityInstance> GetAllEntities()
         {
             var pEntity = new CEntityIdentity(EntitySystem.FirstActiveEntity);
@@ -93,7 +96,7 @@ namespace CounterStrikeSharp.API
                 yield return new PointerTo<CEntityInstance>(pEntity.Handle).Value;
             }
         }
-        
+
         /// <summary>
         /// Returns a list of <see cref="CCSPlayerController"/> that are valid and have a valid <see cref="CCSPlayerController.UserId"/> >= 0
         /// </summary>

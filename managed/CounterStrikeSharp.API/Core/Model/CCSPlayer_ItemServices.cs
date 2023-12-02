@@ -16,7 +16,7 @@
 
 using CounterStrikeSharp.API.Modules.Memory;
 
-namespace CounterStrikeSharp.API.Core;
+namespace CounterStrikeSharp.API.Core.Model;
 
 public partial class CCSPlayer_ItemServices
 {
@@ -27,7 +27,7 @@ public partial class CCSPlayer_ItemServices
     {
         VirtualFunction.CreateVoid<nint, nint>(Handle, GameData.GetOffset("CCSPlayer_ItemServices_DropActivePlayerWeapon"))(Handle, activeWeapon.Handle);
     }
-    
+
     /// <summary>
     /// Removes every weapon from the player.
     /// </summary>
